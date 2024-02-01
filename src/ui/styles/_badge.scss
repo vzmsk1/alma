@@ -1,0 +1,39 @@
+.badge {
+    padding: 1.6rem 3.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    background-color: $white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &_blue {
+        background-color: $blue;
+        color: $white;
+    }
+
+    &_gray {
+        color: $white;
+        background-color: $textGray;
+    }
+
+    @media (any-hover: hover) {
+        &_has-hover {
+            &:hover {
+                background-color: rgba(96, 133, 180, 1);
+                color: $white;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding: 2.4rem 4.8rem;
+        border-radius: 20rem;
+    }
+
+    // .badge__txt
+
+    &__txt {
+        font-weight: 600;
+    }
+}

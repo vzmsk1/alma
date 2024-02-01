@@ -1,0 +1,148 @@
+.btn {
+    padding: 1.6rem 3.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.6rem;
+    border-radius: 10rem;
+    color: $white;
+    background-color: rgba(53, 106, 172, 1);
+
+    &_white {
+        color: rgba(105, 129, 215, 1);
+        background-color: $white;
+        svg path {
+            stroke: rgba(105, 129, 215, 1);
+        }
+    }
+
+    &_primary {
+        svg {
+            width: 2.6rem;
+        }
+
+        .btn__icon {
+            flex: 0 0 2.6rem;
+            width: 2.6rem;
+            height: 2.1rem;
+        }
+
+        @media (max-width: 48em) {
+            padding: 3.2rem 5rem;
+
+            svg {
+                width: 4rem;
+            }
+
+            .btn__icon {
+                flex: 0 0 4rem;
+                width: 4rem;
+                height: 3.5rem;
+            }
+        }
+    }
+
+    &_ghost {
+        padding: 0.4rem 0.4rem 0.4rem 1.4rem;
+        justify-content: space-between;
+        color: $red;
+        background-color: transparent;
+        border: 1px solid transparent;
+        transition: border 0.3s ease;
+
+        .arr {
+            background-color: $blue;
+        }
+
+        .btn__txt {
+            font-weight: 600;
+        }
+
+        @media (max-width: 48em) {
+            padding: 0;
+            border: none;
+        }
+    }
+
+    @media (any-hover: hover) and (min-width: 48em) {
+        &_primary {
+            &:hover {
+                svg path {
+                    &:first-child {
+                        animation: arrAnim1 0.8s linear 0s infinite;
+                    }
+                    &:nth-child(2) {
+                        animation: arrAnim2 0.8s linear 0s infinite;
+                    }
+                    &:last-child {
+                        animation: arrAnim3 0.8s linear 0s infinite;
+                    }
+                }
+            }
+        }
+        &_ghost {
+            &:hover {
+                border: 1px solid $blue;
+                .arr {
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        column-gap: 3.2rem;
+        border-radius: 20rem;
+    }
+
+    // .btn__txt
+
+    &__txt {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1;
+
+        @media (max-width: 48em) {
+            font-size: 3rem;
+        }
+    }
+
+    // .btn__icon
+
+    &__icon {
+    }
+}
+
+@keyframes arrAnim1 {
+    33% {
+        stroke-opacity: 1;
+    }
+    66% {
+        stroke-opacity: 0.5;
+    }
+    100% {
+        stroke-opacity: 0.2;
+    }
+}
+@keyframes arrAnim2 {
+    33% {
+        stroke-opacity: 0.2;
+    }
+    66% {
+        stroke-opacity: 1;
+    }
+    100% {
+        stroke-opacity: 0.5;
+    }
+}
+@keyframes arrAnim3 {
+    33% {
+        stroke-opacity: 0.5;
+    }
+    66% {
+        stroke-opacity: 0.2;
+    }
+    100% {
+        stroke-opacity: 1;
+    }
+}

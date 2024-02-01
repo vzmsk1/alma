@@ -1,0 +1,76 @@
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    &._form-error {
+        .input__label {
+            &::after {
+                content: attr(data-error);
+                white-space: nowrap;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        row-gap: 1.6rem;
+    }
+
+    // .input__field
+
+    &__field {
+        padding: 1.6rem 2rem;
+        display: block;
+        width: 100%;
+        background-color: $white;
+        line-height: 1;
+        border: 1px solid transparent;
+        border-radius: 1.6rem;
+        transition: color 0.3s ease, border 0.3s ease;
+        &::placeholder {
+            color: $textGray;
+            transition: color 0.3s ease;
+        }
+        &._form-error {
+            border: 1px solid $red;
+            color: $red;
+        }
+
+        @media (max-width: 48em) {
+            padding: 2.4rem 3.6rem;
+            border-radius: 3.2rem;
+        }
+    }
+
+    // .input__label
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 3rem;
+        white-space: nowrap;
+        color: $lightGray;
+    }
+
+    &._form-focus {
+    }
+    &._form-error {
+        .input__field::placeholder {
+            color: $red;
+        }
+    }
+}

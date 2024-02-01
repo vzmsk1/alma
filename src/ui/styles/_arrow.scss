@@ -1,0 +1,38 @@
+.arr {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $gray;
+    transition: background-color 0.3s ease;
+
+    &_vertical {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    svg {
+        width: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba(53, 106, 172, 1);
+        }
+    }
+
+    @media (max-width: 48em) {
+        flex: 0 0 5rem;
+        width: 5rem;
+        height: 5rem;
+
+        svg {
+            width: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.link {
+    position: relative;
+    display: inline-flex;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 0.2rem);
+        left: 0;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $blue;
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    @media (any-hover: hover) and (min-width: 48em) {
+        &:hover {
+            &::after {
+                transform: scalex(0);
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        border-bottom: 0.4rem solid $blue;
+        &::after {
+            content: none;
+        }
+    }
+}
