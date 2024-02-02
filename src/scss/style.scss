@@ -51,6 +51,14 @@ main {
     max-width: 1920px;
 }
 
+section {
+    margin-bottom: 18rem;
+
+    @include small-tablet {
+        margin-bottom: 20rem;
+    }
+}
+
 // --------------------------------------------------------------------------
 
 // header / footer

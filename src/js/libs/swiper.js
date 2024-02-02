@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.intro-swiper', {
+    new Swiper('.intro-swiper', {
         modules: [Navigation, Pagination, EffectFade],
         spaceBetween: remToPx(2),
         slidesPerView: 1,
@@ -33,6 +33,34 @@ document.addEventListener('DOMContentLoaded', () => {
             slideChange: ({ realIndex }) => {
                 document.querySelector('.intro__slider-navigation-fraction p span').textContent =
                     realIndex + 1;
+            }
+        }
+    });
+
+    new Swiper('.services-swiper', {
+        modules: [Navigation, Pagination],
+        spaceBetween: remToPx(2.4),
+        speed: 1200,
+
+        pagination: {
+            el: '.services .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        navigation: {
+            nextEl: '.services .swiper-button-next',
+            prevEl: '.services .swiper-button-prev'
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 3
             }
         }
     });
