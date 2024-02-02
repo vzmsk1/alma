@@ -1,0 +1,145 @@
+.specialists {
+    .swiper-slide {
+        height: unset;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 3.2rem;
+        border-radius: 3.2rem;
+        background: $white;
+        height: 100%;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+        }
+
+        &:hover {
+            .specialists__item-name {
+                color: $blue;
+            }
+
+            .arrow-icon {
+                border-color: $blue;
+                background: transparent;
+
+                svg path {
+                    stroke: $blue;
+                }
+            }
+        }
+
+        &-top {
+            position: relative;
+            margin-bottom: 3.2rem;
+            height: 31.4rem;
+
+            @include small-tablet {
+                margin-bottom: 4.8rem;
+                height: 40rem;
+            }
+
+            &-image {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    @include mask('/sections/our-specialists/specialist.webp');
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-experience {
+                position: absolute;
+                left: 4.4rem;
+                bottom: 2rem;
+                padding: 0.8rem 1.6rem;
+                border: 0.15rem solid rgba(255, 255, 255, 0.5);
+                border-radius: 2.4rem;
+                width: fit-content;
+                background: rgba(255, 255, 255, 0.3);
+                display: block;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+
+                @include small-tablet {
+                    padding: 1.6rem 3.2rem;
+                    border-radius: 4.8rem;
+                    font-size: 2.4rem;
+                    left: 6.6rem;
+                    bottom: 2.4rem;
+                }
+            }
+
+            &-icon {
+                position: absolute;
+                right: 2rem;
+                bottom: 2rem;
+                @include sizes(6rem, 6rem);
+                border-radius: 50%;
+                padding: 2rem;
+                background: $white;
+
+                @include small-tablet {
+                    right: 3.2rem;
+                    bottom: 2.4rem;
+                    @include sizes(8.8rem, 8.8rem);
+                    padding: 2.8rem;
+                }
+
+                img {
+                    height: 100%;
+                    border-radius: inherit;
+                }
+            }
+        }
+
+        &-job {
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $gray;
+            margin-bottom: 1.6rem;
+            display: block;
+
+            @include small-tablet {
+                margin-bottom: 2.4rem;
+                font-size: 3rem;
+            }
+        }
+
+        &-name {
+            font-size: 3.4rem;
+            margin-bottom: 3.2rem;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                font-size: 4.4rem;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            margin-top: auto;
+
+            @include small-tablet {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            span {
+                font-size: 2rem;
+                color: $red;
+
+                @include small-tablet {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+}
