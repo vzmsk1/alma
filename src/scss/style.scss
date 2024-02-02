@@ -51,6 +51,18 @@ main {
     max-width: 1920px;
 }
 
+._mobile-only {
+    @media (min-width: 48em) {
+        display: none;
+    }
+}
+
+._desktop-only {
+    @media (max-width: 48em) {
+        display: none;
+    }
+}
+
 // --------------------------------------------------------------------------
 
 // header / footer
