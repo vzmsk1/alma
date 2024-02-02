@@ -1,0 +1,35 @@
+@import '../sections/intro';
+
+figure {
+    margin: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 50%;
+    background: $blue;
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    position: initial !important;
+    margin: 0 !important;
+    padding: 0.8rem;
+    transition: 0.3s background ease;
+
+    &::after {
+        display: none;
+        visibility: hidden;
+    }
+
+    img {
+        height: 100%;
+    }
+
+    &:hover {
+        background: $blue;
+    }
+
+    &.swiper-button-disabled {
+        background: $gray;
+        opacity: 1;
+    }
+}

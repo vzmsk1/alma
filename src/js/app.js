@@ -29,6 +29,9 @@ import './utils/select.js';
 // dynamic dom
 // import './libs/dd.js';
 
+// swiper
+import './libs/swiper.js';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';
