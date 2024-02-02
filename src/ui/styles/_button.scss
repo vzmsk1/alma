@@ -6,7 +6,7 @@
     column-gap: 1.6rem;
     border-radius: 10rem;
     color: $white;
-    background-color: rgba(53, 106, 172, 1);
+    background-color: $blue;
 
     &_white {
         color: rgba(105, 129, 215, 1);
@@ -56,6 +56,7 @@
 
         .btn__txt {
             font-weight: 600;
+            white-space: nowrap;
         }
 
         @media (max-width: 48em) {
@@ -110,6 +111,35 @@
     // .btn__icon
 
     &__icon {
+    }
+}
+
+.round-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 4.6rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    background-color: $blue;
+
+    svg {
+        flex: 0 0 2.6rem;
+        width: 2.6rem;
+        height: 2.3rem;
+    }
+
+    @media (max-width: 48em) {
+        flex: 0 0 9rem;
+        width: 9rem;
+        height: 9rem;
+
+        svg {
+            flex: 0 0 4rem;
+            width: 4rem;
+            height: 4.6rem;
+        }
     }
 }
 

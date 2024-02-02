@@ -1,0 +1,31 @@
+.doctors-images {
+    display: flex;
+
+    // .doctors-images__image-wrap
+
+    &__image-wrap {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid rgba(221, 221, 221, 1);
+        border-radius: 50%;
+        overflow: hidden;
+        &:nth-child(2),
+        &:nth-child(3) {
+            margin-left: -1rem;
+        }
+
+        @media (max-width: 48em) {
+            flex: 0 0 8rem;
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    // .doctors-images__image
+
+    &__image {
+        height: 100%;
+        object-fit: cover;
+    }
+}

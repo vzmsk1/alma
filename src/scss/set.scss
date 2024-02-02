@@ -11,7 +11,7 @@ html {
     -webkit-animation: bugfix infinite 1s;
     line-height: 1.2;
     margin: 0;
-    height: 100%;
+    min-height: 100%;
     padding: 0;
 }
 
@@ -22,7 +22,7 @@ body {
     line-height: 1.2;
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     font-size: 1.8rem;
     color: $fontColor; // цвет по умолчанию текста по сайту
     background-color: $bgColor;
@@ -99,6 +99,14 @@ ul li {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+section {
+    margin-bottom: 18rem;
+
+    @media (max-width: 48em) {
+        margin-bottom: 20rem;
+    }
 }
 
 .container {
