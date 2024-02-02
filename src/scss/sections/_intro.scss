@@ -19,6 +19,7 @@
 
                 img {
                     @include mask('sections/intro/intro-image.webp');
+                    object-fit: cover;
                 }
             }
 
@@ -334,6 +335,9 @@
             position: initial;
             margin-left: auto;
             max-width: 51rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
 
             @include small-tablet {
                 margin-left: initial !important;
@@ -345,8 +349,10 @@
             }
 
             .swiper-pagination-bullet {
-                width: 11.9rem !important;
+                max-width: 11.9rem;
+                width: 100% !important;
                 height: 0.2rem;
+                margin: 0 !important;
 
                 @include small-tablet {
                     width: 9.4rem !important;
