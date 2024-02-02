@@ -22,12 +22,12 @@ import './utils/accordion.js';
 import './utils/select.js';
 
 // modals
-// import './utils/modals.js';
+import './utils/modals.js';
 
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
-// import './libs/dd.js';
+import './libs/dd.js';
 
 // swiper
 import './libs/swiper.js';
