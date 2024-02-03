@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeEffect: {
             crossFade: true
         },
+        grabCursor: true,
 
         pagination: {
             el: '.intro__slider-navigation .swiper-pagination',
