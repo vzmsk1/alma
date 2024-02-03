@@ -1,0 +1,80 @@
+.banner {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 31.7rem;
+        padding: 3.2rem;
+        border-radius: 3.2rem;
+        background: $blue;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 3.2rem;
+        z-index: -1;
+
+        img {
+            clip-path: url(#banner-image);
+            object-fit: cover;
+        }
+    }
+
+    &__heading {
+        max-width: 28.6rem;
+        width: 100%;
+    }
+
+    &__title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: 3.4rem;
+        line-height: 140%;
+        color: $white;
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2.6rem;
+        }
+    }
+
+    &__description {
+        max-width: 35.8rem;
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 140%;
+        color: $white;
+    }
+
+    &__subtitle {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: 3.4rem;
+        line-height: 120%;
+        color: $white;
+        max-width: 47.8rem;
+        width: 100%;
+    }
+
+    &__button {
+        background: $white;
+
+        span {
+            color: $blue;
+        }
+
+        svg {
+            path {
+                stroke: $blue;
+            }
+        }
+    }
+}
