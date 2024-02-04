@@ -1,0 +1,110 @@
+.reviews {
+    .swiper-slide {
+        height: unset;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 3.2rem;
+        border-radius: 3.2rem;
+        background: $white;
+        height: 100%;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3.2rem;
+
+            @include small-tablet {
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &-marks {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @include small-tablet {
+                gap: 2rem;
+            }
+        }
+
+        &-mark {
+            @include sizes(2.2rem, 2.2rem);
+
+            @include small-tablet {
+                @include sizes(4rem, 4rem);
+            }
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &-date {
+            display: block;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $gray;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+
+        &-author {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 1.6rem;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+            }
+        }
+
+        &-description {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $textGray;
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 3.2rem;
+
+            @include small-tablet {
+                -webkit-line-clamp: 6;
+                font-size: 3rem;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        &-company {
+            width: auto;
+            height: auto;
+
+            img {
+                width: auto;
+            }
+        }
+    }
+}

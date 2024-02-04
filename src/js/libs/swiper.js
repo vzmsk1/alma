@@ -96,6 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     swiperSettings('.specialists', {});
     swiperSettings('.services', {});
+    swiperSettings('.reviews', {
+        grabCursor: true
+    });
 
     resizableSwiper('(max-width: 768px)', '.benefits-swiper', {
         modules: [Navigation, Pagination],
