@@ -38,6 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+        let swiper;
+
+        breakpoint = window.matchMedia(breakpoint);
+
+        const enableSwiper = function (className, settings) {
+            swiper = new Swiper(className, settings);
+
+            if (callback) {
+                callback(swiper);
+            }
+        };
+
+        const checker = function () {
+            if (breakpoint.matches) {
+                return enableSwiper(swiperClass, swiperSettings);
+            }
+
+            if (swiper) swiper.destroy(true, true);
+        };
+
+        breakpoint.addEventListener('change', checker);
+        checker();
+    };
+
     new Swiper('.intro-swiper', {
         modules: [Navigation, Pagination, EffectFade],
         spaceBetween: remToPx(2),
@@ -71,4 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     swiperSettings('.specialists', {});
     swiperSettings('.services', {});
+
+    resizableSwiper('(max-width: 768px)', '.benefits-swiper', {
+        modules: [Navigation, Pagination],
+        spaceBetween: remToPx(3.2),
+        slidesPerView: 1,
+        speed: 1200,
+        pagination: {
+            el: '.benefits .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        }
+    });
 });

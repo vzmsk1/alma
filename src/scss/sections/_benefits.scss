@@ -1,0 +1,119 @@
+.benefits {
+    @media (min-width: 48em) {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.4rem;
+        }
+    }
+
+    &__heading {
+        .heading-title {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .swiper-slide {
+        height: unset;
+
+        &:nth-child(3) {
+            .benefits__item {
+                background: $lightBlue;
+            }
+        }
+
+        &:nth-child(4) {
+            .benefits__item {
+                background: $blue;
+            }
+        }
+
+        &:nth-child(4),
+        &:nth-child(3) {
+            color: $white;
+
+            .benefits__item-icon {
+                border: 0.1rem solid $white;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 2.4rem;
+        background: $white;
+        border-radius: 2.4rem;
+        gap: 7.5rem;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+            gap: 16rem;
+        }
+
+        &-backdrop {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+
+        &-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @include small-tablet{
+                align-items: center;
+            }
+        }
+
+        &-icon {
+            padding: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            @include sizes(6rem, 6rem);
+            background: $blue;
+
+            @include small-tablet {
+                @include sizes(8.8rem, 8.8rem);
+                padding: 2.8rem;
+            }
+        }
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 3.4rem;
+
+            @include small-tablet {
+                font-size: 4.4rem;
+            }
+        }
+
+        &-description {
+            font-size: 1.8rem;
+            line-height: 140%;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+    }
+}
