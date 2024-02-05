@@ -1,72 +1,103 @@
 .accordion {
-    // .accordion__item
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        max-width: 103.2rem;
+        width: 100%;
 
-    &__item {
-        border-radius: 2.4rem;
-        background-color: $white;
-        @media (max-width: 48em) {
-            border-radius: 5rem;
+        @include small-tablet {
+            max-width: 100%;
         }
     }
 
-    // .accordion__title
-
-    &__title {
+    &__item {
         padding: 2.4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        &._accordion-active {
-            .arr svg {
-                transform: rotate(-90deg);
-            }
-            .arr {
-                background-color: $blue;
-            }
+        border-radius: 2.4rem;
+        background: $white;
+
+        @include small-tablet {
+            padding: 3.2rem;
+            border-radius: 4.8rem;
         }
-        .arr {
-            flex: 0 0 5rem;
-            width: 5rem;
-            height: 5rem;
-            @media (any-hover: hover) {
-                &:hover {
-                    background-color: $blue;
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.4rem;
+            cursor: pointer;
+
+            transition: 0.3s margin-bottom ease;
+
+            @include small-tablet {
+                gap: 0.8rem;
+                align-items: flex-start;
+            }
+
+            &._accordion-active {
+                .questions__item-button {
+                    background: $blue;
+                    transform: rotate(-180deg);
+                }
+
+                margin-bottom: 3.4rem;
+
+                @include small-tablet {
+                    margin-bottom: 1.4rem;
                 }
             }
         }
-        @media (max-width: 48em) {
-            padding: 3.2rem;
-            .arr {
-                flex: 0 0 9rem;
-                width: 9rem;
-                height: 9rem;
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 120%;
+
+            @include small-tablet {
+                font-size: 3.6rem;
             }
         }
-    }
 
-    // .accordion__title-txt
+        &-button {
+            @include sizes(4.6rem, 4.6rem);
+            border-radius: 50%;
+            background: $gray;
+            padding: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                0.3s background ease,
+                0.3s transform ease;
 
-    &__title-txt {
-    }
-
-    // .accordion__body
-
-    &__body {
-        padding: 2.4rem;
-        padding-top: 0;
-        @media (max-width: 48em) {
-            padding: 3.2rem;
-            padding-top: 0;
+            @include small-tablet {
+                @include sizes(8.8rem, 8.8rem);
+                padding: 2rem;
+            }
         }
-    }
 
-    // .accordion__text
+        &-content {
+            width: 100%;
 
-    &__text {
-        color: rgba(132, 132, 132, 1);
-        &:not(:last-child) {
-            margin-bottom: 1rem;
+            @include small-tablet {
+                width: calc(100% - 1.6rem);
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 140%;
+                color: $textGray;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                @include small-tablet {
+                    font-size: 3rem;
+                }
+            }
         }
     }
 }

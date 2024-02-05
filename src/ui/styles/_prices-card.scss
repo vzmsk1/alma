@@ -1,0 +1,31 @@
+.prices__card {
+    display: flex;
+    gap: 2.4rem;
+    padding: 3.2rem;
+    border-radius: 3.2rem;
+    background: $white;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+        .prices__item-title {
+            color: $blue;
+        }
+
+        .arrow-icon {
+            border-color: $blue;
+            background: transparent;
+
+            svg path {
+                stroke: $blue;
+            }
+        }
+    }
+
+    @include small-tablet {
+        padding: 4.8rem;
+        border-radius: 4.8rem;
+        gap: 4.8rem;
+        flex-direction: column;
+    }
+}
