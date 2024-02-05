@@ -7,6 +7,7 @@
 @import '../sections/reviews';
 @import '../sections/request';
 @import '../sections/licenses';
+@import '../sections/seo';
 
 figure {
     margin: 0;
@@ -40,4 +41,39 @@ figure {
         background: $gray;
         opacity: 1;
     }
+}
+
+.showmore-button {
+    @include small-tablet {
+        margin-top: 2.4rem;
+
+        span {
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+    }
+}
+
+[data-showmore-button] {
+    span {
+        &:last-child {
+            display: none;
+        }
+        ._showmore-active & {
+            display: none;
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+}
+
+._showmore-active [data-showmore-button] span:first-child {
+    display: none;
+}
+
+._showmore-active [data-showmore-button] span:last-child {
+    display: flex;
 }

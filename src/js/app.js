@@ -24,6 +24,11 @@ import './utils/select.js';
 // modals
 import './utils/modals.js';
 
+// show-more
+import { showmore } from './utils/utils.js';
+
+showmore();
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
