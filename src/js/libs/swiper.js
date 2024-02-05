@@ -114,4 +114,33 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true
         }
     });
+
+    new Swiper('.gallery-swiper', {
+        modules: [Navigation, Pagination],
+        spaceBetween: remToPx(2.4),
+        speed: 1200,
+        grabCursor: true,
+        pagination: {
+            el: '.gallery .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        navigation: {
+            nextEl: '.gallery .swiper-button-next',
+            prevEl: '.gallery .swiper-button-prev'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 3,
+                centeredSlides: true,
+                centeredSlidesBounds: true
+            }
+        }
+    });
 });
