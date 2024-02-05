@@ -249,6 +249,8 @@ export const removeClasses = (array, className) => {
   }
 };
 
+
+//show more
 export function showmore() {
   const showMoreBlocks = document.querySelectorAll('[data-showmore]');
   let showMoreBlocksRegular;
