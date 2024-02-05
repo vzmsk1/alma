@@ -1,0 +1,318 @@
+[data-video].video-js,
+.video-js video {
+    width: 100%;
+    height: 100%;
+}
+.video-js {
+    position: relative;
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        border-radius: 5rem;
+        &.vjs-controls-enabled .vjs-control-bar {
+            transform: translateY(100%);
+        }
+    }
+
+    ._init & {
+        .vjs-control-bar {
+            transform: translateY(0);
+        }
+        .vjs-poster {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &.vjs-playing {
+        .vjs-control-bar .vjs-play-control .vjs-icon-placeholder::after {
+            background-image: url(./assets/images/icons/pause.svg);
+        }
+    }
+
+    &.vjs-fullscreen {
+        border-radius: 0;
+        .vjs-control-bar .vjs-fullscreen-control .vjs-icon-placeholder::after {
+            background-image: url(./assets/images/icons/exit-fullscreen.svg);
+        }
+        .vjs-poster {
+            display: none;
+        }
+    }
+
+    .vjs-big-play-button {
+        display: none;
+    }
+
+    .vjs-control-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.8rem 1.6rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: $white;
+
+        &:not(.modal &, ._init &) {
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 48em) {
+            padding: 0.8rem;
+        }
+
+        .vjs-play-control {
+            margin-right: 3.9rem;
+            order: -1;
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/play.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            @media (max-width: 48em) {
+                margin-right: 2rem;
+                .vjs-icon-placeholder {
+                    flex: 0 0 6rem;
+                    &::after {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+        }
+
+        .vjs-volume-panel {
+            margin-right: 2.4rem;
+            display: flex;
+            align-items: center;
+            column-gap: 2.4rem;
+            order: 1;
+
+            .vjs-volume-horizontal {
+                position: relative;
+                width: 10rem;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $gray;
+            }
+
+            .vjs-mouse-display {
+                display: none;
+            }
+
+            @media (max-width: 48em) {
+                margin-right: 2rem;
+                column-gap: 3.2rem;
+
+                .vjs-volume-horizontal {
+                    width: 20rem;
+                    height: 1.6rem;
+                    border-radius: 2rem;
+                    display: none;
+                }
+            }
+        }
+
+        .vjs-fullscreen-control {
+            order: 1;
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/fullscreen.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            @media (max-width: 48em) {
+                .vjs-icon-placeholder {
+                    flex: 0 0 6rem;
+                    &::after {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+        }
+
+        .vjs-mute-control {
+            &.vjs-vol-0 {
+                .vjs-icon-placeholder::after {
+                    background-image: url(./assets/images/icons/unmute.svg);
+                }
+            }
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/mute.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            @media (max-width: 48em) {
+                .vjs-icon-placeholder {
+                    flex: 0 0 6rem;
+                    &::after {
+                        width: 6rem;
+                        height: 6rem;
+                    }
+                }
+            }
+        }
+
+        .vjs-time-control {
+            .vjs-current-time-display {
+                line-height: 140%;
+            }
+            &.vjs-current-time {
+                margin-right: 2.4rem;
+                order: -1;
+            }
+            &.vjs-duration {
+                margin-right: 3.9rem;
+            }
+            @media (max-width: 48em) {
+                .vjs-current-time-display {
+                    line-height: 1;
+                }
+                &.vjs-current-time {
+                    margin-right: 2rem;
+                }
+                &.vjs-duration {
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        .vjs-volume-bar,
+        .vjs-volume-level {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.8rem;
+            border-radius: 1rem;
+
+            @media (max-width: 48em) {
+                height: 1.6rem;
+                border-radius: 2rem;
+            }
+        }
+        .vjs-volume-level {
+            background-color: $blue;
+        }
+
+        .vjs-progress-control {
+            margin-right: 2.4rem;
+            order: -1;
+            flex: 1 1 auto;
+
+            .vjs-progress-holder {
+                position: relative;
+                min-width: 105.5rem;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $gray;
+            }
+
+            .vjs-play-progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $blue;
+            }
+
+            .vjs-load-progress,
+            .vjs-time-tooltip {
+                display: none;
+            }
+
+            @media (max-width: 48em) {
+                margin-right: 2rem;
+
+                .vjs-progress-holder {
+                    min-width: 29.4rem;
+                    height: 1.6rem;
+                    border-radius: 2rem;
+                }
+                .vjs-play-progress {
+                    height: 1.6rem;
+                    border-radius: 2rem;
+                }
+            }
+        }
+
+        .vjs-skip-backward-undefined,
+        .vjs-skip-forward-undefined,
+        .vjs-time-divider,
+        .vjs-live-control,
+        .vjs-seek-to-live-control,
+        .vjs-remaining-time,
+        .vjs-custom-control-spacer,
+        .vjs-playback-rate,
+        .vjs-chapters-button,
+        .vjs-descriptions-button,
+        .vjs-subs-caps-button,
+        .vjs-picture-in-picture-control,
+        .vjs-control-text {
+            display: none;
+        }
+    }
+
+    .vjs-text-track-display,
+    .vjs-loading-spinner,
+    .vjs-modal-dialog {
+        display: none;
+    }
+
+    .vjs-poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal & {
+            display: none;
+        }
+    }
+}

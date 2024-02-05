@@ -37,6 +37,9 @@ import './libs/dd.js';
 // swiper
 import './libs/swiper.js';
 
+// video js
+import './libs/video.js';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';

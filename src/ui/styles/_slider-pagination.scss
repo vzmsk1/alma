@@ -1,0 +1,45 @@
+.slider-pagination {
+    @media (min-width: 48em) {
+        display: none;
+    }
+
+    @include small-tablet {
+        display: block;
+    }
+
+    .swiper-pagination {
+        position: initial !important;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        @include small-tablet {
+            text-align: start;
+            justify-content: center !important;
+            margin-top: 4rem;
+        }
+
+        &-bullet {
+            border-radius: 0 !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $blue !important;
+        }
+
+        .swiper-pagination-bullet {
+            margin: 0 !important;
+            width: 11.9rem !important;
+            height: 0.2rem;
+            transition: 0.3s background ease;
+            background: $gray;
+            border-radius: 0 !important;
+            opacity: 1 !important;
+
+            @include small-tablet {
+                width: 8rem !important;
+                height: 0.4rem !important;
+            }
+        }
+    }
+}
