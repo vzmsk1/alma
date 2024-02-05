@@ -67,25 +67,30 @@
 
     @media (any-hover: hover) and (min-width: 48em) {
         &_primary {
-            &:hover {
-                svg path {
-                    &:first-child {
-                        animation: arrAnim1 0.8s linear 0s infinite;
-                    }
-                    &:nth-child(2) {
-                        animation: arrAnim2 0.8s linear 0s infinite;
-                    }
-                    &:last-child {
-                        animation: arrAnim3 0.8s linear 0s infinite;
+            &:not(&._no-hover) {
+                &:hover {
+                    svg path {
+                        &:first-child {
+                            animation: arrAnim1 0.8s linear 0s infinite;
+                        }
+                        &:nth-child(2) {
+                            animation: arrAnim2 0.8s linear 0s infinite;
+                        }
+                        &:last-child {
+                            animation: arrAnim3 0.8s linear 0s infinite;
+                        }
                     }
                 }
             }
         }
+
         &_ghost {
-            &:hover {
-                border: 1px solid $blue;
-                .arr {
-                    background-color: $blue;
+            &:not(&._no-hover) {
+                &:hover {
+                    border: 1px solid $blue;
+                    .arr {
+                        background-color: $blue;
+                    }
                 }
             }
         }

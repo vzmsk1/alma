@@ -1,0 +1,51 @@
+.areas {
+    // .areas__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .areas__head
+
+    &__head {
+    }
+
+    // .areas__heading
+
+    &__heading {
+    }
+
+    // .areas__body
+
+    &__body {
+    }
+
+    // .areas__slider
+
+    &__slider {
+        @media (max-width: 48em) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    // .areas__wrapper
+
+    &__wrapper {
+    }
+
+    // .areas__slide
+
+    &__slide {
+    }
+
+    // .areas__card
+
+    &__card {
+    }
+
+    // .areas__pagination
+
+    &__pagination {
+    }
+}

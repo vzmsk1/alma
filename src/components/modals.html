@@ -1,7 +1,16 @@
-<div id="" aria-hidden="true" class="modal">
+<div id="videoModal" aria-hidden="true" class="modal video-modal">
     <div class="modal__wrapper">
         <div class="modal__content">
-            <div class="modal__body"></div>
+            <button data-close type="button" class="modal__close">
+                <img src="./assets/images/icons/cross.svg" alt="" class="modal__close-icon" />
+            </button>
+            <div class="modal__body">
+                <div class="video-modal__inner">
+                    <video data-video controls class="modal__video video-js">
+                        <source src="./assets/video/video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
 </div>
