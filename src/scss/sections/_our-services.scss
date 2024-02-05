@@ -35,6 +35,11 @@
         &-image {
             @include sizes(100%, 22rem);
             margin-bottom: 2.2rem;
+            clip-path: url(#services-background);
+
+            @include small-tablet{
+                clip-path: url(#services-background-mobile);
+            }
 
             @include small-tablet {
                 @include sizes(100%, 36rem);
@@ -43,7 +48,6 @@
 
             img {
                 height: 100%;
-                @include mask('/sections/our-services/services-image-1.webp');
                 object-fit: cover;
             }
         }

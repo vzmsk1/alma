@@ -16,9 +16,13 @@
                 position: absolute;
                 inset: 0;
                 z-index: -1;
+                clip-path: url(#intro-poster);
+
+                @include small-tablet{
+                    clip-path: none;
+                }
 
                 img {
-                    @include mask('sections/intro/intro-image.webp');
                     object-fit: cover;
                     height: 100%;
                 }

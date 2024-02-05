@@ -96,9 +96,9 @@
 
                 margin-bottom: 3.4rem;
 
-              @include small-tablet{
-                margin-bottom: 1.4rem;
-              }
+                @include small-tablet {
+                    margin-bottom: 1.4rem;
+                }
             }
         }
 
@@ -132,6 +132,12 @@
         }
 
         &-content {
+            width: 100%;
+
+            @include small-tablet{
+                width: calc(100% - 1.6rem);
+            }
+
             p {
                 font-size: 1.8rem;
                 line-height: 140%;
