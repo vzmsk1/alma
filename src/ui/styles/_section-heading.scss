@@ -14,9 +14,10 @@
         }
     }
 
-    [class*='heading-title'] {
+    [class*='__heading'] {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1.2rem;
 
         @include small-tablet {

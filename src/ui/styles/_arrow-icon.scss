@@ -9,16 +9,18 @@
 
     @include sizes(3.6rem, 3.6rem);
 
-    @include small-tablet{
+    @include small-tablet {
         @include sizes(4.8rem, 4.8rem);
     }
 
-    &:hover {
-        border-color: $blue;
-        background: transparent;
+    &:not(._no-hover &) {
+        &:hover {
+            border-color: $blue;
+            background: transparent;
 
-        svg path {
-            stroke: $blue;
+            svg path {
+                stroke: $blue;
+            }
         }
     }
 

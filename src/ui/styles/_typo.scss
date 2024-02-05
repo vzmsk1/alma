@@ -34,3 +34,14 @@
         font-size: 1.6rem;
     }
 }
+
+.quote-txt {
+    font-family: 'Roboto Flex';
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 120%;
+    color: $red;
+    @media (max-width: 48em) {
+        font-size: 3rem;
+    }
+}

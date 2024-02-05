@@ -1,0 +1,50 @@
+.opinions {
+    // .opinions__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .opinions__head
+
+    &__head {
+    }
+
+    // .opinions__heading
+
+    &__heading {
+    }
+
+    // .opinions__body
+
+    &__body {
+    }
+
+    // .opinions__slider
+
+    &__slider {
+    }
+
+    // .opinions__wrapper
+
+    &__wrapper {
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 2.4rem;
+            }
+        }
+    }
+
+    // .opinions__card-item
+
+    &__card-item {
+    }
+
+    // .opinions__card
+
+    &__card {
+    }
+}
