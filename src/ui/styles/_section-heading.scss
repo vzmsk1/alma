@@ -4,6 +4,16 @@
     justify-content: space-between;
     margin-bottom: 4rem;
 
+    .h {
+        span {
+            padding: 0 2rem;
+            border-radius: 10rem;
+            line-height: 1;
+            color: $white;
+            background-color: $lightBlue;
+        }
+    }
+
     @include small-tablet {
         margin-bottom: 6.4rem;
     }
