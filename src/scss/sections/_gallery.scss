@@ -1,0 +1,60 @@
+.gallery {
+    .swiper-slide {
+        height: unset;
+
+        @media (min-width: 48em) {
+            &-active {
+                .gallery__item {
+                    max-height: 44.2rem;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @include small-tablet{
+            margin-bottom: 6.4rem;
+            text-align: start;
+        }
+    }
+
+    &__navigation-buttons {
+        position: absolute;
+        top: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        bottom: -2rem;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 4.6rem !important;
+            height: 4.6rem !important;
+        }
+    }
+
+    &__item {
+        max-height: 52rem;
+        height: 100%;
+        border-radius: 2.4rem;
+        transition: 0.5s max-height ease 0.1s;
+
+        @include small-tablet {
+            max-height: 70.8rem;
+            border-radius: 4.8rem;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+}

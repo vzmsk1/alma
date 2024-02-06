@@ -1,0 +1,217 @@
+.about {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.7rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.3rem;
+        justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+
+        &-text {
+            flex: 0 1 63.7rem;
+
+            @include small-tablet {
+                flex: 1 1 100%;
+            }
+        }
+
+        &-description {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 140%;
+            margin-bottom: 1rem;
+
+            @include small-tablet {
+                font-size: 3rem;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &-button {
+            display: block;
+            margin-left: auto;
+
+            @include small-tablet {
+                display: flex;
+                margin-left: initial;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__video {
+        @include sizes(90rem, 60rem);
+        border-radius: 2.4rem;
+        position: relative;
+
+        @include small-tablet {
+            @include sizes(100%, 46rem);
+            border-radius: 4.2rem;
+        }
+
+        &-poster {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include sizes(7.2rem, 7.2rem);
+            border: 0.15rem solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            padding: 2.4rem;
+            backdrop-filter: blur(5rem);
+            background: rgba(255, 255, 255, 0.3);
+
+            @include small-tablet {
+                @include sizes(14.4rem, 14.4rem);
+                padding: 4.8rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+
+        @include small-tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: flex-end;
+        gap: 2.4rem;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+            gap: 4.8rem;
+        }
+
+        &-info {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex: 0 1 89.9rem;
+
+            @include small-tablet {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+                max-width: 42.5rem;
+                width: 100%;
+
+                @include small-tablet {
+                    max-width: 100%;
+                    gap: 4.8rem;
+                }
+            }
+
+            &-description {
+                font-size: 1.8rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    font-size: 3rem;
+                }
+            }
+
+            &-button {
+                width: fit-content;
+
+                @include small-tablet {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+
+            &-doctor {
+                border-radius: 2.4rem;
+                @include sizes(24rem, 24rem);
+
+                img {
+                    height: 100%;
+                    border-radius: inherit;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-decor {
+            position: relative;
+            flex: 0 1 63.6rem;
+
+            @include small-tablet {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+
+            &-working {
+                position: absolute;
+                left: 0;
+                top: 1rem;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 120%;
+                text-transform: uppercase;
+                color: $red;
+
+                @include small-tablet {
+                    font-weight: 400;
+                    font-size: 2.4rem;
+                    top: 0;
+                }
+            }
+
+            &-image {
+                @include sizes(100%, 35.8rem);
+                clip-path: url(#about-decor-background);
+
+                @include small-tablet {
+                    height: 45.8rem;
+                    border-radius: 4.8rem;
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.questions {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.1rem;
+        justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__request {
+        max-width: 50.7rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 140%;
+        margin-bottom: 5rem;
+        max-width: 36.8rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            margin-bottom: 4.8rem;
+            font-size: 3rem;
+        }
+    }
+
+    &__button {
+        width: fit-content;
+
+        @include small-tablet {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        max-width: 103.2rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+        }
+    }
+
+    &__item {
+        padding: 2.4rem;
+        border-radius: 2.4rem;
+        background: $white;
+
+        @include small-tablet {
+            padding: 3.2rem;
+            border-radius: 4.8rem;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.4rem;
+            cursor: pointer;
+
+            transition: 0.3s margin-bottom ease;
+
+            @include small-tablet {
+                gap: 0.8rem;
+                align-items: flex-start;
+            }
+
+            &._accordion-active {
+                .questions__item-button {
+                    background: $blue;
+                    transform: rotate(-180deg);
+                }
+
+                margin-bottom: 3.4rem;
+
+                @include small-tablet {
+                    margin-bottom: 1.4rem;
+                }
+            }
+        }
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 120%;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+            }
+        }
+
+        &-button {
+            @include sizes(4.6rem, 4.6rem);
+            border-radius: 50%;
+            background: $gray;
+            padding: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                0.3s background ease,
+                0.3s transform ease;
+
+            @include small-tablet {
+                @include sizes(8.8rem, 8.8rem);
+                padding: 3rem;
+            }
+        }
+
+        &-content {
+            width: 100%;
+
+            @include small-tablet{
+                width: calc(100% - 1.6rem);
+            }
+
+            p {
+                font-size: 1.8rem;
+                line-height: 140%;
+                color: $textGray;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                @include small-tablet {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}

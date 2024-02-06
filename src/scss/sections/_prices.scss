@@ -1,0 +1,115 @@
+.prices {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.4rem;
+        margin-bottom: 2.4rem;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 2.6rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__consultation {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.4rem;
+        background: $blue;
+        clip-path: url(#consultation-background);
+        padding: 3.2rem;
+
+        @include small-tablet {
+            clip-path: none;
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+            flex-direction: column;
+        }
+
+        &-wrapper {
+            @include small-tablet {
+                display: flex;
+                align-items: flex-start;
+                gap: 2.4rem;
+            }
+        }
+
+        &-button {
+            margin-left: auto;
+            background: $white;
+
+            @include small-tablet {
+                width: 100%;
+            }
+
+            span {
+                color: $blue;
+            }
+
+            svg {
+                path {
+                    stroke: $blue;
+                }
+            }
+        }
+
+        &-icon {
+            @include sizes(6rem, 6rem);
+            width: 6rem;
+            border-radius: 50%;
+            background: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem 2rem;
+
+            @include small-tablet {
+                @include sizes(8.8rem, 8.8rem);
+                padding: 2.8rem;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 83.7rem;
+            width: 100%;
+
+            @include small-tablet {
+                max-width: 100%;
+                gap: 0;
+                margin-bottom: 2.8rem;
+            }
+        }
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 3.4rem;
+            line-height: 120%;
+            color: $white;
+
+            @include small-tablet {
+                font-weight: 500;
+                font-size: 4.4rem;
+            }
+        }
+
+        &-description {
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $white;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+    }
+}

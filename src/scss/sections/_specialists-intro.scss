@@ -1,0 +1,130 @@
+.specialists-intro {
+    // .specialists-intro__inner
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 87.8rem;
+    }
+    // .specialists-intro__wrapper
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    // .specialists-intro__title
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        span {
+            display: inline-block;
+            background-color: $lightBlue;
+            color: $white;
+            border-radius: 8rem;
+            padding: 0 2.6rem 0.7rem;
+        }
+    }
+    // .specialists-intro__subtitle
+    &__subtitle {
+        position: absolute;
+        right: 0;
+        bottom: 2.3rem;
+        text-align: right;
+    }
+    // .specialists-intro__info-text
+    &__info-text.intro__row-info-text {
+        position: absolute;
+        top: 3.2rem;
+        right: 3.2rem;
+        z-index: 1;
+        width: 31rem;
+        min-height: 19.4rem;
+
+        p {
+            font-size: 2.4rem;
+            line-height: 120%;
+        }
+    }
+    // .specialists-intro__info-block
+    &__info-block.intro__row-info-block {
+        position: absolute;
+        left: 3.2rem;
+        bottom: 25.7rem;
+
+        width: 23.4rem;
+        height: 25.9rem;
+    }
+    // .specialists-intro__bg
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            mask-image: url('../../assets/images/specialists/specialists-intro-mask-d.svg');
+            mask-size: 100%;
+            object-fit: cover;
+            mask-repeat: no-repeat;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .specialists-intro {
+        // .specialists-intro__inner
+        &__inner {
+            height: 79.2rem;
+        }
+        // .specialists-intro__wrapper
+        &__wrapper {
+            position: relative;
+            width: 100%;
+            height: 64.4rem;
+            margin-bottom: 4.8rem;
+        }
+        // .specialists-intro__title
+        &__title {
+            position: static;
+            span {
+                border-radius: 16rem;
+                padding: 0 3.2rem 0.8rem;
+            }
+        }
+        // .specialists-intro__subtitle
+        &__subtitle {
+            position: absolute;
+            right: unset;
+            bottom: unset;
+            left: 0;
+            top: 14.4rem;
+            text-align: left;
+
+            font-size: 2.4rem;
+            line-height: 120%;
+            text-transform: uppercase;
+            max-width: 25rem;
+        }
+        // .specialists-intro__bg
+        &__bg {
+            top: 14.4rem;
+            height: 50rem;
+
+            img {
+                mask-image: url('../../assets/images/specialists/specialists-intro-mask-m.svg');
+            }
+        }
+        &__btn {
+            width: 100%;
+
+            button {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}
