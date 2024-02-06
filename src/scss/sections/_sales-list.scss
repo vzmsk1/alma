@@ -1,0 +1,25 @@
+.sales-list {
+    // .sales-list__inner
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    // .sales-list__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.4rem;
+
+        @media (max-width: 48em) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__title {
+        margin-bottom: 4rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+}
