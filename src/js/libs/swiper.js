@@ -222,4 +222,31 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    if (document.querySelector('.certificate-modal')) {
+        const certificateSwiper = new Swiper('.certificate-swiper', {
+            modules: [Navigation, Pagination],
+            spaceBetween: remToPx(2),
+            slidesPerView: 1,
+            speed: 1200,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.certificate-modal .swiper-button-next',
+                prevEl: '.certificate-modal .swiper-button-prev'
+            },
+            pagination: {
+                el: '.certificate-modal .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+        });
+
+        Array.from(document.querySelectorAll('.licenses__card')).forEach((card, index) => {
+            card.addEventListener('click', () => {
+                certificateSwiper.slideTo(index, 0);
+            })
+        })
+    }
 });

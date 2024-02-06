@@ -93,41 +93,101 @@
                     Наш специалист свяжется с вами и поможет подобрать для вас подходящие варианты
                 </p>
 
-
                 <button data-close type="button" class="modal__button btn btn_primary">
-                        <span class="btn__txt">Вернуться на главную</span>
-                        <svg
-                            width="28"
-                            height="24"
-                            viewBox="0 0 28 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M1 6L7 12L1 18"
-                                stroke="white"
-                                stroke-opacity="0.2"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M11 6L17 12L11 18"
-                                stroke="white"
-                                stroke-opacity="0.5"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M21 6L27 12L21 18"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
+                    <span class="btn__txt">Вернуться на главную</span>
+                    <svg
+                        width="28"
+                        height="24"
+                        viewBox="0 0 28 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M1 6L7 12L1 18"
+                            stroke="white"
+                            stroke-opacity="0.2"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M11 6L17 12L11 18"
+                            stroke="white"
+                            stroke-opacity="0.5"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M21 6L27 12L21 18"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="certificate-modal" aria-hidden="true" class="modal certificate-modal">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <button data-close type="button" class="modal__close">
+                <img src="./assets/images/icons/cross.svg" alt="" class="modal__close-icon" />
+            </button>
+            <div class="modal__body">
+                <div class="swiper certificate-swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <figure class="certificate__image">
+                                <img
+                                    src="./assets/images/sections/certificates/certificate-image.webp"
+                                    alt=""
+                                />
+                            </figure>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure class="certificate__image">
+                                <img
+                                    src="./assets/images/sections/certificates/certificate-image.webp"
+                                    alt=""
+                                />
+                            </figure>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure class="certificate__image">
+                                <img
+                                    src="./assets/images/sections/certificates/certificate-image.webp"
+                                    alt=""
+                                />
+                            </figure>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure class="certificate__image">
+                                <img
+                                    src="./assets/images/sections/certificates/certificate-image.webp"
+                                    alt=""
+                                />
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="certificate__navigation-buttons navigation-buttons _desktop-only">
+                    <button type="button" class="swiper-button-prev">
+                        <img src="./assets/images/icons/arrow-left.svg" alt="" />
                     </button>
+                    <button type="button" class="swiper-button-next">
+                        <img src="./assets/images/icons/arrow-right.svg" alt="" />
+                    </button>
+                </div>
+
+                <div class="certificate__pagination slider-pagination _mobile-only">
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
     </div>
