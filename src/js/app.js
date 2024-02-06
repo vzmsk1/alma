@@ -21,7 +21,7 @@ utils.headerScroll();
 utils.showmore();
 
 // tabs
-// import './utils/tabs.js';
+import './utils/tabs.js';
 
 // accordion
 import './utils/accordion.js';

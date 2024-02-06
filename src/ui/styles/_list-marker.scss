@@ -1,0 +1,11 @@
+.marker {
+    @include sizes(1.6rem, 1.6rem);
+
+    @include small-tablet {
+        @include sizes(3.2rem, 3.2rem);
+    }
+
+    img {
+        height: 100%;
+    }
+}
