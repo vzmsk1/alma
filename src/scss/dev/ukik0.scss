@@ -11,6 +11,7 @@
 @import '../sections/gallery';
 @import '../sections/about-main';
 @import '../sections/questions';
+@import '../sections/conditions';
 
 figure {
     margin: 0;
@@ -79,4 +80,20 @@ figure {
 
 ._showmore-active [data-showmore-button] span:last-child {
     display: flex;
+}
+
+@keyframes fade-bounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

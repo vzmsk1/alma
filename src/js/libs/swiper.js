@@ -105,6 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    resizableSwiper('(max-width: 768px)', '.conditions-tabs-swiper', {
+        modules: [Pagination],
+        spaceBetween: remToPx(1.6),
+        speed: 1200,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true
+    });
 
     if (document.querySelector('.gallery-swiper')) {
         new Swiper('.gallery-swiper', {
@@ -146,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeEffect: {
                 crossFade: true
             },
+            grabCursor: true,
 
             pagination: {
                 el: '.intro__slider-navigation .swiper-pagination',
@@ -194,6 +202,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 3
                 }
             }
+        });
+    }
+
+    if (document.querySelector('.conditions')) {
+        Array.from(document.querySelectorAll('.conditions-gallery-swiper'), (swiper) => {
+            const buttons = swiper.parentElement.querySelector('.conditions__navigation-buttons');
+
+            new Swiper(swiper, {
+                modules: [Navigation, Pagination],
+                spaceBetween: remToPx(2),
+                slidesPerView: 1,
+                speed: 1200,
+                grabCursor: true,
+                navigation: {
+                    nextEl: buttons.querySelector('.swiper-button-next'),
+                    prevEl: buttons.querySelector('.swiper-button-prev')
+                }
+            });
         });
     }
 });
