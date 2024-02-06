@@ -1,0 +1,50 @@
+.partners {
+    // .partners__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .partners__head
+
+    &__head {
+    }
+
+    // .partners__heading
+
+    &__heading {
+    }
+
+    // .partners__body
+
+    &__body {
+    }
+
+    // .partners__slider
+
+    &__slider {
+    }
+
+    // .partners__wrapper
+
+    &__wrapper {
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.4rem;
+            }
+        }
+    }
+
+    // .partners__slide
+
+    &__slide {
+    }
+
+    // .partners__pagination
+
+    &__pagination {
+    }
+}

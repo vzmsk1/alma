@@ -105,6 +105,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    resizableSwiper('(max-width: 768px)', '.partners__slider', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2.5),
+        speed: 800,
+        slidesPerView: 1,
+
+        pagination: {
+            el: '.partners__pagination .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        breakpoints: {
+            768: {
+                enabled: false
+            }
+        }
+    });
     resizableSwiper('(max-width: 768px)', '.conditions-tabs-swiper', {
         modules: [Pagination],
         spaceBetween: remToPx(1.6),

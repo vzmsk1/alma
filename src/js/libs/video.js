@@ -15,22 +15,18 @@ const initVideoJS = () => {
 
             let isPlaying = true;
 
-            vjs.onplaying = function () {
-                isPlaying = true;
-            };
-
-            vjs.onpause = function () {
-                isPlaying = false;
-            };
-
             async function playVid() {
-                if (vjs.paused && !isPlaying) {
+                console.log(vjs.paused(), !isPlaying);
+                if (vjs.paused()) {
+                    console.log('play');
                     return vjs.play();
                 }
             }
 
-            function pauseVid() {
-                if (!vjs.paused && isPlaying) {
+            async function pauseVid() {
+                console.log('call-pa');
+                if (!vjs.paused()) {
+                    console.log('pause');
                     vjs.pause();
                 }
             }
@@ -41,15 +37,12 @@ const initVideoJS = () => {
                 }
             });
 
-            if (parent) {
-                parent.addEventListener('click', function (e) {
-                    if (!parent.closest('.modal')) {
-                        if (!e.target.closest('.vjs-control-bar')) {
-                            vjs.paused ? playVid() : pauseVid();
-                        }
-                    }
-                });
-            }
+            // if (parent) {
+            //     parent.addEventListener('click', function (e) {
+            //         console.log(vjs.paused());
+            //         vjs.paused() ? playVid() : vjs.pause();
+            //     });
+            // }
         });
     }
 };
