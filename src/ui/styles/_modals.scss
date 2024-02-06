@@ -79,7 +79,7 @@ body::after {
         }
         @media (max-width: 48em) {
             width: 9rem;
-            width: 9rem;
+            height: 9rem;
 
             img {
                 width: 5rem;
@@ -106,8 +106,8 @@ body::after {
         transform: translate(100%, -100%);
 
         @media (max-width: 48em) {
-            top: 3rem;
-            right: 4rem;
+            top: -15rem;
+            right: 1rem;
             transform: none;
         }
     }

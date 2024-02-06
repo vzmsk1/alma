@@ -8,20 +8,18 @@
     border-radius: 2.4rem;
     overflow: hidden;
 
-    @media (max-width: 48em) {
-        border-radius: 5rem;
-        &.vjs-controls-enabled .vjs-control-bar {
-            transform: translateY(100%);
-        }
-    }
-
     ._init & {
         .vjs-control-bar {
-            transform: translateY(0);
+            @media (min-width: 48em) {
+                transform: translateY(0);
+            }
         }
         .vjs-poster {
             opacity: 0;
             visibility: hidden;
+        }
+        .vjs-big-play-button {
+            transform: translate(-50%, -50%) scale(0);
         }
     }
 
@@ -34,6 +32,9 @@
     &.vjs-playing {
         .vjs-control-bar .vjs-play-control .vjs-icon-placeholder::after {
             background-image: url(./assets/images/icons/pause.svg);
+            &:not(.modal &) {
+                background-image: url(./assets/images/icons/play.svg);
+            }
         }
     }
 
@@ -47,8 +48,51 @@
         }
     }
 
+    &.vjs-paused {
+        .vjs-control-bar .vjs-play-control {
+            opacity: 1;
+        }
+    }
+
     .vjs-big-play-button {
-        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+
+        .vjs-icon-placeholder {
+            @extend .play-btn;
+            width: 8rem;
+            height: 8rem;
+
+            &::after {
+                content: '';
+                width: 4rem;
+                height: 4rem;
+                background-image: url(./assets/images/icons/play.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .vjs-control-text {
+            display: none;
+        }
+
+        .modal & {
+            display: none;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
     }
 
     .vjs-control-bar {
@@ -62,12 +106,17 @@
         background-color: $white;
 
         &:not(.modal &, ._init &) {
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            @media (min-width: 48em) {
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+            }
         }
 
         @media (max-width: 48em) {
-            padding: 0.8rem;
+            &:not(.modal &) {
+                position: static;
+                height: 0;
+            }
         }
 
         .vjs-play-control {
@@ -88,12 +137,38 @@
             }
 
             @media (max-width: 48em) {
-                margin-right: 2rem;
-                .vjs-icon-placeholder {
-                    flex: 0 0 6rem;
-                    &::after {
-                        width: 6rem;
-                        height: 6rem;
+                &:not(.modal &) {
+                    position: absolute;
+                    width: 100%;
+                    height: 46rem;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+
+                    .vjs-icon-placeholder {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        border-radius: 50%;
+                        backdrop-filter: blur(5rem);
+                        background-color: rgba(255, 255, 255, 0.3);
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 14rem;
+                        height: 14rem;
+                        &::after {
+                            content: '';
+                            width: 7rem;
+                            height: 7rem;
+                            background-image: url(./assets/images/icons/play.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
                     }
                 }
             }
@@ -117,18 +192,6 @@
             .vjs-mouse-display {
                 display: none;
             }
-
-            @media (max-width: 48em) {
-                margin-right: 2rem;
-                column-gap: 3.2rem;
-
-                .vjs-volume-horizontal {
-                    width: 20rem;
-                    height: 1.6rem;
-                    border-radius: 2rem;
-                    display: none;
-                }
-            }
         }
 
         .vjs-fullscreen-control {
@@ -144,16 +207,6 @@
                     background-image: url(./assets/images/icons/fullscreen.svg);
                     background-size: contain;
                     background-repeat: no-repeat;
-                }
-            }
-
-            @media (max-width: 48em) {
-                .vjs-icon-placeholder {
-                    flex: 0 0 6rem;
-                    &::after {
-                        width: 6rem;
-                        height: 6rem;
-                    }
                 }
             }
         }
@@ -177,16 +230,6 @@
                     background-repeat: no-repeat;
                 }
             }
-
-            @media (max-width: 48em) {
-                .vjs-icon-placeholder {
-                    flex: 0 0 6rem;
-                    &::after {
-                        width: 6rem;
-                        height: 6rem;
-                    }
-                }
-            }
         }
 
         .vjs-time-control {
@@ -200,17 +243,6 @@
             &.vjs-duration {
                 margin-right: 3.9rem;
             }
-            @media (max-width: 48em) {
-                .vjs-current-time-display {
-                    line-height: 1;
-                }
-                &.vjs-current-time {
-                    margin-right: 2rem;
-                }
-                &.vjs-duration {
-                    margin-right: 2rem;
-                }
-            }
         }
 
         .vjs-volume-bar,
@@ -221,11 +253,6 @@
             width: 100%;
             height: 0.8rem;
             border-radius: 1rem;
-
-            @media (max-width: 48em) {
-                height: 1.6rem;
-                border-radius: 2rem;
-            }
         }
         .vjs-volume-level {
             background-color: $blue;
@@ -242,6 +269,11 @@
                 height: 0.8rem;
                 border-radius: 1rem;
                 background-color: $gray;
+                @media (max-width: 48em) {
+                    .modal & {
+                        min-width: 15.5rem;
+                    }
+                }
             }
 
             .vjs-play-progress {
@@ -256,20 +288,6 @@
             .vjs-load-progress,
             .vjs-time-tooltip {
                 display: none;
-            }
-
-            @media (max-width: 48em) {
-                margin-right: 2rem;
-
-                .vjs-progress-holder {
-                    min-width: 29.4rem;
-                    height: 1.6rem;
-                    border-radius: 2rem;
-                }
-                .vjs-play-progress {
-                    height: 1.6rem;
-                    border-radius: 2rem;
-                }
             }
         }
 
