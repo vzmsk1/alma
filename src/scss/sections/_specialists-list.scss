@@ -1,0 +1,49 @@
+.specialists-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 2.4rem;
+
+    @media (max-width: 48em) {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        margin-bottom: 6.4rem;
+    }
+}
+.specialists-list-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8rem;
+    width: 100%;
+
+    button {
+        width: 6rem !important;
+        height: 6rem !important;
+
+        img {
+            width: 60%;
+        }
+    }
+    // .specialists-list-pagination__wrapper
+    &__wrapper {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+
+        li {
+            width: 8.8rem;
+            height: 8.8rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            &.active {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}
