@@ -362,3 +362,76 @@ body::after {
         }
     }
 }
+
+.reviews-modal {
+    @include small-tablet {
+        background: #eff1f3;
+    }
+
+    .modal {
+        &__wrapper {
+            @include small-tablet{
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
+        &__content {
+            max-width: 68.9rem;
+            padding: 4rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            @media (min-width: 48em) {
+                &::after {
+                    @include pseudo {
+                        clip-path: url(#modal-reviews-background);
+                        background: $white;
+                        inset: 0;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            .reviews__card {
+                background: transparent;
+                padding: 0;
+
+                &-heading {
+                    padding-right: 4.9rem;
+                    margin-bottom: 6.9rem;
+
+                    @include small-tablet {
+                        padding: 0;
+                    }
+                }
+
+                &-description {
+                    -webkit-line-clamp: initial;
+                }
+
+                &-company {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &__close {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            @include small-tablet {
+                position: static;
+                display: flex;
+                margin-left: auto;
+                margin-bottom: 6.4rem;
+                width: 8.8rem;
+                height: 8.8rem;
+            }
+        }
+    }
+}
