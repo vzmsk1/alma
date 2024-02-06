@@ -1,6 +1,5 @@
 import videojs from 'video.js';
 import { modules } from '../modules.js';
-
 // --------------------------------------------------------------------------
 
 const initVideoJS = () => {

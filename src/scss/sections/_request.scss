@@ -1,0 +1,270 @@
+.request {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.4rem;
+        align-items: flex-start;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+    }
+
+    &__info {
+        padding: 1.4rem 3.2rem;
+        background: $blue;
+        clip-path: url(#request-background);
+        max-width: 103.2rem;
+        width: 100%;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            max-width: 100%;
+            clip-path: url(#request-background-mobile);
+        }
+
+        &-content {
+            display: flex;
+            gap: 3.2rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 4.8rem;
+            }
+        }
+
+        &-image {
+            border-radius: 2.4rem;
+            @include sizes(47.2rem, 100%);
+
+            @include small-tablet {
+                border-radius: 4.8rem;
+                @include sizes(100%, 38.8rem);
+            }
+
+            img {
+                height: 100%;
+                border-radius: inherit;
+                object-fit: cover;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            max-width: 46.4rem;
+            width: 100%;
+
+            @include small-tablet {
+                max-width: 100%;
+                gap: 4.8rem;
+            }
+        }
+
+        &-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @include small-tablet {
+                gap: 1rem;
+            }
+        }
+    }
+
+    &__title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        font-size: 3.4rem;
+        line-height: 120%;
+        color: $white;
+        max-width: 37.1rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            font-size: 4.4rem;
+        }
+    }
+
+    &__icon {
+        @include sizes(6rem, 6rem);
+        border-radius: 50%;
+        background: $white;
+        padding: 1.8rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include small-tablet {
+            padding: 2.8rem;
+            @include sizes(8.8rem, 8.8rem);
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        background: $white;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: $blue;
+        }
+
+        svg path {
+            stroke: $blue;
+        }
+    }
+
+    &__subtitle {
+        margin-left: 0.6rem;
+        display: block;
+        margin-bottom: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $white;
+
+        @include small-tablet {
+            font-size: 2.4rem;
+            margin-bottom: 4.8rem;
+            max-width: 21.6rem;
+        }
+    }
+
+    &__link {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.4rem;
+        margin-right: 15.5rem;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 120%;
+        color: $white;
+        transition: 0.3s color ease;
+
+        @include small-tablet {
+            margin-top: 4.8rem;
+            font-size: 3rem;
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    &__features {
+        max-width: 50.4rem;
+        width: 100%;
+        border-radius: 2.4rem;
+        padding: 3.2rem;
+        background: $white;
+        margin-top: 2.5rem;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+            margin-top: 0;
+            max-width: 100%;
+        }
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 3.4rem;
+            line-height: 120%;
+            display: block;
+            margin-bottom: 1.6rem;
+
+            @include small-tablet {
+                font-size: 4.4rem;
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        &-description {
+            font-size: 1.8rem;
+            line-height: 140%;
+            margin-bottom: 4rem;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3.2rem;
+
+            @include small-tablet {
+                gap: 1rem;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            &:nth-child(2) {
+                order: -1;
+            }
+
+            &-title {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 120%;
+                color: $red;
+                display: block;
+                margin-bottom: 0.8rem;
+
+                @include small-tablet {
+                    font-size: 3.6rem;
+                    margin-bottom: 0.4rem;
+                }
+            }
+
+            &-subtitle {
+                font-size: 1.8rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        &-icon {
+            @include sizes(6rem, 6rem);
+            border-radius: 50%;
+            padding: 1.8rem;
+            background: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.6rem;
+
+            @include small-tablet {
+                padding: 2rem 2.4rem;
+                @include sizes(8.8rem, 8.8rem);
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+}
