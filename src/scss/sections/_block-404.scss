@@ -1,0 +1,54 @@
+.block-404 {
+    // .block-404__inner
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+        }
+    }
+    // .block-404__left
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            text-align: center;
+            align-items: center;
+            gap: 4.8rem;
+            width: 100%;
+        }
+    }
+    // .block-404__subtitle
+    &__subtitle {
+        @media (max-width: 48em) {
+            max-width: 50rem;
+        }
+    }
+    // .block-404__link
+    &__link {
+        @media (max-width: 48em) {
+            width: 100%;
+
+            a {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+    // .block-404__text
+    &__text {
+        font-weight: 800;
+        font-size: 40rem;
+        line-height: 120%;
+
+        background-image: url('../../assets/images/404/text-texture.png'); /* Путь к изображению текстуры */
+        background-repeat: repeat; /* Повторение текстуры */
+        background-clip: text; /* Применение текстуры к тексту */
+        background-blend-mode: multiply;
+        color: rgba($color: #63b3df, $alpha: 0.4); /* Скрытие цвета текста */
+    }
+}
