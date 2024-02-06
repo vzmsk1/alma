@@ -12,6 +12,14 @@ forms.formSubmit();
 
 // ---------------------------------- utils ---------------------------------
 
+import * as utils from './utils/utils.js';
+
+// header on scroll
+utils.headerScroll();
+
+// show-more
+utils.showmore();
+
 // tabs
 import './utils/tabs.js';
 
@@ -23,11 +31,6 @@ import './utils/select.js';
 
 // modals
 import './utils/modals.js';
-
-// show-more
-import { showmore } from './utils/utils.js';
-
-showmore();
 
 // ---------------------------------- libs ----------------------------------
 
