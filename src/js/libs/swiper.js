@@ -125,6 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    resizableSwiper('(max-width: 768px)', '.conditions-tabs-swiper', {
+        modules: [Pagination],
+        spaceBetween: remToPx(1.6),
+        speed: 1200,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true
+    });
 
     if (document.querySelector('.gallery-swiper')) {
         new Swiper('.gallery-swiper', {
@@ -166,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeEffect: {
                 crossFade: true
             },
+            grabCursor: true,
 
             pagination: {
                 el: '.intro__slider-navigation .swiper-pagination',
@@ -215,6 +223,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    }
+
+    if (document.querySelector('.conditions')) {
+        Array.from(document.querySelectorAll('.conditions-gallery-swiper'), (swiper) => {
+            const buttons = swiper.parentElement.querySelector('.conditions__navigation-buttons');
+
+            new Swiper(swiper, {
+                modules: [Navigation, Pagination],
+                spaceBetween: remToPx(2),
+                slidesPerView: 1,
+                speed: 1200,
+                grabCursor: true,
+                navigation: {
+                    nextEl: buttons.querySelector('.swiper-button-next'),
+                    prevEl: buttons.querySelector('.swiper-button-prev')
+                }
+            });
+        });
+    }
+
+    if (document.querySelector('.certificate-modal')) {
+        const certificateSwiper = new Swiper('.certificate-swiper', {
+            modules: [Navigation, Pagination],
+            spaceBetween: remToPx(2),
+            slidesPerView: 1,
+            speed: 1200,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.certificate-modal .swiper-button-next',
+                prevEl: '.certificate-modal .swiper-button-prev'
+            },
+            pagination: {
+                el: '.certificate-modal .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+        });
+
+        Array.from(document.querySelectorAll('.licenses__card')).forEach((card, index) => {
+            card.addEventListener('click', () => {
+                certificateSwiper.slideTo(index, 0);
+            })
+        })
     }
 
     if (document.querySelector('.sale-detail__slider')) {
