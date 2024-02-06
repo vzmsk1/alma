@@ -216,4 +216,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    if (document.querySelector('.sale-detail__slider')) {
+        new Swiper('.sale-detail__slider', {
+            modules: [Navigation, Pagination],
+            spaceBetween: remToPx(2.5),
+            speed: 800,
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.sale-detail__slider-pagination .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.sale-detail__slider-buttons .swiper-button-next',
+                prevEl: '.sale-detail__slider-buttons .swiper-button-prev'
+            }
+        });
+    }
 });
