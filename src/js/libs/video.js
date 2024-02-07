@@ -1,5 +1,5 @@
 import videojs from 'video.js';
-import { modules } from '../modules.js';
+
 // --------------------------------------------------------------------------
 
 const initVideoJS = () => {
@@ -36,13 +36,6 @@ const initVideoJS = () => {
                     parent.classList.add('_init');
                 }
             });
-
-            // if (parent) {
-            //     parent.addEventListener('click', function (e) {
-            //         console.log(vjs.paused());
-            //         vjs.paused() ? playVid() : vjs.pause();
-            //     });
-            // }
         });
     }
 };

@@ -197,31 +197,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.areas__slider')) {
-        new Swiper('.areas__slider', {
-            modules: [Navigation, Pagination],
-            spaceBetween: remToPx(2.5),
-            speed: 800,
-            slidesPerView: 1,
+    if (document.querySelectorAll('.slider-section__slider').length) {
+        document.querySelectorAll('.slider-section__slider').forEach((section) => {
+            new Swiper(section, {
+                modules: [Navigation, Pagination],
+                spaceBetween: remToPx(2.5),
+                speed: 800,
+                slidesPerView: 1,
 
-            pagination: {
-                el: '.areas__pagination .swiper-pagination',
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '"></span>';
+                pagination: {
+                    el: section.querySelector('.swiper-pagination'),
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"></span>';
+                    },
+                    clickable: true
                 },
-                clickable: true
-            },
 
-            navigation: {
-                nextEl: '.areas .swiper-button-next',
-                prevEl: '.areas .swiper-button-prev'
-            },
+                navigation: {
+                    nextEl: section.querySelector('.swiper-button-next'),
+                    prevEl: section.querySelector('.swiper-button-prev')
+                },
 
-            breakpoints: {
-                768: {
-                    slidesPerView: 3
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3
+                    }
                 }
-            }
+            });
         });
     }
 
@@ -260,14 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     return '<span class="' + className + '"></span>';
                 },
                 clickable: true
-            },
+            }
         });
 
         Array.from(document.querySelectorAll('.licenses__card')).forEach((card, index) => {
             card.addEventListener('click', () => {
                 certificateSwiper.slideTo(index, 0);
-            })
-        })
+            });
+        });
     }
 
     if (document.querySelector('.sale-detail__slider')) {
