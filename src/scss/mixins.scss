@@ -17,12 +17,3 @@
 
     @content;
 }
-
-@mixin mask($path) {
-    -webkit-mask-image: url('../assets/images/' + $path);
-    mask-image: url('../assets/images/' + $path);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-}

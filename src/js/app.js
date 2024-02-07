@@ -24,6 +24,11 @@ import './utils/select.js';
 // modals
 import './utils/modals.js';
 
+// show-more
+import { showmore } from './utils/utils.js';
+
+showmore();
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
@@ -31,6 +36,9 @@ import './libs/dd.js';
 
 // swiper
 import './libs/swiper.js';
+
+// video js
+import './libs/video.js';
 
 // --------------------------------------------------------------------------
 

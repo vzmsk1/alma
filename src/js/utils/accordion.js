@@ -27,7 +27,7 @@ export const accordion = () => {
       let titles = accordionGroup.querySelectorAll('[data-accordion-item]');
       if (titles.length) {
         titles = Array.from(titles).filter(
-          item => item.closest('[data-accordion]') === accordionGroup
+            item => item.closest('[data-accordion]') === accordionGroup
         );
         titles.forEach(title => {
           if (hideAccordionBody) {
@@ -49,13 +49,13 @@ export const accordion = () => {
         const group = title.closest('[data-accordion]');
         const isOneActiveItem = group.hasAttribute('data-accordion-one-active');
         const accordionSpeed = group.dataset.accordionSpeed
-          ? parseInt(group.dataset.accordionSpeed)
-          : 500;
+            ? parseInt(group.dataset.accordionSpeed)
+            : 500;
 
         if (!group.querySelectorAll('._slide').length) {
           if (
-            isOneActiveItem &&
-            !title.classList.contains('_accordion-active')
+              isOneActiveItem &&
+              !title.classList.contains('_accordion-active')
           ) {
             hideAccordionBody(group);
           }
@@ -67,11 +67,11 @@ export const accordion = () => {
     };
     const hideAccordionBody = accordionGroup => {
       const activeTitle = accordionGroup.querySelector(
-        '[data-accordion-item]._accordion-active'
+          '[data-accordion-item]._accordion-active'
       );
       const accordionSpeed = accordionGroup.dataset.accordionSpeed
-        ? parseInt(accordionGroup.dataset.accordionSpeed)
-        : 500;
+          ? parseInt(accordionGroup.dataset.accordionSpeed)
+          : 500;
       if (activeTitle && !accordionGroup.querySelectorAll('._slide').length) {
         activeTitle.classList.remove('_accordion-active');
         _slideUp(activeTitle.nextElementSibling, accordionSpeed);
@@ -85,8 +85,8 @@ export const accordion = () => {
           accordionClose.forEach(accordionItemClose => {
             const group = accordionItemClose.closest('[data-accordion]');
             const speed = spollersBlock.dataset.accordionSpeed
-              ? parseInt(group.dataset.accordionSpeed)
-              : 500;
+                ? parseInt(group.dataset.accordionSpeed)
+                : 500;
             accordionItemClose.classList.remove('_accordion-active');
             _slideUp(accordionItemClose.nextElementSibling, speed);
           });
@@ -95,9 +95,9 @@ export const accordion = () => {
     }
 
     const regItems = Array.from(accordionItems).filter(function (
-      item,
-      index,
-      self
+        item,
+        index,
+        self
     ) {
       return !item.dataset.accordion.split(',')[0];
     });

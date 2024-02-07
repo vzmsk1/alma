@@ -1,0 +1,336 @@
+[data-video].video-js,
+.video-js video {
+    width: 100%;
+    height: 100%;
+}
+.video-js {
+    position: relative;
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    ._init & {
+        .vjs-control-bar {
+            @media (min-width: 48em) {
+                transform: translateY(0);
+            }
+        }
+        .vjs-poster {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .vjs-big-play-button {
+            transform: translate(-50%, -50%) scale(0);
+        }
+    }
+
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &.vjs-playing {
+        .vjs-control-bar .vjs-play-control .vjs-icon-placeholder::after {
+            background-image: url(./assets/images/icons/pause.svg);
+            &:not(.modal &) {
+                background-image: url(./assets/images/icons/play.svg);
+            }
+        }
+    }
+
+    &.vjs-fullscreen {
+        border-radius: 0;
+        .vjs-control-bar .vjs-fullscreen-control .vjs-icon-placeholder::after {
+            background-image: url(./assets/images/icons/exit-fullscreen.svg);
+        }
+        .vjs-poster {
+            display: none;
+        }
+    }
+
+    &.vjs-paused {
+        .vjs-control-bar .vjs-play-control {
+            opacity: 1;
+        }
+    }
+
+    .vjs-big-play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s ease;
+
+        .vjs-icon-placeholder {
+            @extend .play-btn;
+            width: 8rem;
+            height: 8rem;
+
+            &::after {
+                content: '';
+                width: 4rem;
+                height: 4rem;
+                background-image: url(./assets/images/icons/play.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .vjs-control-text {
+            display: none;
+        }
+
+        .modal & {
+            display: none;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    .vjs-control-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.8rem 1.6rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: $white;
+
+        &:not(.modal &, ._init &) {
+            @media (min-width: 48em) {
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        @media (max-width: 48em) {
+            &:not(.modal &) {
+                position: static;
+                height: 0;
+            }
+        }
+
+        .vjs-play-control {
+            margin-right: 3.9rem;
+            order: -1;
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/play.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            @media (max-width: 48em) {
+                &:not(.modal &) {
+                    position: absolute;
+                    width: 100%;
+                    height: 46rem;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+
+                    .vjs-icon-placeholder {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        border-radius: 50%;
+                        backdrop-filter: blur(5rem);
+                        background-color: rgba(255, 255, 255, 0.3);
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 14rem;
+                        height: 14rem;
+                        &::after {
+                            content: '';
+                            width: 7rem;
+                            height: 7rem;
+                            background-image: url(./assets/images/icons/play.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .vjs-volume-panel {
+            margin-right: 2.4rem;
+            display: flex;
+            align-items: center;
+            column-gap: 2.4rem;
+            order: 1;
+
+            .vjs-volume-horizontal {
+                position: relative;
+                width: 10rem;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $gray;
+            }
+
+            .vjs-mouse-display {
+                display: none;
+            }
+        }
+
+        .vjs-fullscreen-control {
+            order: 1;
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/fullscreen.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        .vjs-mute-control {
+            &.vjs-vol-0 {
+                .vjs-icon-placeholder::after {
+                    background-image: url(./assets/images/icons/unmute.svg);
+                }
+            }
+
+            .vjs-icon-placeholder {
+                display: inline-flex;
+                flex: 0 0 3.8rem;
+                &::after {
+                    content: '';
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    background-image: url(./assets/images/icons/mute.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        .vjs-time-control {
+            .vjs-current-time-display {
+                line-height: 140%;
+            }
+            &.vjs-current-time {
+                margin-right: 2.4rem;
+                order: -1;
+            }
+            &.vjs-duration {
+                margin-right: 3.9rem;
+            }
+        }
+
+        .vjs-volume-bar,
+        .vjs-volume-level {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.8rem;
+            border-radius: 1rem;
+        }
+        .vjs-volume-level {
+            background-color: $blue;
+        }
+
+        .vjs-progress-control {
+            margin-right: 2.4rem;
+            order: -1;
+            flex: 1 1 auto;
+
+            .vjs-progress-holder {
+                position: relative;
+                min-width: 105.5rem;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $gray;
+                @media (max-width: 48em) {
+                    .modal & {
+                        min-width: 15.5rem;
+                    }
+                }
+            }
+
+            .vjs-play-progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0.8rem;
+                border-radius: 1rem;
+                background-color: $blue;
+            }
+
+            .vjs-load-progress,
+            .vjs-time-tooltip {
+                display: none;
+            }
+        }
+
+        .vjs-skip-backward-undefined,
+        .vjs-skip-forward-undefined,
+        .vjs-time-divider,
+        .vjs-live-control,
+        .vjs-seek-to-live-control,
+        .vjs-remaining-time,
+        .vjs-custom-control-spacer,
+        .vjs-playback-rate,
+        .vjs-chapters-button,
+        .vjs-descriptions-button,
+        .vjs-subs-caps-button,
+        .vjs-picture-in-picture-control,
+        .vjs-control-text {
+            display: none;
+        }
+    }
+
+    .vjs-text-track-display,
+    .vjs-loading-spinner,
+    .vjs-modal-dialog {
+        display: none;
+    }
+
+    .vjs-poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal & {
+            display: none;
+        }
+    }
+}
