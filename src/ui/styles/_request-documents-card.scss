@@ -1,0 +1,97 @@
+.documents__request {
+    max-width: 50.5rem;
+    width: 100%;
+    padding: 1.8rem 3.2rem 1.2rem;
+    background: $blue;
+    clip-path: url(#documents-request-background);
+
+    @include small-tablet {
+        max-width: 100%;
+        padding: 4.8rem;
+        clip-path: url(#documents-request-background-mobile);
+    }
+
+    &-subtitle {
+        display: block;
+        margin-bottom: 3.6rem;
+        font-size: 1.6rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $white;
+
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+            font-size: 2.4rem;
+            max-width: 21.6rem;
+        }
+    }
+
+    &-specialist {
+        border-radius: 2.4rem;
+        margin-bottom: 3.5rem;
+        height: 29.1rem;
+
+        @include small-tablet {
+            border-radius: 4.8rem;
+            height: 38.8rem;
+            margin-bottom: 4.8rem;
+        }
+
+        img {
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        margin-bottom: 3.2rem;
+        color: $white;
+
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $white;
+        margin-bottom: 1.8rem;
+
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+        }
+
+        span {
+            color: $blue;
+        }
+
+        svg path {
+            stroke: $blue;
+        }
+    }
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 120%;
+        color: $white;
+        transition: 0.3s color ease;
+
+        @include small-tablet {
+            justify-content: flex-end;
+            font-size: 3rem;
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            color: $textGray;
+        }
+    }
+}

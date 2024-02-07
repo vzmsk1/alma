@@ -1,0 +1,268 @@
+.conditions {
+    &__title {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            text-align: start;
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__tabs {
+        width: 100%;
+
+        .conditions-tabs-swiper {
+            .swiper-slide {
+                width: auto;
+            }
+        }
+        @media (min-width: 48em) {
+            .conditions-tabs-swiper .swiper-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 2.4rem;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        &-tab {
+            padding: 1.6rem 3.2rem;
+            border-radius: 10rem;
+            background: $white;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 120%;
+            transition:
+                0.3s color ease,
+                0.3s background ease;
+
+            &._active,
+            &:hover {
+                background: $blue;
+                color: $white;
+            }
+
+            @include small-tablet {
+                padding: 2.4rem 4.8rem;
+                border-radius: 20rem;
+                font-size: 3rem;
+            }
+        }
+
+        &-block {
+            animation: fade-bounce 0.8s ease-in-out forwards;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 0;
+                background: $white;
+                border-radius: 4.8rem;
+            }
+
+            &[hidden] {
+                display: none;
+            }
+        }
+
+        &-info,
+        &-gallery {
+            padding: 3.2rem;
+            background: $white;
+            border-radius: 3.2rem;
+            max-width: calc(50% - 1.2rem);
+            width: 100%;
+            min-height: 46rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                padding: 4.4rem 4.8rem;
+                border-radius: 4.8rem;
+                background: transparent;
+                min-height: initial;
+            }
+        }
+
+        &-info {
+            @include small-tablet {
+                padding-top: 0;
+                min-height: 69rem;
+            }
+
+            &:hover {
+                .conditions__tabs-info-title {
+                    color: $blue;
+                }
+
+                .arrow-icon {
+                    border-color: $blue;
+                    background: transparent;
+
+                    svg path {
+                        stroke: $blue;
+                    }
+                }
+            }
+        }
+
+        &-gallery {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+
+            @include small-tablet {
+                position: static;
+                width: 100%;
+                height: 44rem;
+
+                .swiper {
+                    height: 100%;
+                }
+            }
+
+            &-wrapper {
+                position: relative;
+                height: 100%;
+            }
+
+            &-item {
+                @include sizes(100%, 100%);
+                clip-path: url(#conditions-gallery);
+
+                @include small-tablet {
+                    clip-path: url(#conditions-gallery-mobile);
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                font-size: 3.4rem;
+                line-height: 120%;
+                display: block;
+                margin-bottom: 1.6rem;
+                transition: 0.3s color ease;
+
+                @include small-tablet {
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 500;
+                    font-size: 4.4rem;
+                    margin-bottom: 3.2rem;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                @include small-tablet {
+                    gap: 1.6rem;
+                }
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                font-size: 1.8rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    gap: 1.6rem;
+                    align-items: flex-start;
+                    font-size: 3rem;
+                }
+            }
+
+            &-bottom {
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+
+                @include small-tablet {
+                    justify-content: space-between;
+                }
+            }
+
+            &-price {
+                display: flex;
+                align-items: flex-end;
+                gap: 0.8rem;
+                padding: 0.8rem 1.6rem;
+                border-radius: 10rem;
+                background: $gray;
+                font-size: 1.8rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    gap: 1.6rem;
+                    border-radius: 6.4rem;
+                    font-size: 3rem;
+                    line-height: 140%;
+                }
+
+                sup {
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 700;
+                    font-size: 2.4rem;
+                    line-height: 120%;
+                    color: $blue;
+
+                    @include small-tablet {
+                        font-size: 3.6rem;
+                    }
+                }
+            }
+
+            &-link {
+                display: block;
+                margin-left: 3.2rem;
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 120%;
+                color: $red;
+
+                @include small-tablet {
+                    font-size: 3rem;
+                }
+            }
+
+            .arrow-icon {
+                margin-left: 1.6rem;
+            }
+        }
+
+        &-content {
+            margin-top: 4rem;
+            position: relative;
+
+            @include small-tablet {
+                margin-top: 6.4rem;
+            }
+        }
+    }
+
+    &__navigation-buttons {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include small-tablet{
+            display: none;
+        }
+    }
+}

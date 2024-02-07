@@ -1,4 +1,4 @@
-.area-card {
+.slide-card {
     padding: 3.2rem;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
         border-radius: 5rem;
     }
 
-    // .area-card__image-wrap
+    // .slide-card__image-wrap
 
     &__image-wrap {
         margin-bottom: 2rem;
@@ -38,7 +38,7 @@
         }
     }
 
-    // .area-card__image
+    // .slide-card__image
 
     &__image {
         height: 100%;
@@ -46,7 +46,7 @@
         object-fit: cover;
     }
 
-    // .area-card__heading
+    // .slide-card__heading
 
     &__heading {
         margin-bottom: 2rem;
@@ -55,7 +55,7 @@
         }
     }
 
-    // .area-card__btn
+    // .slide-card__btn
 
     &__btn {
         justify-content: space-between;
