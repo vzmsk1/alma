@@ -20,7 +20,7 @@
             &-text {
                 padding-bottom: 0;
 
-                @include small-tablet{
+                @include small-tablet {
                     padding-bottom: 4.8rem;
                 }
             }
@@ -55,14 +55,14 @@
         .intro__row-block-text {
             height: 28.6rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 height: auto;
                 min-height: 31rem;
             }
         }
 
         .intro__title {
-            @include small-tablet{
+            @include small-tablet {
                 margin-bottom: 6.4rem;
             }
         }
