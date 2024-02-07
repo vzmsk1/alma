@@ -1,0 +1,172 @@
+.directions {
+    // .directions__container
+
+    &__container {
+        display: flex;
+        column-gap: 2.8rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+        }
+    }
+
+    // .directions__image-wrap
+
+    &__image-wrap {
+        margin-bottom: 6.4rem;
+        height: 94rem;
+        clip-path: url(#cl-directionsBg);
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+            flex: 0 0 50rem;
+            width: 50rem;
+            min-height: 68.6rem;
+        }
+    }
+
+    // .directions__image
+
+    &__image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // .directions__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .directions__heading
+
+    &__heading {
+        margin-bottom: 3.2rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    // .directions__groups
+
+    &__groups {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 6.4rem;
+        }
+    }
+
+    // .directions__group
+
+    &__group {
+    }
+
+    // .directions__navigation-buttons
+
+    &__navigation-buttons {
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+}
+
+// --------------------------------------------------------------------------
+
+.group-directions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+
+    @media (max-width: 48em) {
+        row-gap: 4.8rem;
+    }
+
+    // .group-directions__head
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .group-directions__heading
+
+    &__heading {
+    }
+
+    // .group-directions__body
+
+    &__body {
+        min-width: 0;
+
+        @media (min-width: 48em) {
+            max-width: 103.2rem;
+        }
+    }
+
+    // .group-directions__slider
+
+    &__slider {
+        min-width: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    // .group-directions__wrapper
+
+    &__wrapper {
+    }
+
+    // .group-directions__badge
+
+    &__badge {
+        padding: 0.8rem 1.6rem 0.5rem 1.6rem;
+        border-radius: 2.4rem;
+        background-color: $gray;
+
+        &.swiper-slide {
+            width: auto;
+        }
+
+        @media (max-width: 48em) {
+            padding: 1.6rem 3.2rem;
+            border-radius: 4.8rem;
+        }
+    }
+
+    // .group-directions__badge-text
+
+    &__badge-text {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.8rem;
+        line-height: 1;
+        color: $blue;
+
+        &::before {
+            content: '';
+            flex: 0 0 1.6rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-image: url(./assets/images/icons/patch-blue.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 48em) {
+            column-gap: 1.6rem;
+            font-size: 2.8rem;
+
+            &::before {
+                flex: 0 0 3.2rem;
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+    }
+}

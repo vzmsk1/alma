@@ -1,0 +1,112 @@
+.discount-card {
+    user-select: none;
+
+    // .discount-card__inner
+
+    &__inner {
+        padding: 3.2rem;
+        padding-bottom: 2.1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2.4rem;
+        background-image: url(./assets/images/bg/discount-bckdrop.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 48em) {
+            padding: 4.8rem;
+            padding-bottom: 4.8rem;
+            border-radius: 4.8rem;
+        }
+    }
+
+    // .discount-card__body
+
+    &__body {
+        margin-bottom: 3.1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1.6rem;
+        min-height: 37.6rem;
+        background-color: $white;
+        clip-path: url(#cl-discountsBg);
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+            row-gap: 3.2rem;
+            min-height: 53.8rem;
+        }
+    }
+
+    // .discount-card__heading
+
+    &__heading {
+        text-align: center;
+    }
+
+    // .discount-card__text
+
+    &__text {
+        max-width: 38rem;
+        text-align: center;
+        color: $textGray;
+
+        @media (max-width: 48em) {
+            max-width: none;
+        }
+    }
+
+    // .discount-card__footer
+
+    &__footer {
+        padding: 1rem;
+        padding-left: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10rem;
+        background-color: $white;
+
+        @media (max-width: 48em) {
+            padding: 2rem;
+            padding-left: 3rem;
+            border-radius: 20rem;
+        }
+    }
+
+    // .discount-card__footer-text
+
+    &__footer-text {
+        display: flex;
+        align-items: center;
+        column-gap: 1.6rem;
+
+        &::before {
+            content: '';
+            flex: 0 0 2.4rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-image: url(./assets/images/icons/percent.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 48em) {
+            column-gap: 3.2rem;
+
+            &::before {
+                flex: 0 0 4.8rem;
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
+    }
+
+    // .discount-card__arr
+
+    &__arr {
+        background-color: $blue;
+    }
+}

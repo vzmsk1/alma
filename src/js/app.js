@@ -43,6 +43,9 @@ import './libs/swiper.js';
 // video js
 import './libs/video.js';
 
+// inputmask
+import './libs/inputmask.js';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';
