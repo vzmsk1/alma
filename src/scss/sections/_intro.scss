@@ -1,4 +1,82 @@
 .intro {
+    .knowledge-page & {
+        .intro__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 2.4rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                margin-top: 6.4rem;
+            }
+        }
+
+        .intro__row {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &-text {
+                padding-bottom: 0;
+
+                @include small-tablet{
+                    padding-bottom: 4.8rem;
+                }
+            }
+        }
+
+        .intro__image-wrapper {
+            clip-path: url(#knowledge-intro-background);
+            right: 39.6rem;
+
+            @include small-tablet {
+                clip-path: none;
+                height: 50rem;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        .intro__row-info-text {
+            max-width: 30.2rem;
+            width: 100%;
+            margin-top: 3.2rem;
+            margin-left: 3.2rem;
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 500;
+                font-size: 2.4rem;
+                line-height: 120%;
+            }
+        }
+
+        .intro__row-block-info,
+        .intro__row-block-text {
+            height: 28.6rem;
+
+            @include small-tablet{
+                height: auto;
+                min-height: 31rem;
+            }
+        }
+
+        .intro__title {
+            @include small-tablet{
+                margin-bottom: 6.4rem;
+            }
+        }
+
+        .intro__description {
+            @include small-tablet {
+                display: block;
+                font-size: 3rem;
+                line-height: 140%;
+                max-width: 100%;
+            }
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -18,14 +96,14 @@
                 z-index: -1;
                 clip-path: url(#intro-poster);
 
-                @include small-tablet{
+                @include small-tablet {
                     clip-path: none;
                 }
+            }
 
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                }
+            img {
+                object-fit: cover;
+                height: 100%;
             }
 
             @include small-tablet {
