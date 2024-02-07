@@ -132,6 +132,47 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 'auto',
         slideToClickedSlide: true
     });
+    resizableSwiper('(max-width: 768px)', '.discounts__slider', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2.5),
+        speed: 800,
+        slidesPerView: 1,
+
+        pagination: {
+            el: '.odiscounts__pagination .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        breakpoints: {
+            768: {
+                enabled: false
+            }
+        }
+    });
+    resizableSwiper('(max-width: 768px)', '.actions__slider', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2.5),
+        speed: 800,
+        slidesPerView: 1,
+        autoHeight: true,
+
+        pagination: {
+            el: '.actions__pagination .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        breakpoints: {
+            768: {
+                enabled: false
+            }
+        }
+    });
 
     if (document.querySelector('.gallery-swiper')) {
         new Swiper('.gallery-swiper', {
@@ -222,6 +263,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     768: {
                         slidesPerView: 3
                     }
+                }
+            });
+        });
+    }
+
+    if (document.querySelectorAll('.group-directions__slider').length) {
+        document.querySelectorAll('.group-directions__slider').forEach((section) => {
+            new Swiper(section, {
+                modules: [Navigation],
+                spaceBetween: remToPx(1.6),
+                speed: 800,
+                slidesPerView: 'auto',
+
+                navigation: {
+                    nextEl: section.closest('.group-directions').querySelector('.swiper-button-next'),
+                    prevEl: section.closest('.group-directions').querySelector('.swiper-button-prev')
                 }
             });
         });
