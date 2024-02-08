@@ -350,4 +350,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    if (document.querySelector('.review-license')) {
+        new Swiper('.review-license', {
+            modules: [Navigation, Pagination],
+            spaceBetween: remToPx(2.5),
+            speed: 800,
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.review-license__pagination .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.review-license__buttons .swiper-button-next',
+                prevEl: '.review-license__buttons .swiper-button-prev'
+            }
+        });
+    }
 });

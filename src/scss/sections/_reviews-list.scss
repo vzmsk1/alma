@@ -1,0 +1,116 @@
+.reviews-list {
+    // .reviews-list__inner
+    &__inner {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2.3rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+        }
+    }
+    // .reviews-list__main
+    &__main {
+        width: 103.2rem;
+    }
+    // .reviews-list__wrapper
+    &__wrapper {
+    }
+    // .reviews-list__content
+    &__content {
+    }
+    // .reviews-list__aside
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+.review-license {
+    &.swiper {
+        width: 50.4rem;
+        height: 57.6rem;
+        background-color: $white;
+
+        overflow: hidden;
+        border-radius: 2.4rem;
+    }
+    // .review-license__wrapper
+    &__wrapper.swiper-wrapper {
+        width: 100%;
+        height: 46.6rem;
+        padding-bottom: 3.2rem;
+    }
+    // .review-license__slide
+    &__slide.swiper-slide {
+        width: 100%;
+    }
+    // .review-license__card
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        cursor: pointer;
+        padding: 3.2rem;
+
+        &:hover {
+            .review-license__card-image img {
+                transform: scale(1.1);
+                transition: transform 0.2s linear;
+            }
+            .review-license__card-title {
+                color: #6981d7;
+            }
+        }
+    }
+    // .review-license__card-image
+    &__card-image {
+        mask-image: url('../../assets/images/sections/contacts/review-license-mask-d.svg');
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+
+        img {
+            transition: transform 0.2s linear;
+        }
+    }
+    // .review-license__card-title
+    &__card-title {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 120%;
+        display: block;
+        max-width: 36.5rem;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: 0.3s color ease;
+    }
+    // .review-license__card-button
+    &__card-button {
+        position: absolute;
+        position: absolute;
+        top: 3.2rem;
+        right: 3.2rem;
+        max-width: 6rem;
+        width: 100%;
+        height: 6rem;
+        border-radius: 50%;
+        background: #6981d7;
+        padding: 1.8rem;
+    }
+    // .review-license__buttons
+    &__buttons {
+        justify-content: center;
+
+        button {
+            width: 4.6rem !important;
+            height: 4.6rem !important;
+            padding: 1.3rem;
+        }
+    }
+}
