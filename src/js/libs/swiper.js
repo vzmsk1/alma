@@ -132,6 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 'auto',
         slideToClickedSlide: true
     });
+    resizableSwiper('(max-width: 768px)', '.steps-swiper', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2),
+        speed: 1200,
+        slidesPerView: 1,
+        pagination: {
+            el: '.steps .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+    });
 
     if (document.querySelector('.gallery-swiper')) {
         new Swiper('.gallery-swiper', {

@@ -1,0 +1,107 @@
+.steps {
+    .swiper-slide {
+        height: unset;
+        width: auto;
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @include small-tablet{
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__list {
+        @media (min-width: 48em) {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.4rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.4rem;
+        padding: 3.2rem;
+        border-radius: 2.4rem;
+        background: $white;
+        height: 100%;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 4.8rem;
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+            align-items: flex-start;
+        }
+
+        &-step {
+            @include sizes(5rem, 5rem);
+            border-radius: 50%;
+            background: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $white;
+
+            @include small-tablet {
+                @include sizes(10rem, 10rem);
+                font-size: 4rem;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            max-width: 34.4rem;
+            width: 100%;
+
+            @include small-tablet {
+                max-width: 100%;
+                gap: 3.2rem;
+            }
+        }
+
+        &-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 120%;
+
+            @include small-tablet {
+                font-size: 4.8rem;
+            }
+        }
+
+        &-description {
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $textGray;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+            }
+        }
+
+        &-image {
+            @include sizes(26rem, 19.8rem);
+            border-radius: 3.9rem;
+
+            @include small-tablet {
+                @include sizes(100%, 40rem);
+            }
+
+            img {
+                height: 100%;
+                border-radius: inherit;
+                object-fit: cover;
+            }
+        }
+    }
+}
