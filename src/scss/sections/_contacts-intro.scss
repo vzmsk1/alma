@@ -1,0 +1,284 @@
+.contacts-intro {
+    // .contacts-intro__inner
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    // .contacts-intro__left
+    &__left {
+        width: 50.4rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    // .contacts-intro__title
+    &__title {
+    }
+    // .contacts-intro__info
+    &__info {
+    }
+    // .contacts-intro__footer
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    // .contacts-intro__social
+    &__social {
+    }
+    // .contacts-intro__description
+    &__description {
+        margin-bottom: 1.2rem;
+
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 130%;
+        color: $black;
+    }
+    // .contacts-intro__btn
+    &__btn {
+    }
+    // .contacts-intro__right
+    &__right {
+        width: 103.2rem;
+        position: relative;
+    }
+    // .contacts-intro__map
+    &__map {
+        width: 100%;
+        height: 65.3rem;
+
+        mask-image: url('../../assets/images/sections/contacts/contacts-map-mask-d.svg');
+        mask-size: 100% 100%;
+        mask-repeat: repeat;
+    }
+    // .contacts-intro__map-text
+    &__map-text {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-align: right;
+        color: $red;
+    }
+}
+.contacts-info {
+    background: #63b3df url('../../assets/images/sections/contacts/intro-info-image.png') center / cover
+        no-repeat;
+    mask-image: url('../../assets/images/sections/contacts/intro-mask-d.svg');
+    mask-size: 100% 100%;
+    mask-repeat: repeat;
+
+    padding: 4rem 3.2rem;
+    // .contacts-info__title
+    &__title {
+        font-weight: 500;
+        font-size: 3.4rem;
+        line-height: 120%;
+        color: $white;
+
+        margin-bottom: 1.6rem;
+    }
+    // .contacts-info__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+    // .contacts-info__block
+    &__block {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    // .contacts-info__icon
+    &__icon {
+        min-width: 5.6rem;
+        max-width: 5.6rem;
+        height: 5.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10rem;
+        backdrop-filter: blur(5rem);
+        background: rgba(255, 255, 255, 0.3);
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+    // .contacts-info__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $white;
+        }
+
+        strong {
+            display: block;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $white;
+        }
+    }
+}
+.social {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    li a {
+        display: block;
+        border-radius: 10rem;
+        padding: 1.6rem;
+        width: 5.6rem;
+        height: 5.6rem;
+
+        backdrop-filter: blur(5rem);
+        background: $lightBlue;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+.map-marker {
+    width: 6.2rem;
+    height: 7.6rem;
+    cursor: pointer;
+    background: url('../../assets/images/sections/contacts/marker.svg') center / cover no-repeat;
+    &.active {
+        background: url('../../assets/images/sections/contacts/marker-active.svg') center / cover no-repeat;
+    }
+}
+
+@media (max-width: 48em) {
+    .contacts-intro {
+        // .contacts-intro__inner
+        &__inner {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+        // .contacts-intro__left
+        &__left {
+            width: 100%;
+            gap: 4.8rem;
+        }
+        // .contacts-intro__footer
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        // .contacts-intro__description
+        &__description {
+            margin-bottom: 4rem;
+            font-size: 3.6rem;
+        }
+        // .contacts-intro__btn
+        &__btn {
+            width: 100%;
+            button {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        // .contacts-intro__right
+        &__right {
+            width: 100%;
+        }
+        // .contacts-intro__map
+        &__map {
+            width: 100%;
+            height: 43.6rem;
+            mask-image: url('../../assets/images/sections/contacts/contacts-map-mask-m.svg');
+        }
+    }
+    .contacts-info {
+        mask-image: url('../../assets/images/sections/contacts/intro-mask-m.svg');
+        padding: 4.8rem;
+        // .contacts-info__title
+        &__title {
+            font-size: 6rem;
+            margin-bottom: 4%;
+        }
+        // .contacts-info__wrapper
+        &__wrapper {
+            gap: 3.2rem;
+        }
+        // .contacts-info__block
+        &__block {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.4rem;
+        }
+        // .contacts-info__icon
+        &__icon {
+            min-width: 8.8rem;
+            max-width: 8.8rem;
+            height: 8.8rem;
+
+            border-radius: 50%;
+            svg {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        // .contacts-info__content
+        &__content {
+            gap: 0.8rem;
+            span {
+                font-size: 2.4rem;
+                line-height: 120%;
+            }
+
+            strong {
+                font-size: 3rem;
+            }
+        }
+    }
+    .social {
+        gap: 2.4rem;
+
+        li a {
+            display: block;
+            border-radius: 50%;
+            padding: 2rem;
+            width: 8.8rem;
+            height: 8.8rem;
+
+            svg {
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
+    }
+    .map-marker {
+        width: 8rem;
+        height: 9.8rem;
+        cursor: pointer;
+    }
+}
+
+.ymaps3x0--map-copyrights {
+    display: none !important;
+}
