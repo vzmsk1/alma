@@ -1,4 +1,10 @@
 .sales-list {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .sales-list__inner
     &__inner {
         display: flex;

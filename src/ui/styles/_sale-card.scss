@@ -7,17 +7,18 @@
     height: 100%;
     position: relative;
 
-    &:hover {
-        .sale-card__title {
-            color: $blue;
-        }
+    .btn_ghost {
+        padding: 0;
 
-        .arrow-icon {
-            border-color: $blue;
-            background: transparent;
-
-            svg path {
-                stroke: $blue;
+        @media (any-hover: hover) {
+            &:hover {
+                .arr {
+                    border: 1px solid $blue;
+                    background-color: transparent;
+                    svg path {
+                        stroke: $blue;
+                    }
+                }
             }
         }
     }
@@ -101,6 +102,7 @@
         align-items: flex-end;
         font-weight: 700;
         font-size: 2.4rem;
+        font-family: Nunito;
         color: $blue;
         width: fit-content;
         gap: 1rem;
@@ -165,11 +167,11 @@
     &__bottom {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 1.6rem;
         margin-top: auto;
 
         @include small-tablet {
-            justify-content: space-between;
             gap: 3.2rem;
         }
 

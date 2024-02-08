@@ -4,15 +4,11 @@
             <h2 class="about__title h h_h1 _mobile-only">О нашей клинике</h2>
 
             <div class="about__top">
-                <a href="#" class="about__video">
-                    <div class="about__video-poster">
-                        <img src="./assets/images/sections/about/video-poster.webp" alt="" />
-                    </div>
-
-                    <figure class="about__video-icon">
-                        <img src="./assets/images/icons/play.svg" alt="" />
-                    </figure>
-                </a>
+                <div data-video-wrap class="about__video-wrap">
+                    <video data-video="./assets/images/components/video-preview.webp" class="video-js">
+                        <source src="./assets/video/video.mp4" type="video/mp4" />
+                    </video>
+                </div>
 
                 <div class="about__top-text">
                     <h2 class="about__title h h_h1 _desktop-only">О нашей клинике</h2>
@@ -29,7 +25,7 @@
                         других специалистов.
                     </p>
 
-                    <button type="button" class="about__top-button btn btn_primary">
+                    <a href="#" class="about__top-button btn btn_primary">
                         <span class="btn__txt">О клинике</span>
                         <svg
                             width="28"
@@ -62,7 +58,7 @@
                                 stroke-linejoin="round"
                             />
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -83,7 +79,7 @@
                             специальностям.
                         </p>
 
-                        <button type="button" class="about__bottom-info-button btn btn_primary">
+                        <a href="#" class="about__bottom-info-button btn btn_primary">
                             <span class="btn__txt">Услуги</span>
                             <svg
                                 width="28"
@@ -116,7 +112,7 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </button>
+                        </a>
                     </div>
 
                     <figure class="about__bottom-info-doctor _desktop-only">
