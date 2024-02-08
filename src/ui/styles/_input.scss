@@ -10,6 +10,17 @@ textarea:focus,
 input:focus {
     outline: none;
 }
+textarea {
+    resize: none;
+}
+
+textarea.input__field {
+    height: 21.3rem;
+
+    @media (max-width: 48em) {
+        height: 40rem;
+    }
+}
 
 .input {
     position: relative;
@@ -39,7 +50,9 @@ input:focus {
         line-height: 1;
         border: 1px solid transparent;
         border-radius: 1.6rem;
-        transition: color 0.3s ease, border 0.3s ease;
+        transition:
+            color 0.3s ease,
+            border 0.3s ease;
         &::placeholder {
             color: $textGray;
             transition: color 0.3s ease;

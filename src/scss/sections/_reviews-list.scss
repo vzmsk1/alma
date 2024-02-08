@@ -1,4 +1,10 @@
 .reviews-list {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .reviews-list__inner
     &__inner {
         display: flex;
@@ -13,19 +19,50 @@
     }
     // .reviews-list__main
     &__main {
-        width: 103.2rem;
+        .h {
+            margin-bottom: 6.4rem;
+        }
+
+        @media (min-width: 48em) {
+            width: 103.2rem;
+            .h {
+                margin-bottom: 4rem;
+            }
+        }
     }
     // .reviews-list__wrapper
     &__wrapper {
     }
     // .reviews-list__content
     &__content {
+        margin-bottom: 5rem;
+        display: grid;
+        grid-auto-rows: 1fr;
+        row-gap: 2.4rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 20rem;
+        }
     }
     // .reviews-list__aside
     &__aside {
+        margin-top: 11.5rem;
         display: flex;
         flex-direction: column;
         gap: 4rem;
+
+        @media (max-width: 48em) {
+            margin-top: 0;
+            row-gap: 20rem;
+        }
+
+        // @media (min-width: 48em) {
+        //     position: sticky;
+        //     position: -webkit-sticky;
+        //     top: 15rem;
+        //     right: 0;
+        //     margin-bottom: 10rem;
+        // }
     }
 }
 .review-license {
