@@ -105,7 +105,9 @@
         font-size: 2.4rem;
         color: $blue;
         width: fit-content;
+        font-family: Nunito;
         gap: 1rem;
+        line-height: 1;
 
         @include small-tablet {
             position: absolute;

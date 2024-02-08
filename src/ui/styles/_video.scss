@@ -7,6 +7,7 @@
     position: relative;
     border-radius: 2.4rem;
     overflow: hidden;
+    cursor: pointer;
 
     ._init & {
         .vjs-control-bar {
@@ -34,6 +35,11 @@
             background-image: url(./assets/images/icons/pause.svg);
             &:not(.modal &) {
                 background-image: url(./assets/images/icons/play.svg);
+            }
+        }
+        @media (max-width: 48em) {
+            .vjs-play-control {
+                opacity: 0;
             }
         }
     }
@@ -105,6 +111,10 @@
         width: 100%;
         background-color: $white;
 
+        .modal & {
+            height: 5.4rem;
+        }
+
         &:not(.modal &, ._init &) {
             @media (min-width: 48em) {
                 transform: translateY(100%);
@@ -143,7 +153,6 @@
                     height: 46rem;
                     top: 0;
                     left: 0;
-                    opacity: 0;
                     transition: opacity 0.3s ease;
 
                     .vjs-icon-placeholder {
@@ -232,6 +241,14 @@
             }
         }
 
+        .vjs-volume-control {
+            @media (max-width: 48em) {
+                .modal & {
+                    display: none;
+                }
+            }
+        }
+
         .vjs-time-control {
             .vjs-current-time-display {
                 line-height: 140%;
@@ -265,10 +282,14 @@
 
             .vjs-progress-holder {
                 position: relative;
-                min-width: 105.5rem;
                 height: 0.8rem;
                 border-radius: 1rem;
                 background-color: $gray;
+
+                .video-section & {
+                    min-width: 105.5rem;
+                }
+
                 @media (max-width: 48em) {
                     .modal & {
                         min-width: 15.5rem;

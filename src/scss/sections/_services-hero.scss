@@ -1,4 +1,10 @@
 .services-hero {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .services-hero__container
 
     &__container {

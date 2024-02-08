@@ -1,4 +1,6 @@
 .intro {
+    padding-top: 2rem;
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -18,7 +20,7 @@
                 z-index: -1;
                 clip-path: url(#intro-poster);
 
-                @include small-tablet{
+                @include small-tablet {
                     clip-path: none;
                 }
 

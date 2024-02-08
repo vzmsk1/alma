@@ -1,4 +1,10 @@
 .sale-detail {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .sale-detail__inner
     &__inner {
         display: flex;
@@ -91,6 +97,7 @@
         bottom: 1.2rem;
         z-index: 1;
 
+        font-family: Nunito;
         font-size: 1.8rem;
         line-height: 140%;
 

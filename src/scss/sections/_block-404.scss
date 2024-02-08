@@ -1,4 +1,10 @@
 .block-404 {
+    padding-top: 5rem;
+
+    @media (max-width: 48em) {
+        padding-top: 12rem;
+    }
+
     // .block-404__inner
     &__inner {
         display: flex;

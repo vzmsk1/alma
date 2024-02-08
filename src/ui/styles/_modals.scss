@@ -79,12 +79,12 @@ body::after {
             object-fit: contain;
         }
         @media (max-width: 48em) {
-            width: 9rem;
-            height: 9rem;
+            width: 8rem;
+            height: 8rem;
 
             img {
-                width: 5rem;
-                height: 5rem;
+                width: 4rem;
+                height: 4rem;
             }
         }
     }
@@ -370,7 +370,7 @@ body::after {
 
     .modal {
         &__wrapper {
-            @include small-tablet{
+            @include small-tablet {
                 justify-content: flex-start;
                 align-items: flex-start;
             }

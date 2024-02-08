@@ -22,6 +22,8 @@
         }
 
         &-text {
+            display: flex;
+            flex-direction: column;
             flex: 0 1 63.7rem;
 
             @include small-tablet {
@@ -42,15 +44,22 @@
         }
 
         &-button {
-            display: block;
-            margin-left: auto;
+            align-self: flex-end;
 
             @include small-tablet {
-                display: flex;
                 margin-left: initial;
                 width: 100%;
                 justify-content: space-between;
             }
+        }
+    }
+
+    &__video-wrap {
+        height: 46rem;
+
+        @media (min-width: 48em) {
+            flex: 0 0 90rem;
+            height: 60rem;
         }
     }
 
