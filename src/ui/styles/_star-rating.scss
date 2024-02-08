@@ -1,0 +1,61 @@
+.star-rating {
+    margin: 0 -0.2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+
+    ._is-active svg,
+    ._is-active ~ .star-rating__star svg {
+        fill: #63b3df;
+        path {
+            stroke: #63b3df;
+        }
+    }
+    .star-rating__star:hover svg,
+    .star-rating__star:hover ~ .star-rating__star svg {
+        fill: #63b3df;
+        path {
+            stroke: #63b3df;
+        }
+    }
+
+    @media (max-width: 48em) {
+        margin: 0 -0.4rem;
+    }
+
+    // .star-rating__star
+
+    &__star {
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+
+        svg {
+            padding: 0 0.4rem;
+            width: 4rem;
+            height: 4rem;
+            transition: fill 0.3s ease;
+
+            path {
+                transition: stroke 0.3s ease;
+
+                ._form-error & {
+                    stroke: $red;
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            flex: 0 0 6rem;
+            width: 6rem;
+            height: 6rem;
+
+            svg {
+                padding: 0 0.8rem;
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+}

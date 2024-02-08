@@ -51,6 +51,7 @@
     "inputmask": "^5.0.8",
     "jquery": "^3.7.1",
     "jsdom": "^22.1.0",
+    "star-rating.js": "^4.3.0",
     "swiper": "^11.0.5",
     "video.js": "^8.10.0"
   }
