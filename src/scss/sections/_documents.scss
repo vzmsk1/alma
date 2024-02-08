@@ -1,4 +1,10 @@
 .documents {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;

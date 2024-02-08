@@ -145,6 +145,47 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true
         },
     });
+    resizableSwiper('(max-width: 768px)', '.discounts__slider', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2.5),
+        speed: 800,
+        slidesPerView: 1,
+
+        pagination: {
+            el: '.odiscounts__pagination .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        breakpoints: {
+            768: {
+                enabled: false
+            }
+        }
+    });
+    resizableSwiper('(max-width: 768px)', '.actions__slider', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2.5),
+        speed: 800,
+        slidesPerView: 1,
+        autoHeight: true,
+
+        pagination: {
+            el: '.actions__pagination .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+
+        breakpoints: {
+            768: {
+                enabled: false
+            }
+        }
+    });
 
     if (document.querySelector('.gallery-swiper')) {
         new Swiper('.gallery-swiper', {
@@ -210,31 +251,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.areas__slider')) {
-        new Swiper('.areas__slider', {
-            modules: [Navigation, Pagination],
-            spaceBetween: remToPx(2.5),
-            speed: 800,
-            slidesPerView: 1,
+    if (document.querySelectorAll('.slider-section__slider').length) {
+        document.querySelectorAll('.slider-section__slider').forEach((section) => {
+            new Swiper(section, {
+                modules: [Navigation, Pagination],
+                spaceBetween: remToPx(2.5),
+                speed: 800,
+                slidesPerView: 1,
 
-            pagination: {
-                el: '.areas__pagination .swiper-pagination',
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '"></span>';
+                pagination: {
+                    el: section.querySelector('.swiper-pagination'),
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"></span>';
+                    },
+                    clickable: true
                 },
-                clickable: true
-            },
 
-            navigation: {
-                nextEl: '.areas .swiper-button-next',
-                prevEl: '.areas .swiper-button-prev'
-            },
+                navigation: {
+                    nextEl: section.querySelector('.swiper-button-next'),
+                    prevEl: section.querySelector('.swiper-button-prev')
+                },
 
-            breakpoints: {
-                768: {
-                    slidesPerView: 3
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3
+                    }
                 }
-            }
+            });
+        });
+    }
+
+    if (document.querySelectorAll('.group-directions__slider').length) {
+        document.querySelectorAll('.group-directions__slider').forEach((section) => {
+            new Swiper(section, {
+                modules: [Navigation],
+                spaceBetween: remToPx(1.6),
+                speed: 800,
+                slidesPerView: 'auto',
+
+                navigation: {
+                    nextEl: section.closest('.group-directions').querySelector('.swiper-button-next'),
+                    prevEl: section.closest('.group-directions').querySelector('.swiper-button-prev')
+                }
+            });
         });
     }
 
@@ -273,14 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     return '<span class="' + className + '"></span>';
                 },
                 clickable: true
-            },
+            }
         });
 
         Array.from(document.querySelectorAll('.licenses__card')).forEach((card, index) => {
             card.addEventListener('click', () => {
                 certificateSwiper.slideTo(index, 0);
-            })
-        })
+            });
+        });
     }
 
     if (document.querySelector('.sale-detail__slider')) {
@@ -301,6 +360,28 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: '.sale-detail__slider-buttons .swiper-button-next',
                 prevEl: '.sale-detail__slider-buttons .swiper-button-prev'
+            }
+        });
+    }
+
+    if (document.querySelector('.review-license')) {
+        new Swiper('.review-license', {
+            modules: [Navigation, Pagination],
+            spaceBetween: remToPx(2.5),
+            speed: 800,
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.review-license__pagination .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+
+            navigation: {
+                nextEl: '.review-license__buttons .swiper-button-next',
+                prevEl: '.review-license__buttons .swiper-button-prev'
             }
         });
     }

@@ -21,8 +21,10 @@
     }
 
     @media (any-hover: hover) {
-        &:hover {
-            background-color: rgba(53, 106, 172, 1);
+        &:not(&._no-hover) {
+            &:hover {
+                background-color: rgba(53, 106, 172, 1);
+            }
         }
     }
 

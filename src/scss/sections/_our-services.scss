@@ -1,6 +1,11 @@
 .services {
     .swiper-slide {
-        height: unset;
+        .services-page & {
+            height: auto;
+        }
+        &:not(.services-page &) {
+            height: unset;
+        }
     }
 
     &__item {

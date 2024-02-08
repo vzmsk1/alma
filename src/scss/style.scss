@@ -46,6 +46,10 @@ html
 main {
     position: relative;
     padding-top: 14rem;
+
+    @media (max-width: 48em) {
+        padding-top: 16.4rem;
+    }
 }
 
 .wrapper {

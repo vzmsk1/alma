@@ -1,0 +1,78 @@
+.discounts {
+    // .discounts__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .discounts__head
+
+    &__head {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: stretch;
+        }
+    }
+
+    // .discounts__heading
+
+    &__heading {
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    // .discounts__btn
+
+    &__btn {
+        @media (max-width: 48em) {
+            &.btn {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    // .discounts__body
+
+    &__body {
+    }
+
+    // .discounts__slider
+
+    &__slider {
+    }
+
+    // .discounts__wrapper
+
+    &__wrapper {
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.4rem;
+            }
+        }
+    }
+
+    // .discounts__slide
+
+    &__slide {
+    }
+
+    // .discounts__pagination
+
+    &__pagination {
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+}

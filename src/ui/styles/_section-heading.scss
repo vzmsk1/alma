@@ -11,6 +11,10 @@
             line-height: 1;
             color: $white;
             background-color: $lightBlue;
+
+            @media (max-width: 48em) {
+                padding: 1rem 2rem;
+            }
         }
     }
 

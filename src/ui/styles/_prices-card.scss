@@ -7,17 +7,35 @@
     height: 100%;
     position: relative;
 
-    &:hover {
-        .prices__card-title {
-            color: $blue;
+    .btn_ghost {
+        padding: 0;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .arr {
+                    border: 1px solid $blue;
+                    background-color: transparent;
+                    svg path {
+                        stroke: $blue;
+                    }
+                }
+            }
         }
+    }
 
-        .arrow-icon {
-            border-color: $blue;
-            background: transparent;
+    &:hover {
+        &:not(&._no-hover) {
+            .prices__card-title {
+                color: $blue;
+            }
 
-            svg path {
-                stroke: $blue;
+            .arrow-icon {
+                border-color: $blue;
+                background: transparent;
+
+                svg path {
+                    stroke: $blue;
+                }
             }
         }
     }
@@ -87,7 +105,9 @@
         font-size: 2.4rem;
         color: $blue;
         width: fit-content;
+        font-family: Nunito;
         gap: 1rem;
+        line-height: 1;
 
         @include small-tablet {
             position: absolute;
