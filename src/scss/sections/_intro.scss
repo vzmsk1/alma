@@ -77,6 +77,175 @@
         }
     }
 
+    .psychiatry-services-page & {
+        .intro__button {
+            @include small-tablet{
+                display: none;
+            }
+        }
+
+        .intro__image-wrapper {
+            right: 0;
+            left: auto;
+            @include sizes(76.8rem, 100%);
+            clip-path: none;
+            border-radius: 2.4rem;
+
+            @include small-tablet {
+                border-radius: 4.8rem;
+                @include sizes(100%, 59.8rem);
+                margin-bottom: 2.4rem;
+            }
+
+            img {
+                border-radius: inherit;
+            }
+        }
+
+        .intro__row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 76rem;
+            width: 100%;
+
+            @include small-tablet {
+                max-width: 100%;
+            }
+        }
+
+        .intro__content {
+            flex-direction: row;
+            align-items: flex-end;
+            margin-top: 2.4rem;
+            justify-content: space-between;
+            gap: 0;
+
+            @include small-tablet {
+                margin-top: 6.4rem;
+                flex-direction: column;
+            }
+        }
+
+        .intro__row {
+            gap: 20rem;
+
+            @include small-tablet {
+                gap: 0;
+            }
+
+            &-info {
+                margin-left: auto;
+                margin-bottom: 2rem;
+                margin-right: 2.5rem;
+
+                @include small-tablet {
+                    display: none;
+                }
+            }
+
+            &-text {
+                &-button {
+                    @include small-tablet{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+
+                &-bottom {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+
+                    @include small-tablet {
+                        flex-direction: column;
+                        gap: 4.8rem;
+                    }
+
+                    .intro__description {
+                        max-width: 29.5rem;
+                        width: 100%;
+
+                        @include small-tablet {
+                            max-width: 100%;
+                            display: block;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                &-block {
+                    display: flex;
+                    gap: 2.5rem;
+
+                    @include small-tablet{
+                        flex-direction: column;
+                        gap: 4.8rem;
+                    }
+
+                    &-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        max-width: 37.1rem;
+                        width: 100%;
+
+                        @include small-tablet {
+                            max-width: 100%;
+                            gap: 3.2rem;
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 140%;
+
+                            @include small-tablet {
+                                font-size: 3rem;
+                                line-height: 140%;
+                            }
+                        }
+                    }
+                }
+
+                &-block-protection {
+                    padding: 0.8rem 1.6rem;
+                    border-radius: 2.4rem;
+                    background: $lightBlue;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.6rem;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                    color: $white;
+                    width: fit-content;
+
+                    @include small-tablet {
+                        gap: 3.2rem;
+                        padding: 1.6rem 3.6rem;
+                        border-radius: 4.8rem;
+                        font-size: 3.2rem;
+                    }
+
+                    figure {
+                        @include sizes(2.4rem, 2.4rem);
+
+                        @include small-tablet {
+                            @include sizes(4.8rem, 4.8rem);
+                        }
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
