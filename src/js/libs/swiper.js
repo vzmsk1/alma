@@ -132,6 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 'auto',
         slideToClickedSlide: true
     });
+    resizableSwiper('(max-width: 768px)', '.steps-swiper', {
+        modules: [Pagination],
+        spaceBetween: remToPx(2),
+        speed: 1200,
+        slidesPerView: 1,
+        pagination: {
+            el: '.steps .swiper-pagination',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            },
+            clickable: true
+        },
+    });
     resizableSwiper('(max-width: 768px)', '.discounts__slider', {
         modules: [Pagination],
         spaceBetween: remToPx(2.5),
@@ -371,5 +384,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.review-license__buttons .swiper-button-prev'
             }
         });
+    }
+
+    if (document.querySelector('.article-licenses-swiper')) {
+        new Swiper('.article-licenses-swiper', {
+            modules: [Pagination, Navigation],
+            spaceBetween: remToPx(2),
+            speed: 1200,
+            slidesPerView: 1,
+            pagination: {
+                el: '.article__licenses .swiper-pagination',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.article__licenses .navigation-buttons .swiper-button-next',
+                prevEl: '.article__licenses .navigation-buttons .swiper-button-prev'
+            },
+        })
     }
 });

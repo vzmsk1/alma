@@ -36,7 +36,7 @@
             }
 
             &._accordion-active {
-                .questions__item-button {
+                button {
                     background: $blue;
                     transform: rotate(-180deg);
                 }

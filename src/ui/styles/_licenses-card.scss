@@ -5,6 +5,22 @@
     z-index: 1;
     cursor: pointer;
 
+    &.--v2 {
+        @media (min-width: 48em) {
+            padding: 0;
+            background: transparent;
+
+            &-button {
+                bottom: auto;
+                top: 0;
+            }
+
+            &-image {
+                clip-path: url(#licenses-background-v2);
+            }
+        }
+    }
+
     @include small-tablet {
         padding: 4.8rem;
         border-radius: 4.8rem;

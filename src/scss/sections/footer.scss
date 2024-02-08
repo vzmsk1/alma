@@ -1,7 +1,7 @@
 .footer {
     margin-bottom: 3.2rem;
 
-    @media (max-width: 48em) {
+    @include small-tablet{
         margin-bottom: 0;
     }
 

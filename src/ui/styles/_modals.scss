@@ -178,6 +178,7 @@ body::after {
             font-size: 1.8rem;
             line-height: 140%;
             margin-bottom: 2.6rem;
+            color: $textGray;
 
             @include small-tablet {
                 font-size: 3rem;
@@ -202,6 +203,7 @@ body::after {
             align-items: flex-start;
             text-align: start;
             gap: 1.2rem;
+            cursor: pointer;
 
             @include small-tablet {
                 gap: 1.6rem;
@@ -432,6 +434,36 @@ body::after {
                 margin-bottom: 6.4rem;
                 width: 8.8rem;
                 height: 8.8rem;
+            }
+        }
+    }
+}
+
+.success-modal {
+    .modal {
+        &__content {
+            padding: 7.3rem 4rem 5.3rem;
+
+            @include small-tablet {
+                padding: 8.4rem 4.8rem 8.2rem;
+            }
+
+            &::after {
+                clip-path: url(#success-modal-background);
+
+                @include small-tablet {
+                    clip-path: url(#success-modal-background-mobile);
+                }
+            }
+        }
+
+        &__description {
+            max-width: 38.9rem;
+            text-align: center;
+            margin: 0 auto;
+
+            @include small-tablet {
+                max-width: 100%;
             }
         }
     }
