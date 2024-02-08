@@ -46,6 +46,9 @@ import './libs/video.js';
 // inputmask
 import './libs/inputmask.js';
 
+// YandexMap
+import './libs/yandex-map.js';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';

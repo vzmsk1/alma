@@ -138,11 +138,9 @@ module.exports = {
         static: path.resolve(__dirname, 'dist'),
         watchFiles: path.join(__dirname, 'src')
     },
-
     entry: {
         main: path.resolve(__dirname, 'src/js', 'app.js')
     },
-    // entry: getEntries(),
     output: {
         //куда выводит билд
         path: path.resolve(__dirname, 'dist'),
@@ -152,7 +150,6 @@ module.exports = {
         // [name] - стандартный по вебпаку (main), [contenthash] - добавляептся хэш к названию
         filename: '[name].js'
     },
-
     plugins: [
         new CleanWebpackPlugin(),
 
@@ -223,11 +220,9 @@ module.exports = {
                   ]
               })
     ],
-
     optimization: {
         minimize: false
     },
-
     module: {
         rules: [
             {
