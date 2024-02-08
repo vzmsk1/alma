@@ -32,6 +32,9 @@ import './utils/select.js';
 // modals
 import './utils/modals.js';
 
+// star rating
+import './utils/star-rating.js';
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
