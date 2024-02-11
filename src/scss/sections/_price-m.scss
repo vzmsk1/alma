@@ -1,3 +1,214 @@
 .price-m {
+    .breadcrumbs {
+        margin-bottom: 2.4rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 116.4rem;
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        width: 56.8rem;
+        top: 4rem;
+        left: 4rem;
+        z-index: 2;
+    }
+
+    &__price {
+        width: 34.5rem;
+        height: 18.8rem;
+        border-radius: 2.4rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #63b3df;
+        padding: 3.7rem 3.2rem;
+        
+        &-title {
+            color: $white;
+            font-size: 6rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+
+        }
+
+        &-text {
+            font-size: 2.4rem;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+            color: $white;
+        }
+        &-poster {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            height: 18.8rem;
+            width: 100%;
+            border-radius: 2.4rem;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 2.4rem;
+                object-fit: cover;
+            }
+        }
     
+      
+    }
+
+    &__image-desk {
+        width: 100%;
+        height: 66rem;
+        position: relative;
+        // &::before {
+        //     position: absolute;
+        //     clip-path: url(#price-mBg);
+        // }
+    }
+
+    &__image-mob {
+        display: none;
+    }
+
+    .intro__row-block-text {
+        min-height: 31.8rem;
+    }
+
+    &__doctors {
+        margin-top: 2.4rem;
+        position: relative;
+        padding: 2.4rem;
+        width: 37.2rem;
+        height: 31.8rem;
+     
+        display: flex;
+        flex-direction: column;
+        &::before {
+            position: absolute;
+            content:'';
+            width: 100%;
+            height: 100%;
+            clip-Path: url(#bgDoctorsPrice);
+            background-color: $white;
+            top: 0;
+            z-index: -1;
+            left: 0;
+        }
+        &-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        &-text {
+            color: $textGray;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+
+        &-image {
+            margin-top: auto;
+            width: 14.7rem;
+            height: 6rem;
+            margin-bottom: 1.3rem;
+        }
+
+        &-word {
+            height: 1.6rem;
+            width: 14.7rem;
+        }
+
+
+
+        .btn {
+            width: 6rem;
+            height: 6rem;
+            padding: 0;
+            align-items:center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+       
+    }
 }
+
+
+@media (max-width: 48em) {
+
+    .price-m {
+
+        &__wrapper {
+            flex-direction: column;
+        }
+      
+
+        &__left {
+            width: 100%;
+        }
+
+        &__title {
+            position: initial;
+            margin-bottom: 6.4rem;
+        }
+        &__doctors {
+            display: none;
+        }
+
+        &__image {
+            width: 100%;
+            height: 50rem;
+            margin-bottom: 2.4rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4.8rem;
+            }
+        }
+
+        &__image-desk {
+            display: none;
+        }
+
+        &__image-mob {
+            display: block;
+        }
+
+        &__price {
+            position: relative;
+            padding: 3.6rem 3.2rem;
+            width: 100%;
+            height: 31.2rem;
+            border-radius: 4.8rem;
+            margin-bottom: 2.4rem;
+            display: flex;
+            flex-direction: column;
+
+            &-text {
+                margin-top: auto;
+                font-size: 3.6rem;
+            }
+        }
+
+        &__price-poster {
+            height: 100%;
+            border-radius: 4.8rem;
+
+            img {
+                border-radius: 4.8rem;
+            }
+        }
+    } 
+
+ }
