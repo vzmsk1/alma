@@ -1,4 +1,10 @@
 .about-hero {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .about-hero__container
 
     &__container {
@@ -138,6 +144,22 @@
         position: absolute;
         right: 1.5rem;
         bottom: 2.8rem;
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    &:first-child {
+                        animation: arrAnim1 0.8s linear 0s infinite;
+                    }
+                    &:nth-child(2) {
+                        animation: arrAnim2 0.8s linear 0s infinite;
+                    }
+                    &:last-child {
+                        animation: arrAnim3 0.8s linear 0s infinite;
+                    }
+                }
+            }
+        }
 
         @media (max-width: 48em) {
             display: none;

@@ -1,4 +1,10 @@
 .specialists-intro {
+    padding-top: 1rem;
+
+    @media (max-width: 48em) {
+        padding-top: 2rem;
+    }
+
     // .specialists-intro__inner
     &__inner {
         position: relative;

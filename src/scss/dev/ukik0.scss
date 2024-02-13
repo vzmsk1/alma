@@ -13,6 +13,11 @@
 @import '../sections/questions';
 @import '../sections/conditions';
 @import '../sections/documents';
+@import '../sections/knowledge';
+@import '../sections/helpful';
+@import '../sections/steps';
+@import '../sections/rate';
+@import '../sections/article';
 
 figure {
     margin: 0;
@@ -50,7 +55,7 @@ figure {
 
 .showmore-button {
     @include small-tablet {
-        margin-top: 2.4rem;
+        margin-top: 4rem;
 
         span {
             font-weight: 500;

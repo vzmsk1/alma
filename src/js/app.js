@@ -32,6 +32,9 @@ import './utils/select.js';
 // modals
 import './utils/modals.js';
 
+// star rating
+import './utils/star-rating.js';
+
 // ---------------------------------- libs ----------------------------------
 
 // dynamic dom
@@ -45,6 +48,9 @@ import './libs/video.js';
 
 // inputmask
 import './libs/inputmask.js';
+
+// YandexMap
+import './libs/yandex-map.js';
 
 // --------------------------------------------------------------------------
 

@@ -1,0 +1,93 @@
+.contacts-information {
+    // .contacts-information__inner
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.4rem;
+    }
+    // .contacts-information__left
+    &__left {
+        width: 50.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    // .contacts-information__btn
+    &__btn {
+        .btn.btn_ghost {
+            padding: 0;
+        }
+    }
+    // .contacts-information__list-main
+    &__list {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+        }
+
+        strong {
+            display: block;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $black;
+            max-width: 37.2rem;
+            width: 100%;
+        }
+        span {
+            display: block;
+            flex: 1 1 auto;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $black;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .contacts-information {
+        // .contacts-information__inner
+        &__inner {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+        // .contacts-information__left
+        &__left {
+            width: 100%;
+            gap: 4.8rem;
+        }
+        // .contacts-information__list-main
+        &__list {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            width: 100%;
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 1.6rem;
+                width: 100%;
+            }
+
+            strong {
+                font-size: 3rem;
+                max-width: 100%;
+            }
+            span {
+                font-size: 3rem;
+            }
+        }
+    }
+}

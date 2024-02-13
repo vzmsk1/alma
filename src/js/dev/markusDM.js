@@ -1,5 +1,17 @@
 import $ from 'jquery';
+import Swiper from 'swiper';
+import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
+export const rem = function (rem) {
+  if ($(window).width() > 768) {
+    return 0.005208335 * $(window).width() * rem;
+  } else {
+    return (100 / 390) * (0.1 * $(window).width()) * rem;
+  }
+};
 
 $(document).ready(function(){ 
 
@@ -45,6 +57,54 @@ $(document).ready(function(){
   });
  
 
+});
+
+const otherArticlesSwiper = new Swiper('.other-articles__swiper', {
+  modules: [Pagination],
+  slidesPerView: 1,
+  spaceBetween: rem(2.4),
+  speed: 1000,
+  pagination: {
+    el: '.other-articles__pagination .swiper-pagination',
+    renderBullet: function (index, className) {
+        return '<span class="' + className + '"></span>';
+    },
+    clickable: true
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 4,
+      spaceBetween: rem(2.4),
+    },
+  },
+});
+
+
+var positions = [],
+	currentActive = null,
+	links = $('.sidebar-ar__chapter');
+
+$(".article__block-title").each(function(){
+	positions.push({
+		top: $(this).position().top - 100,
+		a: links.filter('[href="#'+$(this).attr('id')+'"]')
+	});
+});
+
+positions = positions.reverse();
+
+$(window).on('scroll',function() {
+	var winTop = $(window).scrollTop();
+	for(var i = 0; i < positions.length; i++){
+		if(positions[i].top < winTop){
+			if(currentActive !== i){
+				currentActive = i;
+				links.removeClass('active');
+				positions[i].a.addClass("active");
+			}
+			break;
+		}
+	}
 });
 
 

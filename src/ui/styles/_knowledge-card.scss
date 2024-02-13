@@ -1,0 +1,116 @@
+.knowledge__card {
+    a {
+        display: flex;
+        flex-direction: column;
+        padding: 2.4rem 2.4rem 4.1rem;
+        border-radius: 2.4rem;
+        background: $white;
+        height: 100%;
+
+        @include small-tablet {
+            padding: 4.8rem;
+            border-radius: 4.8rem;
+        }
+
+        &:hover {
+            .knowledge__card-description {
+                color: $blue;
+            }
+
+            .arrow-icon {
+                border-color: $blue;
+                background: transparent;
+
+                svg path {
+                    stroke: $blue;
+                }
+            }
+        }
+    }
+
+    &-top {
+        position: relative;
+        height: 24.3rem;
+        margin-bottom: 2rem;
+
+        @include small-tablet {
+            height: 40rem;
+            margin-bottom: 4.8rem;
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .arrow-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include sizes(6rem, 6rem);
+
+            @include small-tablet {
+                @include sizes(8.8rem, 8.8rem);
+            }
+        }
+    }
+
+    &-category {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        padding: 0.8rem 1.6rem;
+        border: 0.15rem solid rgba(255, 255, 255, 0.5);
+        border-radius: 2.4rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.8);
+
+        @include small-tablet {
+            top: 2.4rem;
+            left: 2.4rem;
+            padding: 1.6rem 3.2rem;
+            border-radius: 20rem;
+            font-size: 2.4rem;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+    }
+
+    &-description {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 120%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: 0.3s color ease;
+
+        @include small-tablet {
+            font-size: 3.6rem;
+        }
+    }
+
+    &-image {
+        clip-path: url(#knowledge-card-background);
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include small-tablet {
+            clip-path: url(#knowledge-card-background-mobile);
+        }
+    }
+}

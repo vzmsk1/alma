@@ -1,0 +1,114 @@
+.rate {
+    .prices__consultation {
+        padding-bottom: 5rem;
+    }
+
+    .prices__consultation-text {
+        max-width: 90rem;
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    .psychiatry-services-page & {
+        .accordion__list {
+            max-width: 100%;
+            margin-bottom: 4rem;
+
+            @include small-tablet {
+                margin-bottom: 6.4rem;
+            }
+        }
+
+        .accordion__item-content {
+            border-radius: 2.4rem;
+            background: $white;
+            margin-top: 1.4rem;
+            padding: 2.4rem 2.4rem 1rem;
+
+            p {
+                color: #2e2e2e;
+            }
+
+            @include small-tablet {
+                border-radius: 4.8rem;
+                margin-top: 0.8rem;
+                width: 100%;
+                padding: 3.2rem 3.2rem 2rem;
+            }
+        }
+
+        .accordion__item {
+            background: transparent;
+            padding: 0;
+
+            &-heading {
+                background: $white;
+                padding: 2.5rem 2.4rem;
+                border-radius: 2.4rem;
+                margin-bottom: 0;
+                align-items: center;
+
+                @include small-tablet {
+                    padding: 2.8rem 3.2rem;
+                    border-radius: 4.8rem;
+                }
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @include small-tablet {
+            gap: 2.4rem;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.4rem;
+
+        @include small-tablet {
+            gap: 1.4rem;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 2rem;
+            border-bottom: 0.1rem solid $gray;
+
+            @include small-tablet {
+                padding-bottom: 1.4rem;
+            }
+        }
+
+        &-title {
+            font-size: 1.8rem;
+            line-height: 140%;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+
+        &-price {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 140%;
+
+            @include small-tablet {
+                font-size: 3rem;
+            }
+        }
+    }
+}
