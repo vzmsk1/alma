@@ -1,0 +1,141 @@
+.comment-box {
+    background-color: $white;
+    padding: 3.2rem;
+    border-radius: 3.2rem;
+    margin-bottom: 2.4rem;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+        &-block {
+            display: flex;
+        }
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        color: $textGray;
+    }
+
+    &__date {
+        font-size: 1.8rem;
+        color: $textGray;
+        margin-right: 2.4rem;
+    }
+
+    &__stars {
+        display: flex;
+    }
+
+    &__star {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 0.8rem;
+    }
+
+    &__star:last-child {
+        margin-right: 0;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 140%;
+        
+    }
+
+    &__answer {
+        padding-left: 1.6rem;
+        border-left: 0.2rem solid $blue;
+        margin-top: 3.2rem;
+        &-name {
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: $textGray;
+            margin-bottom: 0.4rem;
+            font-weight: 400;
+        }
+
+        &-text {
+            font-size: 1.8rem;
+            line-height: 140%;
+            font-weight: 400;
+        }
+    }
+}
+
+.comment-box:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 48em) {
+
+    .comment-box {
+        padding: 4.8rem;
+        border-radius: 4.8rem;
+        margin-bottom: 4rem;
+
+        &__inner {
+            flex-direction: column-reverse;
+            margin-bottom: 4.8rem;
+            &-block {
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items:center;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &__date {
+            margin-right: 0;
+            font-size: 3rem;
+        }
+
+        &__star {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1.6rem;
+        }
+
+        &__name {
+            font-size: 3rem;
+        }
+
+        &__title {
+            margin-bottom: 1.6rem;
+            font-size: 3.6rem;
+            font-weight: 500;
+        }
+
+        &__text {
+            font-size: 3rem;
+            line-height: 140%;
+            
+        }
+
+        &__answer {
+            margin-top: 4.8rem;
+            padding-left: 3.2rem;
+
+            &-name {
+                font-size: 3rem;
+                margin-bottom: 0.8rem;
+            }
+
+            &-text {
+                font-size: 3rem;
+                line-height: 140%;
+            }
+        }
+
+       
+    }
+
+
+}

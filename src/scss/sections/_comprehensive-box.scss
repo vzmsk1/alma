@@ -1,0 +1,197 @@
+.comprehensive-box {
+    background-color: $white;
+    padding: 3.2rem;
+    position: relative;
+    border-radius: 3.2rem;
+    margin-bottom: 2.4rem;
+    &__icon {
+        max-width: 6rem;
+        width: 100%;
+        height: 6rem;
+        border-radius: 50%;
+        background: #6981d7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.8rem 2rem;
+        position: absolute;
+        left: 3.2rem;
+        top: 3.2rem;
+    }
+
+    &__price {
+        padding: 0.8rem 1.6rem;
+        border-radius: 10rem;
+        background: #e9ecf5;
+        margin-bottom: 2.4rem;
+        display: inline-flex;
+        align-items: flex-end;
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: #6981d7;
+        width: fit-content;
+        gap: 1rem;
+        position: absolute;
+        bottom: 3.2rem;
+        left: 3.2rem;
+    }
+
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 76.8rem;
+        margin: 0 auto;
+        
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    &__info {
+        font-size: 1.8rem;
+        font-weight: 550;
+        color: $black;
+        margin-bottom: 1.2rem;
+    }
+
+    &__lists {
+        margin-bottom: 2.6rem;
+        li {
+            position: relative;
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            padding-left: 2.5rem;
+            &::before {
+                position: absolute;
+                content:'';
+                width: 1.6rem;
+                height: 1.6rem;
+                left: 0;
+                background-image: url(../assets/images/sections/price-page/plastr.svg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
+        li:nth-child(n+4){display:none;}
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__all {
+        width: fit-content;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-top: auto;
+        position: absolute;
+        top: 3.2rem;
+        right: 3.2rem;
+        @include small-tablet {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        span {
+            font-size: 2rem;
+            color: $red;
+
+            @include small-tablet {
+                font-size: 3.6rem;
+            }
+        }
+    }
+}
+
+.comprehensive-box:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 48em) { 
+
+    .comprehensive-box {
+        border-radius: 4.8rem;
+        padding: 4.4rem 4.8rem;
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4.8rem;
+        }
+
+        &__button {
+            top: initial;
+            width: fit-content;
+            bottom: 4.4rem;
+            right: 4.8rem;
+        }
+
+        &__icon {
+            position: initial;
+            max-width: 8.8rem;
+            width: 8.8rem;
+            height: 8.8rem;
+            padding: 2.8rem;
+        }
+
+        &__price {
+            position: initial;
+            margin-bottom: 0;
+            height: fit-content;
+            font-size: 3.6rem;
+        }
+
+        &__content{
+            max-width: 100%;
+        }
+
+        &__title {
+            font-size: 3.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        &__text {
+            font-size: 3rem;
+            margin-bottom: 4.8rem;
+            color: $textGray;
+
+        }
+
+        &__info {
+            font-size: 3rem;
+            margin-bottom: 3.2rem;
+        }
+
+        &__lists {
+            margin-bottom: 4.8rem;
+
+            li {
+                font-size: 3rem;
+                margin-bottom: 1.6rem;
+                padding-left: 3.2rem;
+            }
+        }
+
+        &__all {
+            font-size: 3rem;
+        }
+        
+    }
+
+}

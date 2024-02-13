@@ -1,0 +1,115 @@
+.sidebar-ar {
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    background-color: $white;
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+    }
+
+    &__introduction {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 1.6rem;
+    }
+
+    &__inner {
+        margin-bottom: 1.6rem;
+        max-width: 32.4rem;
+    }
+
+    &__chapter {
+        position: relative;
+        font-size: 1.8rem;
+        line-height: 140%;
+        font-weight: 500;
+        transition: 0.2s ease-in-out;
+        &::before {
+            position: absolute;
+            content:'';
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: $blue;
+            opacity: 0;
+        }
+    }
+
+    &__chapter.active {
+        color: $blue;
+        padding-left: 1.6rem;
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &__lists {
+        margin-top: 1.2rem;
+        padding-left: 2.4rem;
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        color: $textGray;
+        &:hover {
+            transition: 0.2s ease-in-out ;
+            color: $black;
+        }
+
+    }
+}
+
+
+@media (max-width: 48em) {
+    .sidebar-ar {
+        width: 100%;
+        padding: 4.8rem;
+        border-radius: 4.8rem;
+        &__title {
+            font-size: 3.6rem;
+            line-height: 120%;
+            margin-bottom: 4.8rem;
+        }
+
+        &__introduction {
+            font-size: 3rem;
+            line-height: 140%;
+            margin-bottom: 3.2rem;
+        }
+
+        &__inner {
+            max-width: 100%;
+            margin-bottom: 3.2rem;
+        }
+
+        &__chapter {
+            font-size: 3rem;
+            line-height: 140%;
+            margin-bottom: 3.2rem;
+        }
+
+        &__chapter.active {
+            padding-left: 3rem;
+            &::before {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+        }
+
+        &__lists {
+            margin-top: 1.6rem;
+        }
+
+        &__item {
+            font-size: 3rem;
+            line-height: 140%;
+            margin-bottom: 1.6rem;
+        }
+    }
+ }
