@@ -44,6 +44,10 @@
         height: 100%;
         clip-path: url(#clImg);
         object-fit: cover;
+        @media (max-width: 48em) { 
+            clip-path: url(#clImg-2);
+        }
+       
     }
 
     // .slide-card__heading

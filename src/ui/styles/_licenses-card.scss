@@ -1,5 +1,6 @@
 .licenses__card {
     padding: 3.2rem;
+    padding-bottom: 4.6rem;
     border-radius: 3.2rem;
     position: relative;
     z-index: 1;
@@ -46,7 +47,7 @@
     }
 
     &-image {
-        @include sizes(100%, 34.5rem);
+        @include sizes(100%, 33rem);
         border-radius: 2.4rem;
         margin-bottom: 3.2rem;
         overflow: hidden;

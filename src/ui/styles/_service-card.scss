@@ -40,8 +40,8 @@
     }
 
     &__image {
-        @include sizes(100%, 22rem);
-        margin-bottom: 2.2rem;
+        @include sizes(100%, 24.5rem);
+        margin-bottom: 3rem;
         clip-path: url(#services-background);
 
         @include small-tablet {

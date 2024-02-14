@@ -87,8 +87,8 @@
 
         &-info {
             @include small-tablet {
-                padding-top: 0;
-                min-height: 69rem;
+                padding-top: 1rem;
+                min-height: 68rem;
             }
 
             &:hover {

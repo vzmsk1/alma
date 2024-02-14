@@ -30,7 +30,7 @@
     // .partner-card__head
 
     &__head {
-        margin-bottom: 7.2rem;
+        margin-bottom: 6.2rem;
         display: flex;
         justify-content: space-between;
         column-gap: 2.4rem;
@@ -39,6 +39,11 @@
             margin-bottom: 22.8rem;
             column-gap: 4.8rem;
         }
+    }
+
+
+    .btn_ghost {
+        padding-left: 0;
     }
 
     // .partner-card__heading

@@ -2,7 +2,7 @@
     padding-top: 1rem;
 
     @media (max-width: 48em) {
-        padding-top: 2rem;
+        padding-top: 3.5rem;
     }
 
     // .about-hero__container
@@ -58,7 +58,7 @@
     // .about-hero__text
 
     &__text {
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
     }
 
     // .about-hero__btn
@@ -77,7 +77,7 @@
     &__bg {
         position: relative;
         margin-bottom: 5rem;
-
+        min-height: 36.6rem;
         @media (min-width: 48em) {
             margin-bottom: 0;
             flex: 0 0 90rem;
@@ -186,7 +186,7 @@
         clip-path: url(#clHeroBg);
         height: 100%;
         object-fit: cover;
-
+        object-position: 20% 20%;
         @media (max-width: 48em) {
             clip-path: url(#clHeroBg-m);
         }
