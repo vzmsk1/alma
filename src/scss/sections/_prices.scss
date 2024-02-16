@@ -1,4 +1,15 @@
 .prices {
+
+    &_therapy {
+        .prices__consultation {
+            padding-bottom: 6rem;
+        }
+
+        .prices__consultation-text {
+            max-width: 90rem;
+        }
+    }
+
     &__heading {
         align-items: center;
 

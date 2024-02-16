@@ -348,7 +348,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.sale-detail__slider', {
             modules: [Navigation, Pagination],
             spaceBetween: remToPx(2.5),
-            speed: 800,
+            speed: 1200,
+            grabCursor: true,
             slidesPerView: 1,
 
             pagination: {

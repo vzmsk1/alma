@@ -49,8 +49,8 @@ $(document).ready(function(){
       (comprehensiveItemNth).slideToggle('');
       $(this).toggleClass('opnd_g');
       if($(this).hasClass('opnd_g')){
-      $(this).html('Скрыть');}
-      else {$(this).html('Развернуть');}
+      $(this).html('СВЕРНУТЬ');}
+      else {$(this).html('РАЗВЕРНУТЬ');}
       });
       }else{comprehensiveBtn.hide();}
 

@@ -1,8 +1,18 @@
 .services-hero {
-    padding-top: 1rem;
-
     @media (max-width: 48em) {
-        padding-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .statistics-card__text {
+        line-height: 140%;
+    }
+
+    .price-card__badge {
+        height: 4rem;
+    }
+
+    .price-card {
+        padding-bottom: 3rem;
     }
 
     // .services-hero__container

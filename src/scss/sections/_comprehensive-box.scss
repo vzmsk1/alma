@@ -4,6 +4,7 @@
     position: relative;
     border-radius: 3.2rem;
     margin-bottom: 2.4rem;
+    padding-bottom: 5rem;
     &__icon {
         max-width: 6rem;
         width: 100%;
@@ -32,7 +33,7 @@
         width: fit-content;
         gap: 1rem;
         position: absolute;
-        bottom: 3.2rem;
+        bottom: .2rem;
         left: 3.2rem;
     }
 
@@ -44,6 +45,7 @@
         justify-content: center;
         max-width: 76.8rem;
         margin: 0 auto;
+        padding-top: 1rem;
         
     }
 
@@ -62,7 +64,7 @@
         font-size: 1.8rem;
         font-weight: 550;
         color: $black;
-        margin-bottom: 1.2rem;
+        margin-bottom: 2.2rem;
     }
 
     &__lists {
@@ -70,7 +72,7 @@
         li {
             position: relative;
             font-size: 1.8rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1.1rem;
             padding-left: 2.5rem;
             &::before {
                 position: absolute;
@@ -132,7 +134,7 @@
         &__inner {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 4.8rem;
+            margin-bottom: 3.8rem;
         }
 
         &__button {
@@ -168,23 +170,28 @@
 
         &__text {
             font-size: 3rem;
-            margin-bottom: 4.8rem;
+            margin-bottom: 6.8rem;
             color: $textGray;
 
         }
 
         &__info {
             font-size: 3rem;
-            margin-bottom: 3.2rem;
+            margin-bottom: 4.2rem;
         }
 
         &__lists {
-            margin-bottom: 4.8rem;
+            margin-bottom: 5.8rem;
 
             li {
                 font-size: 3rem;
-                margin-bottom: 1.6rem;
-                padding-left: 3.2rem;
+                margin-bottom: 2.6rem;
+                padding-left: 4.5rem;
+
+                &::before{
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
             }
         }
 
