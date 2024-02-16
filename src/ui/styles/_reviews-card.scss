@@ -7,16 +7,24 @@
     height: 100%;
 
     &_large {
+        .reviews__card-description {
+            -webkit-line-clamp: 6;
+        }
+
         .reviews__card-subtitle {
             margin-bottom: 1.6rem;
+
+            @include small-tablet{
+                margin-bottom: 2.4rem;
+            }
         }
         .reviews__card-button {
             margin-bottom: 3.2rem;
             align-items: center;
         }
         .reviews__card-heading {
-            margin-bottom: 1rem;
             align-items: flex-start;
+            margin-bottom: 0;
 
             @media (max-width: 48em) {
                 margin-bottom: 5rem;

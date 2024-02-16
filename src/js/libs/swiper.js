@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resizableSwiper('(max-width: 768px)', '.opinions__slider', {
         modules: [Pagination],
         spaceBetween: remToPx(2.5),
-        speed: 800,
+        speed: 1200,
         slidesPerView: 1,
 
         pagination: {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return '<span class="' + className + '"></span>';
             },
             clickable: true
-        },
+        }
     });
     resizableSwiper('(max-width: 768px)', '.discounts__slider', {
         modules: [Pagination],
@@ -253,14 +253,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelectorAll('.slider-section__slider').length) {
         document.querySelectorAll('.slider-section__slider').forEach((section) => {
+            const parent = section.closest('.slider-section__container');
+
             new Swiper(section, {
                 modules: [Navigation, Pagination],
                 spaceBetween: remToPx(2.5),
-                speed: 800,
+                speed: 1200,
                 slidesPerView: 1,
 
                 pagination: {
-                    el: section.querySelector('.swiper-pagination'),
+                    el: parent.querySelector('.swiper-pagination'),
                     renderBullet: function (index, className) {
                         return '<span class="' + className + '"></span>';
                     },
@@ -268,8 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
 
                 navigation: {
-                    nextEl: section.querySelector('.swiper-button-next'),
-                    prevEl: section.querySelector('.swiper-button-prev')
+                    nextEl: parent.querySelector('.swiper-button-next'),
+                    prevEl: parent.querySelector('.swiper-button-prev')
                 },
 
                 breakpoints: {
@@ -402,11 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: '.article__licenses .navigation-buttons .swiper-button-next',
                 prevEl: '.article__licenses .navigation-buttons .swiper-button-prev'
-            },
-        })
+            }
+        });
     }
-
-
-
-    
 });

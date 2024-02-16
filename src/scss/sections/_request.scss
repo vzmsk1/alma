@@ -97,8 +97,7 @@
         justify-content: center;
 
         @include small-tablet {
-            padding: 2.8rem;
-            @include sizes(8.8rem, 8.8rem);
+            display: none;
         }
 
         img {
@@ -145,7 +144,7 @@
         justify-content: flex-end;
         margin-top: 1.4rem;
         margin-right: 15.5rem;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 2rem;
         line-height: 120%;
         color: $white;
@@ -198,6 +197,7 @@
 
             @include small-tablet {
                 font-size: 3rem;
+                margin-bottom: 5rem;
             }
         }
 
@@ -223,6 +223,10 @@
 
             &:nth-child(2) {
                 order: -1;
+
+                @include small-tablet{
+                    order: 0;
+                }
             }
 
             &-title {

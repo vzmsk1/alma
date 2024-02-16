@@ -53,7 +53,7 @@
 
         @include small-tablet {
             max-width: 100%;
-            gap: 12rem;
+            gap: 20rem;
         }
     }
 
@@ -228,6 +228,23 @@
             padding: 3.2rem;
             border-radius: 2.4rem;
             background: $white;
+        }
+
+        .licenses__card {
+            @media (min-width: 48em) {
+                &-button {
+                    top: 0;
+                }
+
+                &-image {
+                    height: 34.4rem;
+                    clip-path: url(#licenses-background-v2);
+
+                    @include small-tablet{
+                        height: 46rem;
+                    }
+                }
+            }
         }
 
         .navigation-buttons {

@@ -9,6 +9,7 @@
     // .slider-section__head
 
     &__head {
+        align-items: center;
     }
 
     // .slider-section__heading
@@ -42,6 +43,9 @@
     // .slider-section__card
 
     &__card {
+        .btn_ghost {
+            padding: 0;
+        }
     }
 
     // .slider-section__pagination

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         activeChapter.classList.add('_is-active');
                         getList(activeChapter) ? getList(activeChapter).classList.add('_is-active') : null;
                     }
-                    if (e.target.closest('.header__hamburger-btn')) {
+                    if (e.target.closest('.header__navbar-menu-wrapper')) {
                         document.documentElement.classList.add('_show-menu');
                     } else if (
                         !e.target.closest('.desktop-menu') &&
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('header').addEventListener('click', function (e) {
                 const target = e.target;
 
-                if (target.closest('.hamburger') && bodyLockStatus) {
+                if (target.closest('.hamburger') && bodyLockStatus && window.innerWidth < 768) {
                     document.documentElement.classList.add('_show-mobile-menu');
                     bodyLock();
                 }

@@ -1,8 +1,24 @@
 .reviews-list {
     padding-top: 1rem;
 
-    @media (max-width: 48em) {
-        padding-top: 2rem;
+    .documents__request {
+        &-specialist {
+            height: 24.8rem;
+
+            @include small-tablet {
+                height: 37.8rem;
+            }
+        }
+    }
+
+    .article__info {
+        margin-top: 11rem;
+    }
+
+    &__main {
+        @include small-tablet {
+            margin-bottom: 22rem;
+        }
     }
 
     // .reviews-list__inner
@@ -14,7 +30,7 @@
         gap: 2.3rem;
 
         @media (max-width: 48em) {
-            flex-direction: column;
+            display: block;
         }
     }
     // .reviews-list__main
@@ -41,7 +57,8 @@
         row-gap: 2.4rem;
 
         @media (max-width: 48em) {
-            margin-bottom: 20rem;
+            margin-bottom: 6rem;
+            gap: 3rem;
         }
     }
     // .reviews-list__aside

@@ -1,6 +1,20 @@
 .opinions {
     // .opinions__container
 
+    .specialist-card {
+        &__top {
+            height: 31.4rem;
+
+            @include small-tablet{
+                height: 41.4rem;
+            }
+        }
+
+        &__experience, .specialist-card__icon {
+            bottom: 1.6rem;
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -9,6 +23,7 @@
     // .opinions__head
 
     &__head {
+        margin-bottom: 3rem;
     }
 
     // .opinions__heading

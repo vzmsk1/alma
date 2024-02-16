@@ -1,8 +1,6 @@
 .about-hero {
-    padding-top: 1rem;
-
     @media (max-width: 48em) {
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
 
     // .about-hero__container
@@ -47,7 +45,7 @@
     // .about-hero__heading
 
     &__heading {
-        margin-bottom: 3.2rem;
+        margin-bottom: 4.2rem;
 
         @media (max-width: 48em) {
             margin-bottom: 6.4rem;
@@ -58,7 +56,12 @@
     // .about-hero__text
 
     &__text {
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
+
+        @include small-tablet{
+            line-height: 140%;
+            margin-bottom: 5rem;
+        }
     }
 
     // .about-hero__btn
@@ -77,6 +80,7 @@
     &__bg {
         position: relative;
         margin-bottom: 5rem;
+        min-height: 36.3rem;
 
         @media (min-width: 48em) {
             margin-bottom: 0;
@@ -118,6 +122,21 @@
         position: absolute;
         top: 2.4rem;
         left: 2.4rem;
+
+        &:hover {
+            .arr {
+                border: 1px solid #6981d7;
+                background: transparent;
+
+                svg path {
+                    stroke: #6981d7;
+                }
+            }
+        }
+
+        .btn_ghost {
+            padding: 0;
+        }
 
         @media (max-width: 48em) {
             top: auto;
@@ -170,6 +189,14 @@
 
     &__bg-image-wrap {
         height: 53.2rem;
+
+        img {
+            object-position: 0 -4rem;
+
+            @include small-tablet{
+                object-position: 0 0;
+            }
+        }
 
         @media (min-width: 48em) {
             position: absolute;

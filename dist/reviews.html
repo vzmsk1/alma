@@ -4,17 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Отзывы</title>
-    <script defer src="main.js"></script></head>
+    <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
     <body>
         <div class="wrapper reviews-page">
             <header data-scroll-show="" data-scroll="" class="header">
     <div class="header__container container">
         <a href="#" class="header__logo-wrap"><img src="./assets/images/icons/logo.svg" alt="" class="header__logo"></a>
-        <a href="#" class="header__btn-link btn btn_primary btn_white">
-            <span class="btn__txt">Услуги</span>
-        </a>
-        <div class="header__hamburger-btn">
-            <button type="button" class="header__hamburger hamburger"></button>
+        <div class="header__navbar-menu-wrapper">
+            <a href="#" class="header__btn-link btn btn_primary btn_white">
+                <span class="btn__txt">Услуги</span>
+            </a>
+            <div class="header__hamburger-btn">
+                <button type="button" class="header__hamburger hamburger"></button>
+            </div>
         </div>
         <nav class="header__nav">
             <a href="#" class="header__nav-link txt20">Новости</a>
@@ -1249,28 +1251,39 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="list-pagination">
-                        <button type="button" class="swiper-button-prev swiper-button-disabled">
+                    <div class="pagination">
+                        <a href="" class="pagination__button">
                             <img src="./assets/images/icons/arrow-left.svg" alt="">
-                        </button>
-                        <ul class="list-pagination__wrapper">
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
+                        </a>
+
+                        <ul class="pagination__list">
+                            <li class="pagination__item --active">
+                                <a href="#"> 1 </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#"> 2 </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#"> 3 </a>
+                            </li>
                         </ul>
-                        <button type="button" class="swiper-button-next">
+
+                        <a href="" class="pagination__button --active">
                             <img src="./assets/images/icons/arrow-right.svg" alt="">
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="reviews-list__aside">
-                <aside class="documents__request">
+            <aside class="article__info">
+                <div class="documents__request">
                     <span class="documents__request-subtitle"> комплексный подход </span>
+
                     <figure class="documents__request-specialist">
                         <img src="./assets/images/sections/documents/specialist.webp" alt="">
                     </figure>
+
                     <p class="documents__request-title h h_h2">Получите бесплатную консультацию!</p>
+
                     <button type="button" class="documents__request-button btn btn_primary">
                         <span class="btn__txt">Записаться на консультацию</span>
                         <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1279,51 +1292,70 @@
                             <path d="M21 6L27 12L21 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </button>
+
                     <a href="tel:79281074216" class="documents__request-link"> + 7 928 107 42 16 </a>
-                </aside>
-                <aside class="review-license swiper">
-                    <div class="review-license__wrapper swiper-wrapper">
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="">
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="">
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="">
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="">
-                                </button>
-                            </div>
-                        </div>
+                </div>
+
+
+                <div class="article__licenses">
+                    <div class="swiper article-licenses-swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="">
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="">
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="">
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="">
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="">
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="">
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="">
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="">
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="navigation-buttons review-license__buttons _desktop-only">
+
+                    <div class="navigation-buttons">
                         <button type="button" class="swiper-button-prev">
                             <img src="./assets/images/icons/arrow-left.svg" alt="">
                         </button>
@@ -1331,11 +1363,12 @@
                             <img src="./assets/images/icons/arrow-right.svg" alt="">
                         </button>
                     </div>
-                    <div class="licenses__pagination slider-pagination review-license__pagination">
+
+                    <div class="licenses__pagination slider-pagination">
                         <div class="swiper-pagination"></div>
                     </div>
-                </aside>
-            </div>
+                </div>
+            </aside>
         </div>
     </div>
 </section>
@@ -1854,6 +1887,11 @@
         </clipPath>
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <clipPath id="clImg-m" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.12 C0,0.054,0.036,0,0.081,0 H0.248 H0.624 H0.757 C0.787,0,0.812,0.036,0.812,0.081 C0.812,0.125,0.836,0.161,0.867,0.161 H0.919 C0.964,0.161,1,0.215,1,0.281 V0.88 C1,0.946,0.964,1,0.919,1 H0.5 H0.25 H0.129 C0.09,1,0.059,0.954,0.059,0.897 V0.838 C0.059,0.814,0.046,0.794,0.03,0.794 C0.013,0.794,0,0.775,0,0.751 V0.589 V0.177 V0.12"></path>
+        </clipPath>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
         <clipPath id="clImg-2" clipPathUnits="objectBoundingBox">
             <path d="M0,0.076 C0,0.034,0.024,0,0.055,0 H0.248 H0.624 H0.757 C0.788,0,0.812,0.034,0.812,0.076 V0.085 C0.812,0.127,0.836,0.161,0.866,0.161 H0.945 C0.976,0.161,1,0.196,1,0.238 V0.924 C1,0.966,0.976,1,0.945,1 H0.5 H0.25 H0.114 C0.084,1,0.059,0.966,0.059,0.924 V0.836 C0.059,0.813,0.046,0.794,0.03,0.794 C0.013,0.794,0,0.776,0,0.753 V0.589 V0.177 V0.076"></path>
         </clipPath>
@@ -2079,16 +2117,23 @@
             <path d="M0.128,0 H0.962 C0.983,0,1,0.023,1,0.052 V0.834 C1,0.862,0.983,0.885,0.962,0.885 H0.708 C0.689,0.885,0.672,0.905,0.67,0.931 L0.668,0.955 C0.666,0.98,0.65,1,0.631,1 H0.246 H0.038 C0.017,1,0,0.977,0,0.948 V0.589 V0.411 V0.267 V0.052 C0,0.023,0.017,0,0.038,0 H0.128"></path>
         </clipPath>
     </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+        <clipPath id="bgDoctorsPrice" clipPathUnits="objectBoundingBox">
+            <path d="M0.065,0 L0.935,0 C0.971,0,1,0.034,1,0.075 L1,0.693 C1,0.735,0.971,0.769,0.935,0.769 L0.874,0.769 C0.838,0.769,0.809,0.803,0.809,0.844 L0.809,0.925 C0.809,0.966,0.78,1,0.745,1 L0.065,1 C0.029,1,0,0.966,0,0.925 L0,0.075 C0,0.034,0.029,0,0.065,0"></path>
+        </clipPath>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <clipPath id="licenses-background-v2" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.071 C0,0.033,0.024,0.001,0.055,0.001 H0.777 C0.807,0.001,0.832,0.033,0.832,0.071 V0.135 C0.832,0.174,0.856,0.205,0.886,0.205 H0.945 C0.976,0.205,1,0.236,1,0.275 V0.932 C1,0.97,0.976,1,0.945,1 H0.055 C0.024,1,0,0.97,0,0.932 V0.071"></path>
+        </clipPath>
+    </svg>
 </div>
 
 
 
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
-	
-    <clipPath id="bgDoctorsPrice" clipPathUnits="objectBoundingBox">
-	<path d="M0.065,0 L0.935,0 C0.971,0,1,0.034,1,0.075 L1,0.693 C1,0.735,0.971,0.769,0.935,0.769 L0.874,0.769 C0.838,0.769,0.809,0.803,0.809,0.844 L0.809,0.925 C0.809,0.966,0.78,1,0.745,1 L0.065,1 C0.029,1,0,0.966,0,0.925 L0,0.075 C0,0.034,0.029,0,0.065,0"></path>
-    </clipPath>
-</svg>
+
 
 
         </div>

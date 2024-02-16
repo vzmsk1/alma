@@ -1,6 +1,30 @@
 .review-form {
     // .review-form__container
 
+    textarea.input__field {
+        height: 18.2rem;
+
+        @include small-tablet{
+            height: 40rem;
+        }
+    }
+
+    .star-rating__star {
+        width: 3rem;
+        height: 3rem;
+        flex: 0 0 auto;
+
+        @include small-tablet{
+            width: 5.5rem;
+            height: 4rem;
+        }
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
     &__container {
         padding: 3.2rem;
         border-radius: 2.4rem;
@@ -41,9 +65,11 @@
     &__heading {
         margin-bottom: 4rem;
         color: $white;
+        font-family: "Nunito";
+        font-size: 3.4rem;
 
         @media (max-width: 48em) {
-            font-size: 4.8rem;
+            font-size: 4.4rem;
         }
     }
 
@@ -53,7 +79,7 @@
         margin-bottom: 2.4rem;
         display: flex;
         flex-direction: column;
-        row-gap: 1.2rem;
+        row-gap: 2.2rem;
         color: $lightGray;
 
         @media (max-width: 48em) {
@@ -65,6 +91,9 @@
     // .review-form__rating-subtitle
 
     &__rating-subtitle {
+        @include small-tablet{
+            font-size: 2.4rem;
+        }
     }
 
     // .review-form__fields
@@ -72,15 +101,21 @@
     &__fields {
         display: flex;
         flex-direction: column;
-        row-gap: 2.4rem;
+        row-gap: 2.9rem;
 
         @media (max-width: 48em) {
             margin-bottom: 4.8rem;
-            row-gap: 3.2rem;
+            row-gap: 2rem;
         }
     }
 
     // .review-form__dropdown
+
+    .dropdown__label, .input__label {
+        @include small-tablet{
+            font-size: 2.4rem;
+        }
+    }
 
     &__dropdown {
     }
