@@ -1,8 +1,8 @@
 .block-404 {
-    padding-top: 5rem;
+    padding-top: 8rem;
 
     @media (max-width: 48em) {
-        padding-top: 12rem;
+        padding-top: 16rem;
     }
 
     // .block-404__inner
@@ -26,6 +26,7 @@
             align-items: center;
             gap: 4.8rem;
             width: 100%;
+            margin-top: -4rem;
         }
     }
     // .block-404__subtitle
