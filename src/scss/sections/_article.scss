@@ -1,4 +1,39 @@
 .article {
+    .knowledge-page-template & {
+        .article__content {
+            @include small-tablet{
+                gap: 20rem;
+            }
+        }
+
+        .article__info {
+            max-width: 37.5rem;
+
+            @include small-tablet{
+                max-width: 100%;
+            }
+        }
+
+       @media (min-width: 48em) {
+           .request__info-image {
+               max-width: 34.2rem;
+               height: 23rem;
+           }
+
+           .review-form__fields {
+               row-gap: 2.2rem;
+           }
+
+           textarea.input__field {
+               height: 20.3rem;
+           }
+       }
+
+        .comment-form__btn{
+            margin-top: 2.8rem;
+        }
+    }
+
     .seo__sidebar-info {
         padding: 2.7rem 3.2rem 3.2rem 1.3rem;
         clip-path: url(#article-template-background);

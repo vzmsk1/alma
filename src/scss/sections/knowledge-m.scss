@@ -1,4 +1,8 @@
 .knowledge-m {
+    @include small-tablet{
+        padding-top: 1rem;
+    }
+
     .breadcrumbs {
         margin-bottom: 2.4rem;
     }
@@ -111,6 +115,7 @@
         border-radius: 2.4rem;
         background-color: $blue;
         right: 0;
+        line-height: 140%;
 
         &-clock {
             font-size: 1.8rem;
@@ -181,6 +186,7 @@
 
         &__stars {
             margin-right: 6.4rem;
+            gap: .5rem;
         }
 
 

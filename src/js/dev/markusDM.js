@@ -83,7 +83,6 @@ const otherArticlesSwiper = new Swiper('.other-articles__swiper', {
 var positions = [],
 	currentActive = null,
 	links = $('.sidebar-ar__chapter');
-
 $(".article__block-title").each(function(){
 	positions.push({
 		top: $(this).position().top - 100,
@@ -91,8 +90,7 @@ $(".article__block-title").each(function(){
 	});
 });
 
-positions = positions.reverse();
-
+positions.reverse();
 $(window).on('scroll',function() {
 	var winTop = $(window).scrollTop();
 	for(var i = 0; i < positions.length; i++){

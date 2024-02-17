@@ -1,5 +1,7 @@
 .reviews-list {
-    padding-top: 1rem;
+    @include small-tablet{
+        padding-top: 1rem;
+    }
 
     .documents__request {
         &-specialist {
