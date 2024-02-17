@@ -1,8 +1,27 @@
 .services-hero {
-    padding-top: 1rem;
-
     @media (max-width: 48em) {
-        padding-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .statistics-card__text {
+        line-height: 140%;
+    }
+
+    .price-card__badge {
+        height: 4.5rem;
+        background: #E9ECF5;
+
+        @include small-tablet{
+            height: 8rem;
+        }
+    }
+
+    .price-card {
+        padding-bottom: 3rem;
+
+        @include small-tablet{
+            padding-bottom: 4rem;
+        }
     }
 
     // .services-hero__container
@@ -65,6 +84,12 @@
 
         @media (max-width: 48em) {
             display: none;
+        }
+    }
+
+    &__text {
+        @include small-tablet{
+            line-height: 140%;
         }
     }
 

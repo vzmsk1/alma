@@ -6,16 +6,18 @@
 
     ._is-active svg,
     ._is-active ~ .star-rating__star svg {
-        fill: #63b3df;
+        fill: $white;
         path {
-            stroke: #63b3df;
+            stroke: $white;
+            fill: $white;
         }
     }
     .star-rating__star:hover svg,
     .star-rating__star:hover ~ .star-rating__star svg {
-        fill: #63b3df;
+        fill: $white;
         path {
-            stroke: #63b3df;
+            stroke: $white;
+            fill: $white;
         }
     }
 
@@ -38,7 +40,7 @@
             transition: fill 0.3s ease;
 
             path {
-                transition: stroke 0.3s ease;
+                transition: stroke 0.3s ease, fill .3s ease;
 
                 ._form-error & {
                     stroke: $red;

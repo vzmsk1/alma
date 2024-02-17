@@ -5,4 +5,36 @@
 
     &__item {
     }
+
+    &-list {
+        margin-bottom: 5rem;
+
+        @include small-tablet{
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__button {
+        @extend .specialist-card__bottom;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        @include small-tablet{
+            width: fit-content;
+            margin: 0 auto;
+            gap: 2.4rem;
+        }
+
+        &:hover {
+            .arrow-icon {
+                border-color: $blue;
+                background: transparent;
+
+                svg path {
+                    stroke: $blue;
+                }
+            }
+        }
+    }
 }

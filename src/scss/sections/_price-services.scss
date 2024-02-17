@@ -1,4 +1,9 @@
 .price-services {
+
+    &__tabs {
+        margin-bottom: 2rem;
+    }
+
     &__title {
         margin-bottom: 4rem;
     }
@@ -10,7 +15,7 @@
 
     &__item {
         background: $white;
-        padding: 1.6rem 3.2rem;
+        padding: 1.6rem 2.8rem;
         border-radius: 10rem;
         font-size: 2rem;
         font-weight: 600;
@@ -28,7 +33,6 @@
 
     &__block {
         display: none;
-        margin-top: 1.6rem;
     }
 
     &__block.active {

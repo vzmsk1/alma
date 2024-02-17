@@ -1,8 +1,7 @@
 .specialists-intro {
-    padding-top: 1rem;
 
     @media (max-width: 48em) {
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
 
     // .specialists-intro__inner
@@ -72,7 +71,7 @@
         z-index: -1;
 
         img {
-            mask-image: url('../../assets/images/specialists/specialists-intro-mask-d.svg');
+            mask-image: url('./assets/images/specialists/specialists-intro-mask-d.svg');
             mask-size: 100%;
             object-fit: cover;
             mask-repeat: no-repeat;
@@ -121,7 +120,7 @@
             height: 50rem;
 
             img {
-                mask-image: url('../../assets/images/specialists/specialists-intro-mask-m.svg');
+                mask-image: url('./assets/images/specialists/specialists-intro-mask-m.svg');
             }
         }
         &__btn {

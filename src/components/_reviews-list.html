@@ -358,28 +358,39 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="list-pagination">
-                        <button type="button" class="swiper-button-prev swiper-button-disabled">
+                    <div class="pagination">
+                        <a href="" class="pagination__button">
                             <img src="./assets/images/icons/arrow-left.svg" alt="" />
-                        </button>
-                        <ul class="list-pagination__wrapper">
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
+                        </a>
+
+                        <ul class="pagination__list">
+                            <li class="pagination__item --active">
+                                <a href="#"> 1 </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#"> 2 </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#"> 3 </a>
+                            </li>
                         </ul>
-                        <button type="button" class="swiper-button-next">
+
+                        <a href="" class="pagination__button --active">
                             <img src="./assets/images/icons/arrow-right.svg" alt="" />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="reviews-list__aside">
-                <aside class="documents__request">
+            <aside class="article__info">
+                <div class="documents__request">
                     <span class="documents__request-subtitle"> комплексный подход </span>
+
                     <figure class="documents__request-specialist">
                         <img src="./assets/images/sections/documents/specialist.webp" alt="" />
                     </figure>
+
                     <p class="documents__request-title h h_h2">Получите бесплатную консультацию!</p>
+
                     <button type="button" class="documents__request-button btn btn_primary">
                         <span class="btn__txt">Записаться на консультацию</span>
                         <svg
@@ -396,7 +407,7 @@
                                 stroke-width="1.5"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                            ></path>
+                            />
                             <path
                                 d="M11 6L17 12L11 18"
                                 stroke="white"
@@ -404,61 +415,80 @@
                                 stroke-width="1.5"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                            ></path>
+                            />
                             <path
                                 d="M21 6L27 12L21 18"
                                 stroke="white"
                                 stroke-width="1.5"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                            ></path>
+                            />
                         </svg>
                     </button>
+
                     <a href="tel:79281074216" class="documents__request-link"> + 7 928 107 42 16 </a>
-                </aside>
-                <aside class="review-license swiper">
-                    <div class="review-license__wrapper swiper-wrapper">
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="" />
-                                </button>
-                            </div>
-                        </div>
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="" />
-                                </button>
-                            </div>
-                        </div>
-                        <div class="review-license__slide swiper-slide">
-                            <div data-modal="#certificate-modal" class="review-license__card">
-                                <figure class="review-license__card-image">
-                                    <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
-                                </figure>
-                                <span class="review-license__card-title">
-                                    Медицинская лицензия по психиатрии-наркологии
-                                </span>
-                                <button class="review-license__card-button">
-                                    <img src="./assets/images/icons/glass.svg" alt="" />
-                                </button>
-                            </div>
-                        </div>
+                </div>
+
+
+                <div class="article__licenses">
+                    <div class="swiper article-licenses-swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button  class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="" />
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="" />
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="" />
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div data-modal="#certificate-modal" class="licenses__card --v2">
+                                    <figure class="licenses__card-image">
+                                        <img src="./assets/images/sections/licenses/license-image.webp" alt="" />
+                                    </figure>
+
+                                    <span class="licenses__card-title"> Медицинская лицензия по психиатрии-наркологии </span>
+
+                                    <button class="licenses__card-button">
+                                        <img src="./assets/images/icons/glass.svg" alt="" />
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="navigation-buttons review-license__buttons _desktop-only">
+
+                    <div class="navigation-buttons">
                         <button type="button" class="swiper-button-prev">
                             <img src="./assets/images/icons/arrow-left.svg" alt="" />
                         </button>
@@ -466,11 +496,12 @@
                             <img src="./assets/images/icons/arrow-right.svg" alt="" />
                         </button>
                     </div>
-                    <div class="licenses__pagination slider-pagination review-license__pagination">
+
+                    <div class="licenses__pagination slider-pagination">
                         <div class="swiper-pagination"></div>
                     </div>
-                </aside>
-            </div>
+                </div>
+            </aside>
         </div>
     </div>
 </section>

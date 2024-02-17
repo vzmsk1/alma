@@ -26,13 +26,42 @@
         padding: 3.2rem;
         z-index: 1;
         position: relative;
-        background-image: url(../assets/images/sections/detailed-spm/top.svg);
+        background-image: url(./assets/images/sections/detailed-spm/top.svg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        padding-bottom: 1.8rem;
+
+        @include small-tablet{
+            padding: 5.2rem;
+            padding-bottom: 2.8rem;
+            background-image: url(./assets/images/sections/detailed-spm/top-m.svg);
+        }
 
         &-title {
             color: $white;
-            width: 20rem;
+            margin-bottom: 2.4rem;
+
+            @include small-tablet{
+                margin-bottom: 3rem;
+            }
+        }
+
+        &-phone {
+            display: flex;
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 120%;
+            color: $white;
+            transition: 0.3s color ease;
+
+            @include small-tablet {
+                font-size: 3rem;
+                margin-right: 1.5rem;
+            }
+
+            &:hover {
+                color: $gray;
+            }
         }
     }
 
@@ -42,10 +71,15 @@
         padding-top: 5.7rem;
         z-index: 1;
         position: relative;
-        background-image: url(../assets/images/sections/detailed-spm/bottom.svg);
+        background-image: url(./assets/images/sections/detailed-spm/bottom.svg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         margin-top: auto;
+
+        @include small-tablet{
+            padding: 5.2rem;
+            padding-top: 8.7rem;
+        }
 
         .btn {
            justify-content: space-between;

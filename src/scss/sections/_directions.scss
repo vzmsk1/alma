@@ -1,6 +1,14 @@
 .directions {
     // .directions__container
 
+    @include small-tablet{
+        overflow: hidden;
+
+        .swiper {
+            overflow: visible;
+        }
+    }
+
     &__container {
         display: flex;
         column-gap: 2.8rem;
@@ -15,7 +23,6 @@
     &__image-wrap {
         margin-bottom: 6.4rem;
         clip-path: url(#cl-directionsBg);
-
         @media (min-width: 48em) {
             margin-bottom: 0;
             flex: 0 0 50rem;
@@ -53,7 +60,7 @@
     &__groups {
         display: flex;
         flex-direction: column;
-        row-gap: 3.2rem;
+        row-gap: 4.2rem;
 
         @media (max-width: 48em) {
             row-gap: 6.4rem;
@@ -105,6 +112,22 @@
 
         @media (min-width: 48em) {
             max-width: 103.2rem;
+            position: relative;
+
+            &::after{
+                @include pseudo{
+                    right: -.2rem;
+                    height: 100%;
+                    width: 10.7rem;
+                    z-index: 10;
+                    background: linear-gradient(272deg, #eff1f3 0%, rgba(239, 241, 243, 0) 100%);
+                    top: 0;
+
+                    @include small-tablet{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
@@ -146,6 +169,10 @@
         column-gap: 0.8rem;
         line-height: 1;
         color: $blue;
+
+        @include small-tablet{
+            transform: translateY(2px);
+        }
 
         &::before {
             content: '';

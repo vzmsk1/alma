@@ -143,6 +143,18 @@
             gap: 2.4rem;
             clip-path: url(#seo-background);
 
+            .services-page-template-3 & {
+                @include small-tablet{
+                    .seo__sidebar-info-description {
+                        margin-left: -11rem;
+                    }
+
+                    .seo__sidebar-info-text {
+                        gap: 4.6rem;
+                    }
+                }
+            }
+
             @include small-tablet {
                 padding: 4.8rem;
                 clip-path: url(#seo-background-mobile);

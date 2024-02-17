@@ -4,17 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>База знаний</title>
-    <script defer src="main.js"></script></head>
+    <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
     <body>
-        <div class="wrapper knowledge-page">
+        <div class="wrapper knowledge-page-template services-page-template-3">
             <header data-scroll-show="" data-scroll="" class="header">
     <div class="header__container container">
         <a href="#" class="header__logo-wrap"><img src="./assets/images/icons/logo.svg" alt="" class="header__logo"></a>
-        <a href="#" class="header__btn-link btn btn_primary btn_white">
-            <span class="btn__txt">Услуги</span>
-        </a>
-        <div class="header__hamburger-btn">
-            <button type="button" class="header__hamburger hamburger"></button>
+        <div class="header__navbar-menu-wrapper">
+            <a href="#" class="header__btn-link btn btn_primary btn_white">
+                <span class="btn__txt">Услуги</span>
+            </a>
+            <div class="header__hamburger-btn">
+                <button type="button" class="header__hamburger hamburger"></button>
+            </div>
         </div>
         <nav class="header__nav">
             <a href="#" class="header__nav-link txt20">Новости</a>
@@ -27,7 +29,7 @@
             <a href="tel:78633335808" class="header__tel txt20"><span>+7&nbsp;863&nbsp;333-58-08</span></a>
             <span class="header__address">г.&nbsp;Ростов-на-Дону</span>
         </div>
-        <button type="button" class="header__btn btn btn_primary">
+        <button data-modal="#request-modal-success" type="button" class="header__btn btn btn_primary">
             <span class="btn__txt">Заказать звонок</span>
             <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 6L7 12L1 18" stroke="white" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -949,7 +951,7 @@
                             450
                         </div>
                     </div>
-                    <div class="knowledge-m__title h_h1">
+                    <div class="knowledge-m__title h h_h1">
                         Послеродовая депрессия у&nbsp;женщин: Современные методы лечения&nbsp;ПРД
                     </div>
                     <div class="knowledge-m__text">
@@ -976,47 +978,51 @@
                             <div class="article__text">
                                 <div class="article__description-block">
                                     <p class="article__description">
-                                        Постродовая депрессия – это серьезное состояние, которое может затронуть новых
-                                        родителей в течение первых нескольких недель или месяцев после рождения ребенка. Это
-                                        не просто "грусть" или "постпартумная печальность", а медицинское состояние, которое
-                                        требует внимания и лечения. Симптомы постродовой депрессии могут варьироваться от
-                                        усталости и раздражительности до нарушений сна и низкого настроения, и они могут
-                                        значительно осложнить приспособление к новой роли родителя и повлиять на качество
-                                        жизни всей семьи.
+                                        Постродовая депрессия – это серьезное состояние, которое может
+                                        затронуть новых родителей в течение первых нескольких недель или
+                                        месяцев после рождения ребенка. Это не просто "грусть" или
+                                        "постпартумная печальность", а медицинское состояние, которое требует
+                                        внимания и лечения. Симптомы постродовой депрессии могут варьироваться
+                                        от усталости и раздражительности до нарушений сна и низкого
+                                        настроения, и они могут значительно осложнить приспособление к новой
+                                        роли родителя и повлиять на качество жизни всей семьи.
                                     </p>
-                
+
                                     <div class="seo__sidebar-info">
                                         <figure class="seo__sidebar-info-icon">
                                             <img src="./assets/images/icons/star-blue.svg" alt="" />
                                         </figure>
-                
+
                                         <div class="seo__sidebar-info-text">
                                             <span class="seo__sidebar-info-title"> Важно </span>
-                
+
                                             <p class="seo__sidebar-info-description">
-                                                Важно осознать, что постродовая депрессия не является чем‑то, что новые
-                                                родители должны переносить в одиночку или преодолевать без помощи. Обращение
-                                                за поддержкой и лечением — важный первый шаг на пути к выздоровлению.
+                                                Важно осознать, что постродовая депрессия не является чем‑то,
+                                                что новые родители должны переносить в одиночку
+                                                или преодолевать без помощи. Обращение за поддержкой
+                                                и лечением — важный первый шаг на пути к выздоровлению.
                                             </p>
                                         </div>
                                     </div>
-                
+
                                     <p class="article__description">
-                                        В этой статье мы рассмотрим причины появления постродовой депрессии, ее симптомы,
-                                        влияние на родителей и ребенка, а также методы лечения и поддержки, доступные для тех,
-                                        кто сталкивается с этим состоянием.
+                                        В этой статье мы рассмотрим причины появления постродовой депрессии,
+                                        ее симптомы, влияние на родителей и ребенка, а также методы лечения и
+                                        поддержки, доступные для тех, кто сталкивается с этим состоянием.
                                     </p>
                                 </div>
-                
+
                                 <div class="article__block">
-                                    <span id="articleTitle1" class="article__block-title"> Отличия от обычной депрессии </span>
-                
+                                    <span id="articleTitle1" class="article__block-title">
+                                        Отличия от обычной депрессии
+                                    </span>
+
                                     <ul class="article__block-list">
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Причина: гормональные изменения, стресс от ухода за ребенком.
                                             </p>
@@ -1025,7 +1031,7 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Интенсивность: может быть менее выраженной, но постоянной.
                                             </p>
@@ -1034,7 +1040,7 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Социальные факторы: изоляция, недостаток поддержки.
                                             </p>
@@ -1043,7 +1049,7 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Физиологические аспекты: усталость, изменения в аппетите.
                                             </p>
@@ -1052,49 +1058,53 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
-                                                Психологические особенности: чувство вины, неуверенность в своих материнских
-                                                способностях.
+                                                Психологические особенности: чувство вины, неуверенность в
+                                                своих материнских способностях.
                                             </p>
                                         </li>
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
-                                                Влияние на ребенка: затрудняет установление эмоциональной связи.
+                                                Влияние на ребенка: затрудняет установление эмоциональной
+                                                связи.
                                             </p>
                                         </li>
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
-                                                Лечение: часто включает консультации с психотерапевтом, поддержку семьи.
+                                                Лечение: часто включает консультации с психотерапевтом,
+                                                поддержку семьи.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="request__info">
                                     <span class="request__subtitle"> комплексный подход </span>
-                
+
                                     <div class="request__info-content">
                                         <figure class="request__info-image">
                                             <img src="./assets/images/sections/request/doctor.webp" alt="" />
                                         </figure>
-                
+
                                         <div class="request__info-text">
                                             <div class="request__info-heading">
-                                                <h2 class="request__title">Получите бесплатную консультацию!</h2>
-                
+                                                <h2 class="request__title">
+                                                    Получите бесплатную консультацию!
+                                                </h2>
+
                                                 <figure class="request__icon">
                                                     <img src="./assets/images/icons/star-blue.svg" alt="" />
                                                 </figure>
                                             </div>
-                
+
                                             <button
                                                 data-modal="#request-modal"
                                                 type="button"
@@ -1135,21 +1145,25 @@
                                             </button>
                                         </div>
                                     </div>
-                
+
                                     <a href="tel:792810742 6" class="request__link">+ 7 928 107 42 16</a>
                                 </div>
                                 <div class="article__subblock">
-                                    <span id="articleTitle2" class="article__subblock-title"> Признаки депрессии у женщин </span>
-                
+                                    <span id="articleTitle2" class="article__subblock-title">
+                                        Признаки депрессии у женщин
+                                    </span>
+
                                     <div class="article__block">
-                                        <span id="articleTitle3" class="article__block-title">Распространенные проявления</span>
-                
+                                        <span id="articleTitle3" class="article__block-title"
+                                            >Распространенные проявления</span
+                                        >
+
                                         <ul class="article__block-list">
                                             <li class="article__block-item">
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
                                                     Уменьшение интереса к привычным занятиям.
                                                 </p>
@@ -1158,14 +1172,16 @@
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
-                                                <p class="article__block-item-text">Общее ухудшение настроения, грусть.</p>
+
+                                                <p class="article__block-item-text">
+                                                    Общее ухудшение настроения, грусть.
+                                                </p>
                                             </li>
                                             <li class="article__block-item">
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
                                                     Проблемы со сном: бессонница или чрезмерная сонливость.
                                                 </p>
@@ -1174,7 +1190,7 @@
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
                                                     Изменение аппетита: потеря или увеличение.
                                                 </p>
@@ -1183,25 +1199,25 @@
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
                                                     Трудности в концентрации, нерешительность.
                                                 </p>
                                             </li>
                                         </ul>
                                     </div>
-                
+
                                     <div class="article__block">
                                         <span id="articleTitle4" class="article__block-title"
                                             >Признаки депрессии у женщины и нервного истощения</span
                                         >
-                
+
                                         <ul class="article__block-list">
                                             <li class="article__block-item">
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
                                                     Признаки депрессии у женщины и нервного истощения
                                                 </p>
@@ -1210,35 +1226,45 @@
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
-                                                <p class="article__block-item-text">Тревожность, внутреннее напряжение.</p>
+
+                                                <p class="article__block-item-text">
+                                                    Тревожность, внутреннее напряжение.
+                                                </p>
                                             </li>
                                             <li class="article__block-item">
                                                 <figure class="marker">
                                                     <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                                 </figure>
-                
+
                                                 <p class="article__block-item-text">
-                                                    Психосоматические недомогания: головные боли, расстройства пищеварения.
+                                                    Психосоматические недомогания: головные боли, расстройства
+                                                    пищеварения.
                                                 </p>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                
+
                                 <div class="article__banner">
                                     <h2 class="article__banner-title">Причины депрессии у женщин</h2>
-                
+
                                     <ul class="article__banner-list">
                                         <li class="article__banner-item">
-                                            Гормональные изменения: резкие колебания уровня эстрогена и прогестерона.
+                                            Гормональные изменения: резкие колебания уровня эстрогена и
+                                            прогестерона.
                                         </li>
                                         <li class="article__banner-item">
                                             Физические изменения: боли после родов, изменение внешности.
                                         </li>
-                                        <li class="article__banner-item">Недосып: из-за ухода за новорожденным.</li>
-                                        <li class="article__banner-item">Стресс: адаптация к новой роли, ответственности.</li>
-                                        <li class="article__banner-item">История: предшествующие эпизоды усиливают риск.</li>
+                                        <li class="article__banner-item">
+                                            Недосып: из-за ухода за новорожденным.
+                                        </li>
+                                        <li class="article__banner-item">
+                                            Стресс: адаптация к новой роли, ответственности.
+                                        </li>
+                                        <li class="article__banner-item">
+                                            История: предшествующие эпизоды усиливают риск.
+                                        </li>
                                         <li class="article__banner-item">
                                             Отсутствие поддержки: со стороны партнера, семьи, друзей.
                                         </li>
@@ -1246,36 +1272,41 @@
                                             Финансовые трудности: беспокойство о материальном обеспечении.
                                         </li>
                                         <li class="article__banner-item">
-                                            Нереализованные ожидания: разрыв между идеальными представлениями о материнстве и
-                                            реальностью.
+                                            Нереализованные ожидания: разрыв между идеальными представлениями
+                                            о материнстве и реальностью.
                                         </li>
                                     </ul>
                                 </div>
-                
+
                                 <div class="article__block">
                                     <span class="article__block-title"
-                                        >Средство от депрессии для женщин: «Как восстановить радость жизни»</span
+                                        >Средство от депрессии для женщин: «Как восстановить радость
+                                        жизни»</span
                                     >
-                
+
                                     <p class="article__description">
-                                        Женская депрессия — многогранное состояние, сопряжённое с физиологическими,
-                                        психологическими и социальными факторами. Её сложность обусловлена гормональными
-                                        изменениями, социальными ожиданиями, чувствительностью к стрессу. Комплексный подход
-                                        включает психотерапию, медикаментозное лечение, изменение образа жизни. Уникальность
-                                        женского организма требует индивидуализации методов: учёта гормонального фона,
-                                        эмоциональных особенностей, жизненных обстоятельств.
+                                        Женская депрессия — многогранное состояние, сопряжённое
+                                        с физиологическими, психологическими и социальными факторами.
+                                        Её сложность обусловлена гормональными изменениями, социальными
+                                        ожиданиями, чувствительностью к стрессу. Комплексный подход включает
+                                        психотерапию, медикаментозное лечение, изменение образа жизни.
+                                        Уникальность женского организма требует индивидуализации методов:
+                                        учёта гормонального фона, эмоциональных особенностей, жизненных
+                                        обстоятельств.
                                     </p>
                                 </div>
-                
+
                                 <div class="article__block">
-                                    <span class="article__block-title">Психотерапия: Ключ к самопониманию</span>
-                
+                                    <span class="article__block-title"
+                                        >Психотерапия: Ключ к самопониманию</span
+                                    >
+
                                     <ul class="article__block-list">
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Когнитивноповеденческая: коррекция мыслей, поведения
                                             </p>
@@ -1284,21 +1315,25 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
-                                            <p class="article__block-item-text">Гештальттерапия: осознание текущего опыта</p>
+
+                                            <p class="article__block-item-text">
+                                                Гештальттерапия: осознание текущего опыта
+                                            </p>
                                         </li>
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
-                                            <p class="article__block-item-text">Арттерапия: творческое самовыражение</p>
+
+                                            <p class="article__block-item-text">
+                                                Арттерапия: творческое самовыражение
+                                            </p>
                                         </li>
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Семейная терапия: взаимоотношения, решение конфликтов
                                             </p>
@@ -1307,14 +1342,16 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
-                                            <p class="article__block-item-text">Групповая терапия: поддержка, обмен опытом</p>
+
+                                            <p class="article__block-item-text">
+                                                Групповая терапия: поддержка, обмен опытом
+                                            </p>
                                         </li>
                                         <li class="article__block-item">
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Танцевальнодвигательная терапия: телесное освобождение
                                             </p>
@@ -1323,7 +1360,7 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
+
                                             <p class="article__block-item-text">
                                                 Музыкотерапия: эмоциональный катарсис через музыку
                                             </p>
@@ -1332,12 +1369,14 @@
                                             <figure class="marker">
                                                 <img src="./assets/images/icons/marker-icon.svg" alt="" />
                                             </figure>
-                
-                                            <p class="article__block-item-text">Биофидбек: контроль телесных процессов</p>
+
+                                            <p class="article__block-item-text">
+                                                Биофидбек: контроль телесных процессов
+                                            </p>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="comment-form__title h_h1">
+                                <div class="comment-form__title h h_h1">
                                     <span>4 комментария</span>
                                     <ul class="comment-form__stars">
                                         <li class="comment-form__star">
@@ -1353,31 +1392,49 @@
                                             <img src="./assets/images/icons/star-small-filled.svg" alt="" />
                                         </li>
                                         <li class="comment-form__star">
-                                            <img src="./assets/images/icons/star-small-contained.svg" alt="" />
+                                            <img
+                                                src="./assets/images/icons/star-small-contained.svg"
+                                                alt=""
+                                            />
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="comment-form__wrapper">
-                                   <div class="comment-box">
+                                    <div class="comment-box">
                                         <div class="comment-box__inner">
                                             <div class="comment-box__name">Владимир</div>
                                             <div class="comment-box__inner-block">
                                                 <div class="comment-box__date">20.07.2022</div>
                                                 <div class="comment-box__stars">
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-contained.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-contained.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1385,45 +1442,25 @@
                                         <div class="comment-box__content">
                                             <div class="comment-box__title">Очень интересно!</div>
                                             <div class="comment-box__text">
-                                                Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ. Факт долгосрочного употребления не менее важен для определения мероприятий по лечению и реабилитации Исследование волос/ногтей выполняют для подтверждения хронического отравления опиатами. Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ.
+                                                Его проводят по запросу суда или следственных органов, а также
+                                                с целью исключения однократного приёма запрещённых веществ.
+                                                Факт долгосрочного употребления не менее важен для определения
+                                                мероприятий по лечению и реабилитации Исследование
+                                                волос/ногтей выполняют для подтверждения хронического
+                                                отравления опиатами. Его проводят по запросу суда
+                                                или следственных органов, а также с целью исключения
+                                                однократного приёма запрещённых веществ.
                                             </div>
                                         </div>
                                         <div class="comment-box__answer">
-                                            <div class="comment-box__answer-name">Надежда, специалист клиники</div>
-                                            <div class="comment-box__answer-text">Добрый день! Спасибо за выбор клиники и добрые слова в адрес наших специалистов.</div>
-                                        </div>
-                                   </div>
-                                   <div class="comment-box">
-                                    <div class="comment-box__inner">
-                                        <div class="comment-box__name">Владимир</div>
-                                        <div class="comment-box__inner-block">
-                                            <div class="comment-box__date">20.07.2022</div>
-                                            <div class="comment-box__stars">
-                                                <div class="comment-box__star">
-                                                    <img src="./assets/images/icons/star-small-filled.svg" alt="" />
-                                                </div>
-                                                <div class="comment-box__star">
-                                                    <img src="./assets/images/icons/star-small-filled.svg" alt="" />
-                                                </div>
-                                                <div class="comment-box__star">
-                                                    <img src="./assets/images/icons/star-small-filled.svg" alt="" />
-                                                </div>
-                                                <div class="comment-box__star">
-                                                    <img src="./assets/images/icons/star-small-filled.svg" alt="" />
-                                                </div>
-                                                <div class="comment-box__star">
-                                                    <img src="./assets/images/icons/star-small-contained.svg" alt="" />
-                                                </div>
+                                            <div class="comment-box__answer-name">
+                                                Надежда, специалист клиники
+                                            </div>
+                                            <div class="comment-box__answer-text">
+                                                Добрый день! Спасибо за выбор клиники и добрые слова в адрес
+                                                наших специалистов.
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="comment-box__content">
-                                        <div class="comment-box__title">Очень интересно!</div>
-                                        <div class="comment-box__text">
-                                            Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ. Факт долгосрочного употребления не менее важен для определения мероприятий по лечению и реабилитации Исследование волос/ногтей выполняют для подтверждения хронического отравления опиатами. Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ.
-                                        </div>
-                                    </div>
-                                    
                                     </div>
                                     <div class="comment-box">
                                         <div class="comment-box__inner">
@@ -1432,19 +1469,34 @@
                                                 <div class="comment-box__date">20.07.2022</div>
                                                 <div class="comment-box__stars">
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-filled.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                     <div class="comment-box__star">
-                                                        <img src="./assets/images/icons/star-small-contained.svg" alt="" />
+                                                        <img
+                                                            src="./assets/images/icons/star-small-contained.svg"
+                                                            alt=""
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
@@ -1452,20 +1504,75 @@
                                         <div class="comment-box__content">
                                             <div class="comment-box__title">Очень интересно!</div>
                                             <div class="comment-box__text">
-                                                Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ. Факт долгосрочного употребления не менее важен для определения мероприятий по лечению и реабилитации Исследование волос/ногтей выполняют для подтверждения хронического отравления опиатами. Его проводят по запросу суда или следственных органов, а также с целью исключения однократного приёма запрещённых веществ.
+                                                Его проводят по запросу суда или следственных органов, а также
+                                                с целью исключения однократного приёма запрещённых веществ.
+                                                Факт долгосрочного употребления не менее важен для определения
+                                                мероприятий по лечению и реабилитации Исследование
+                                                волос/ногтей выполняют для подтверждения хронического
+                                                отравления опиатами. Его проводят по запросу суда
+                                                или следственных органов, а также с целью исключения
+                                                однократного приёма запрещённых веществ.
                                             </div>
                                         </div>
-                                        
-                                   </div>
+                                    </div>
+                                    <div class="comment-box">
+                                        <div class="comment-box__inner">
+                                            <div class="comment-box__name">Владимир</div>
+                                            <div class="comment-box__inner-block">
+                                                <div class="comment-box__date">20.07.2022</div>
+                                                <div class="comment-box__stars">
+                                                    <div class="comment-box__star">
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="comment-box__star">
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="comment-box__star">
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="comment-box__star">
+                                                        <img
+                                                            src="./assets/images/icons/star-small-filled.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                    <div class="comment-box__star">
+                                                        <img
+                                                            src="./assets/images/icons/star-small-contained.svg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-box__content">
+                                            <div class="comment-box__title">Очень интересно!</div>
+                                            <div class="comment-box__text">
+                                                Его проводят по запросу суда или следственных органов, а также
+                                                с целью исключения однократного приёма запрещённых веществ.
+                                                Факт долгосрочного употребления не менее важен для определения
+                                                мероприятий по лечению и реабилитации Исследование
+                                                волос/ногтей выполняют для подтверждения хронического
+                                                отравления опиатами. Его проводят по запросу суда
+                                                или следственных органов, а также с целью исключения
+                                                однократного приёма запрещённых веществ.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="comment-form__title h_h1">
-                                    Оставить комментарий
-                                </div>
+                                <div class="comment-form__title h h_h1">Оставить комментарий</div>
                                 <form data-dev action="#" class="comment-form">
                                     <div class="comment-form__content">
-                                       
-                        
                                         <div class="comment-form__rating-wrap">
                                             <span class="comment-form__rating-subtitle txt16">Оценка</span>
                                             <div
@@ -1552,9 +1659,11 @@
                                             </div>
                                         </div>
                                         <div class="review-form__fields">
-                                           
                                             <div class="review-form__input input txt16">
-                                                <label for="reviewName" class="input__label" data-error="*Заполните поле"
+                                                <label
+                                                    for="reviewName"
+                                                    class="input__label"
+                                                    data-error="*Заполните поле"
                                                     >Ваше имя</label
                                                 >
                                                 <input
@@ -1569,11 +1678,13 @@
                                                 />
                                             </div>
                                             <div class="review-form__input input txt16">
-                                                <label for="reviewName" class="input__label" data-error="*Заполните поле"
+                                                <label
+                                                    for="reviewName"
+                                                    class="input__label"
+                                                    data-error="*Заполните поле"
                                                     >Заголовок комментария</label
                                                 >
                                                 <input
-                                                  
                                                     data-validate
                                                     data-required
                                                     autocomplete="off"
@@ -1584,7 +1695,10 @@
                                                 />
                                             </div>
                                             <div class="review-form__input input input_textarea txt16">
-                                                <label for="reviewComment" class="input__label" data-error="*Заполните поле"
+                                                <label
+                                                    for="reviewComment"
+                                                    class="input__label"
+                                                    data-error="*Заполните поле"
                                                     >Комментарий</label
                                                 >
                                                 <textarea
@@ -1636,78 +1750,114 @@
                                             </svg>
                                         </button>
                                     </div>
-                                   
                                 </form>
                             </div>
-                
-                            <aside class="article__info">
-                               <div class="sidebar-ar">
-                                    <div class="sidebar-ar__title">Содержание</div>
-                                    <div class="sidebar-ar__introduction">Введение</div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#articleTitle1" class="sidebar-ar__chapter">Отличия от обычной депрессии</a>
-                                        
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#articleTitle2" class="sidebar-ar__chapter">Признаки депрессии у женщин</a>
-                                        <ul class="sidebar-ar__lists">
-                                            <li class="sidebar-ar__item"><a href="#">Распространенные проявления</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Признаки депрессии у женщины и нервного истощения</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Симптомы депрессии у женщин после 50 лет</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Хроническая депрессия симптомы у женщин</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#articleTitle3" class="sidebar-ar__chapter">Средство от депрессии для женщин: «Как восстановить радость жизни»</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#articleTitle4" class="sidebar-ar__chapter">Психотерапия: Ключ к самопониманию</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#" class="sidebar-ar__chapter">Когда необходимы препараты от депрессии женщинам</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#" class="sidebar-ar__chapter">Правильное питание: Энергия и баланс</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#" class="sidebar-ar__chapter">Роль диеты в управлении депрессией</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#" class="sidebar-ar__chapter">Серотонин и его роль в депрессии</a>
-                                    </div>
-                                    <div class="sidebar-ar__inner">
-                                        <a href="#" class="sidebar-ar__chapter">Медитация и релаксация: Умиротворение ума</a>
-                                        <ul class="sidebar-ar__lists">
-                                            <li class="sidebar-ar__item"><a href="#">Методы Релакс</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Что такое медитация</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Что такое релаксация</a></li>
-                                            <li class="sidebar-ar__item"><a href="#">Что такое осознанность</a></li>
-                                        </ul>
 
+                            <aside class="article__info">
+                                <div data-showmore class="sidebar-ar">
+                                    <div data-showmore-content="1000000" class="sidebar-ar__wrapper">
+                                        <div class="sidebar-ar__title">Содержание</div>
+                                        <div class="sidebar-ar__introduction">Введение</div>
+                                        <div class="sidebar-ar__introduction">Отличия от обычной депрессии</div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#articleTitle2" class="sidebar-ar__chapter active"
+                                            >Признаки депрессии у женщин</a
+                                            >
+                                            <ul class="sidebar-ar__lists">
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Распространенные проявления</a>
+                                                </li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#"
+                                                    >Признаки депрессии у женщины и нервного истощения</a
+                                                    >
+                                                </li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Симптомы депрессии у женщин после 50 лет</a>
+                                                </li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Хроническая депрессия симптомы у женщин</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#articleTitle3" class="sidebar-ar__chapter"
+                                            >Средство от депрессии для женщин: «Как восстановить радость
+                                                жизни»</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#articleTitle4" class="sidebar-ar__chapter"
+                                            >Психотерапия: Ключ к самопониманию</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#" class="sidebar-ar__chapter"
+                                            >Когда необходимы препараты от депрессии женщинам</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#" class="sidebar-ar__chapter"
+                                            >Правильное питание: Энергия и баланс</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#" class="sidebar-ar__chapter"
+                                            >Роль диеты в управлении депрессией</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#" class="sidebar-ar__chapter"
+                                            >Серотонин и его роль в депрессии</a
+                                            >
+                                        </div>
+                                        <div class="sidebar-ar__inner">
+                                            <a href="#" class="sidebar-ar__chapter"
+                                            >Медитация и релаксация: Умиротворение ума</a
+                                            >
+                                            <ul class="sidebar-ar__lists">
+                                                <li class="sidebar-ar__item"><a href="#">Методы Релакс</a></li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Что такое медитация</a>
+                                                </li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Что такое релаксация</a>
+                                                </li>
+                                                <li class="sidebar-ar__item">
+                                                    <a href="#">Что такое осознанность</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    
-                               </div>
-                               <div class="aricle-confirmed">
+
+                                    <div data-showmore-button="" class="link _mobile-only">
+                                        <div>
+                                            <span>РАЗВЕРНУТЬ</span>
+                                            <span>СВЕРНУТЬ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="aricle-confirmed">
                                     <div class="aricle-confirmed__text">Статья проверена:</div>
                                     <div class="aricle-confirmed__inner">
                                         <div class="aricle-confirmed__image">
-                                            <img src="./assets/images/sections/knowledge-d/ava.webp" alt="">
+                                            <img src="./assets/images/sections/knowledge-d/ava.webp" alt="" />
                                         </div>
                                         <div class="aricle-confirmed__block">
-                                            <div class="aricle-confirmed__name">Воякина Валерия Георгиевна</div>
+                                            <div class="aricle-confirmed__name">
+                                                Воякина Валерия Георгиевна
+                                            </div>
                                             <div class="aricle-confirmed__work">Психиатр</div>
                                         </div>
                                     </div>
-                               </div>
-                
+                                </div>
                             </aside>
                         </div>
                     </div>
                 </section>
                 <section class="other-articles">
     <div class="container">
-        <div class="other-articles__title h_h1">
+        <div class="other-articles__title h h_h1">
             Другие статьи
         </div>
         <div class="other-articles__wrapper">
@@ -1805,7 +1955,6 @@
         </div>
     </div>
 </section>
-               
             </main>
             <footer class="footer">
     <div class="container">
@@ -2247,6 +2396,11 @@
         </clipPath>
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <clipPath id="clImg-m" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.12 C0,0.054,0.036,0,0.081,0 H0.248 H0.624 H0.757 C0.787,0,0.812,0.036,0.812,0.081 C0.812,0.125,0.836,0.161,0.867,0.161 H0.919 C0.964,0.161,1,0.215,1,0.281 V0.88 C1,0.946,0.964,1,0.919,1 H0.5 H0.25 H0.129 C0.09,1,0.059,0.954,0.059,0.897 V0.838 C0.059,0.814,0.046,0.794,0.03,0.794 C0.013,0.794,0,0.775,0,0.751 V0.589 V0.177 V0.12"></path>
+        </clipPath>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
         <clipPath id="clImg-2" clipPathUnits="objectBoundingBox">
             <path d="M0,0.076 C0,0.034,0.024,0,0.055,0 H0.248 H0.624 H0.757 C0.788,0,0.812,0.034,0.812,0.076 V0.085 C0.812,0.127,0.836,0.161,0.866,0.161 H0.945 C0.976,0.161,1,0.196,1,0.238 V0.924 C1,0.966,0.976,1,0.945,1 H0.5 H0.25 H0.114 C0.084,1,0.059,0.966,0.059,0.924 V0.836 C0.059,0.813,0.046,0.794,0.03,0.794 C0.013,0.794,0,0.776,0,0.753 V0.589 V0.177 V0.076"></path>
         </clipPath>
@@ -2313,7 +2467,7 @@
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
         <clipPath id="services-background-mobile" clipPathUnits="objectBoundingBox">
-            <path d="M0.194,0.177 C0.224,0.177,0.248,0.137,0.248,0.089 C0.248,0.04,0.272,0,0.302,0 H0.919 C0.964,0,1,0.06,1,0.133 V0.598 C1,0.624,0.987,0.646,0.97,0.646 C0.954,0.646,0.941,0.668,0.941,0.694 V0.867 C0.941,0.94,0.904,1,0.86,1 H0.081 C0.036,1,0,0.94,0,0.867 V0.31 C0,0.237,0.036,0.177,0.081,0.177 H0.194"></path>
+            <path d="M0,0.12 C0,0.054,0.036,0,0.081,0 H0.248 H0.624 H0.757 C0.787,0,0.812,0.036,0.812,0.081 C0.812,0.125,0.836,0.161,0.867,0.161 H0.919 C0.964,0.161,1,0.215,1,0.281 V0.88 C1,0.946,0.964,1,0.919,1 H0.5 H0.25 H0.129 C0.09,1,0.059,0.954,0.059,0.897 V0.838 C0.059,0.814,0.046,0.794,0.03,0.794 C0.013,0.794,0,0.775,0,0.751 V0.589 V0.177 V0.12"></path>
         </clipPath>
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
@@ -2472,16 +2626,23 @@
             <path d="M0.128,0 H0.962 C0.983,0,1,0.023,1,0.052 V0.834 C1,0.862,0.983,0.885,0.962,0.885 H0.708 C0.689,0.885,0.672,0.905,0.67,0.931 L0.668,0.955 C0.666,0.98,0.65,1,0.631,1 H0.246 H0.038 C0.017,1,0,0.977,0,0.948 V0.589 V0.411 V0.267 V0.052 C0,0.023,0.017,0,0.038,0 H0.128"></path>
         </clipPath>
     </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+
+        <clipPath id="bgDoctorsPrice" clipPathUnits="objectBoundingBox">
+            <path d="M0.065,0 L0.935,0 C0.971,0,1,0.034,1,0.075 L1,0.693 C1,0.735,0.971,0.769,0.935,0.769 L0.874,0.769 C0.838,0.769,0.809,0.803,0.809,0.844 L0.809,0.925 C0.809,0.966,0.78,1,0.745,1 L0.065,1 C0.029,1,0,0.966,0,0.925 L0,0.075 C0,0.034,0.029,0,0.065,0"></path>
+        </clipPath>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+        <clipPath id="licenses-background-v2" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.071 C0,0.033,0.024,0.001,0.055,0.001 H0.777 C0.807,0.001,0.832,0.033,0.832,0.071 V0.135 C0.832,0.174,0.856,0.205,0.886,0.205 H0.945 C0.976,0.205,1,0.236,1,0.275 V0.932 C1,0.97,0.976,1,0.945,1 H0.055 C0.024,1,0,0.97,0,0.932 V0.071"></path>
+        </clipPath>
+    </svg>
 </div>
 
 
 
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
-	
-    <clipPath id="bgDoctorsPrice" clipPathUnits="objectBoundingBox">
-	<path d="M0.065,0 L0.935,0 C0.971,0,1,0.034,1,0.075 L1,0.693 C1,0.735,0.971,0.769,0.935,0.769 L0.874,0.769 C0.838,0.769,0.809,0.803,0.809,0.844 L0.809,0.925 C0.809,0.966,0.78,1,0.745,1 L0.065,1 C0.029,1,0,0.966,0,0.925 L0,0.075 C0,0.034,0.029,0,0.065,0"></path>
-    </clipPath>
-</svg>
+
 
 
         </div>

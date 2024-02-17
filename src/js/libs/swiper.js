@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resizableSwiper('(max-width: 768px)', '.opinions__slider', {
         modules: [Pagination],
         spaceBetween: remToPx(2.5),
-        speed: 800,
+        speed: 1200,
         slidesPerView: 1,
 
         pagination: {
@@ -125,13 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    resizableSwiper('(max-width: 768px)', '.conditions-tabs-swiper', {
-        modules: [Pagination],
-        spaceBetween: remToPx(1.6),
-        speed: 1200,
-        slidesPerView: 'auto',
-        slideToClickedSlide: true
-    });
+    resizableSwiper(
+        '(max-width: 768px)',
+        '.conditions-tabs-swiper',
+        {
+            modules: [Pagination],
+            spaceBetween: remToPx(1.6),
+            speed: 1200,
+            slidesPerView: 'auto',
+            slideToClickedSlide: true,
+            resizeObserver: true,
+            observer: true
+        },
+        (swiper) => setTimeout(() => swiper.update(), 100)
+    );
     resizableSwiper('(max-width: 768px)', '.steps-swiper', {
         modules: [Pagination],
         spaceBetween: remToPx(2),
@@ -143,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return '<span class="' + className + '"></span>';
             },
             clickable: true
-        },
+        }
     });
     resizableSwiper('(max-width: 768px)', '.discounts__slider', {
         modules: [Pagination],
@@ -152,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
 
         pagination: {
-            el: '.odiscounts__pagination .swiper-pagination',
+            el: '.discounts__pagination .swiper-pagination',
             renderBullet: function (index, className) {
                 return '<span class="' + className + '"></span>';
             },
@@ -253,14 +260,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelectorAll('.slider-section__slider').length) {
         document.querySelectorAll('.slider-section__slider').forEach((section) => {
+            const parent = section.closest('.slider-section__container');
+
             new Swiper(section, {
                 modules: [Navigation, Pagination],
                 spaceBetween: remToPx(2.5),
-                speed: 800,
+                speed: 1200,
                 slidesPerView: 1,
 
                 pagination: {
-                    el: section.querySelector('.swiper-pagination'),
+                    el: parent.querySelector('.swiper-pagination'),
                     renderBullet: function (index, className) {
                         return '<span class="' + className + '"></span>';
                     },
@@ -268,8 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
 
                 navigation: {
-                    nextEl: section.querySelector('.swiper-button-next'),
-                    prevEl: section.querySelector('.swiper-button-prev')
+                    nextEl: parent.querySelector('.swiper-button-next'),
+                    prevEl: parent.querySelector('.swiper-button-prev')
                 },
 
                 breakpoints: {
@@ -301,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(document.querySelectorAll('.conditions-gallery-swiper'), (swiper) => {
             const buttons = swiper.parentElement.querySelector('.conditions__navigation-buttons');
 
-            new Swiper(swiper, {
+            const conditionsSwiper = new Swiper(swiper, {
                 modules: [Navigation, Pagination],
                 spaceBetween: remToPx(2),
                 slidesPerView: 1,
@@ -346,7 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.sale-detail__slider', {
             modules: [Navigation, Pagination],
             spaceBetween: remToPx(2.5),
-            speed: 800,
+            speed: 1200,
+            grabCursor: true,
             slidesPerView: 1,
 
             pagination: {
@@ -402,11 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 nextEl: '.article__licenses .navigation-buttons .swiper-button-next',
                 prevEl: '.article__licenses .navigation-buttons .swiper-button-prev'
-            },
-        })
+            }
+        });
     }
-
-
-
-    
 });

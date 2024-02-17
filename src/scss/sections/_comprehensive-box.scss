@@ -4,6 +4,7 @@
     position: relative;
     border-radius: 3.2rem;
     margin-bottom: 2.4rem;
+    padding-bottom: 5rem;
     &__icon {
         max-width: 6rem;
         width: 100%;
@@ -32,7 +33,7 @@
         width: fit-content;
         gap: 1rem;
         position: absolute;
-        bottom: 3.2rem;
+        bottom: .2rem;
         left: 3.2rem;
     }
 
@@ -44,6 +45,7 @@
         justify-content: center;
         max-width: 76.8rem;
         margin: 0 auto;
+        padding-top: 1.8rem;
         
     }
 
@@ -51,6 +53,7 @@
         font-size: 2.4rem;
         font-weight: 500;
         margin-bottom: 2rem;
+        font-family: "Nunito";
     }
 
     &__text {
@@ -62,7 +65,7 @@
         font-size: 1.8rem;
         font-weight: 550;
         color: $black;
-        margin-bottom: 1.2rem;
+        margin-bottom: 2.2rem;
     }
 
     &__lists {
@@ -70,7 +73,7 @@
         li {
             position: relative;
             font-size: 1.8rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1.1rem;
             padding-left: 2.5rem;
             &::before {
                 position: absolute;
@@ -78,7 +81,7 @@
                 width: 1.6rem;
                 height: 1.6rem;
                 left: 0;
-                background-image: url(../assets/images/sections/price-page/plastr.svg);
+                background-image: url(./assets/images/sections/price-page/plastr.svg);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
             }
@@ -101,8 +104,8 @@
         gap: 1.6rem;
         margin-top: auto;
         position: absolute;
-        top: 3.2rem;
-        right: 3.2rem;
+        top: 4.4rem;
+        right: 2.8rem;
         @include small-tablet {
             width: 100%;
             justify-content: space-between;
@@ -111,9 +114,10 @@
         span {
             font-size: 2rem;
             color: $red;
+            font-weight: 500;
 
             @include small-tablet {
-                font-size: 3.6rem;
+                font-size: 3rem;
             }
         }
     }
@@ -132,7 +136,7 @@
         &__inner {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 4.8rem;
+            margin-bottom: 3.8rem;
         }
 
         &__button {
@@ -155,6 +159,13 @@
             margin-bottom: 0;
             height: fit-content;
             font-size: 3.6rem;
+
+            sub {
+                position: initial;
+                margin-bottom: 0;
+                height: fit-content;
+                font-size: 3.6rem;
+            }
         }
 
         &__content{
@@ -168,23 +179,28 @@
 
         &__text {
             font-size: 3rem;
-            margin-bottom: 4.8rem;
+            margin-bottom: 6.8rem;
             color: $textGray;
 
         }
 
         &__info {
             font-size: 3rem;
-            margin-bottom: 3.2rem;
+            margin-bottom: 4.2rem;
         }
 
         &__lists {
-            margin-bottom: 4.8rem;
+            margin-bottom: 5.8rem;
 
             li {
                 font-size: 3rem;
-                margin-bottom: 1.6rem;
-                padding-left: 3.2rem;
+                margin-bottom: 2.6rem;
+                padding-left: 4.5rem;
+
+                &::before{
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
             }
         }
 

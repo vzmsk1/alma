@@ -43,6 +43,11 @@
     &__image {
         height: 100%;
         clip-path: url(#clImg);
+
+        @include small-tablet{
+            clip-path: url(#clImg-m);
+        }
+
         object-fit: cover;
     }
 
