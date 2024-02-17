@@ -1,5 +1,9 @@
 .intro {
     .knowledge-page & {
+        @include small-tablet{
+            padding-top: 1rem;
+        }
+
         .intro__content {
             display: flex;
             flex-direction: row;

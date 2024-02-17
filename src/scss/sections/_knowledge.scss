@@ -9,13 +9,15 @@
 
     &__filters {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 8rem;
 
         @include small-tablet {
             flex-direction: column;
             gap: 4.8rem;
+            align-items: flex-start;
+            margin-bottom: 6.4rem;
         }
 
         &-list {

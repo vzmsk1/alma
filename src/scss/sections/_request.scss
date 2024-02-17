@@ -222,10 +222,8 @@
             text-align: center;
 
             &:nth-child(2) {
-                order: -1;
-
                 @include small-tablet{
-                    order: 0;
+                    order: -1;
                 }
             }
 

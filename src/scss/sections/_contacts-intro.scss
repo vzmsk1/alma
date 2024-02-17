@@ -1,5 +1,10 @@
 .contacts-intro {
     // .contacts-intro__inner
+    @include small-tablet{
+        padding-top: 1rem;
+        margin-bottom: 6.4rem;
+    }
+
     &__inner {
         display: flex;
         align-items: flex-start;
@@ -62,7 +67,7 @@
         bottom: 0;
 
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         line-height: 120%;
         text-transform: uppercase;
         text-align: right;
@@ -135,6 +140,14 @@
             font-size: 2rem;
             line-height: 120%;
             color: $white;
+
+            a {
+                transition: .3s color ease-in-out;
+            }
+
+            a:hover{
+                color: $gray;
+            }
         }
     }
 }
@@ -219,7 +232,7 @@
         // .contacts-info__title
         &__title {
             font-size: 6rem;
-            margin-bottom: 4%;
+            margin-bottom: 4rem;
         }
         // .contacts-info__wrapper
         &__wrapper {
