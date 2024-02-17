@@ -45,7 +45,7 @@
         justify-content: center;
         max-width: 76.8rem;
         margin: 0 auto;
-        padding-top: 1rem;
+        padding-top: 1.8rem;
         
     }
 
@@ -53,6 +53,7 @@
         font-size: 2.4rem;
         font-weight: 500;
         margin-bottom: 2rem;
+        font-family: "Nunito";
     }
 
     &__text {
@@ -80,7 +81,7 @@
                 width: 1.6rem;
                 height: 1.6rem;
                 left: 0;
-                background-image: url(../assets/images/sections/price-page/plastr.svg);
+                background-image: url(./assets/images/sections/price-page/plastr.svg);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
             }
@@ -103,8 +104,8 @@
         gap: 1.6rem;
         margin-top: auto;
         position: absolute;
-        top: 3.2rem;
-        right: 3.2rem;
+        top: 4.4rem;
+        right: 2.8rem;
         @include small-tablet {
             width: 100%;
             justify-content: space-between;
@@ -113,9 +114,10 @@
         span {
             font-size: 2rem;
             color: $red;
+            font-weight: 500;
 
             @include small-tablet {
-                font-size: 3.6rem;
+                font-size: 3rem;
             }
         }
     }
@@ -157,6 +159,13 @@
             margin-bottom: 0;
             height: fit-content;
             font-size: 3.6rem;
+
+            sub {
+                position: initial;
+                margin-bottom: 0;
+                height: fit-content;
+                font-size: 3.6rem;
+            }
         }
 
         &__content{

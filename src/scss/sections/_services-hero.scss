@@ -8,7 +8,8 @@
     }
 
     .price-card__badge {
-        height: 4rem;
+        height: 4.5rem;
+        background: #E9ECF5;
 
         @include small-tablet{
             height: 8rem;

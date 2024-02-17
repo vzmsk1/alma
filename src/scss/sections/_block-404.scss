@@ -53,7 +53,7 @@
         font-size: 40rem;
         line-height: 120%;
 
-        background-image: url('../../assets/images/404/text-texture.png'); /* Путь к изображению текстуры */
+        background-image: url('./assets/images/404/text-texture.png'); /* Путь к изображению текстуры */
         background-repeat: repeat; /* Повторение текстуры */
         background-clip: text; /* Применение текстуры к тексту */
         background-blend-mode: multiply;

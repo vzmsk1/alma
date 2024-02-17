@@ -222,6 +222,7 @@
     // .advantage-card__text
 
     &__text {
+        line-height: 140%;
         @media (max-width: 48em) {
             max-width: 51rem;
         }

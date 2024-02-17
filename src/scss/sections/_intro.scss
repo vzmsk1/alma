@@ -423,6 +423,7 @@
                     font-size: 6rem;
                     line-height: 120%;
                     color: $white;
+                    font-family: "Nunito";
                 }
 
                 &-description {
@@ -430,6 +431,7 @@
                     font-size: 2.4rem;
                     line-height: 120%;
                     color: $white;
+                    font-family: "Nunito";
 
                     @include small-tablet {
                         font-size: 3.6rem;
@@ -496,9 +498,12 @@
                     line-height: 120%;
                     color: $white;
                     margin-top: auto;
+                    letter-spacing: .5rem;
+                    font-family: "Nunito";
 
                     @include small-tablet {
                         font-size: 6rem;
+                        letter-spacing: 0;
                     }
                 }
             }

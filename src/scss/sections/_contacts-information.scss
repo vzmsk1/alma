@@ -16,17 +16,21 @@
     &__btn {
         .btn.btn_ghost {
             padding: 0;
-        }
 
-        &:hover {
-            .arr {
-                border: 1px solid $blue;
-                background: transparent !important;
+            &:hover {
+                .arr {
+                    border: 1px solid $blue;
+                    background: transparent !important;
 
-                svg path {
-                    stroke: $blue;
+                    svg path {
+                        stroke: $blue;
+                    }
                 }
             }
+        }
+
+        span {
+            font-weight: 500;
         }
 
         @media (min-width: 48em) {

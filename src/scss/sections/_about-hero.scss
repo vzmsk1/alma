@@ -45,7 +45,7 @@
     // .about-hero__heading
 
     &__heading {
-        margin-bottom: 4.2rem;
+        margin-bottom: 3.2rem;
 
         @media (max-width: 48em) {
             margin-bottom: 6.4rem;
@@ -57,9 +57,9 @@
 
     &__text {
         margin-bottom: 6rem;
+        line-height: 140%;
 
         @include small-tablet{
-            line-height: 140%;
             margin-bottom: 5rem;
         }
     }
@@ -153,6 +153,7 @@
                 font-size: 3.6rem;
                 font-weight: 400;
                 color: $black;
+                font-family: "Nunito";
             }
         }
     }

@@ -1,5 +1,10 @@
 .detailed-spm {
     margin-bottom: 18rem;
+
+    @include small-tablet{
+        margin-bottom: 20rem;
+    }
+
     .breadcrumbs {
         margin-bottom: 2.4rem;
     }
@@ -100,6 +105,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        gap: 2.4rem;
 
         .btn {
             width: 6rem;
@@ -115,7 +121,7 @@
     &__feedback {
         position: relative;
         padding: 2.4rem;
-        min-width: 37.2rem;
+        width: 100%;
         &:hover {
             svg path {
                 &:first-child {
@@ -169,7 +175,7 @@
     &__licenses {
         position: relative;
         padding: 2.4rem;
-        min-width: 37.2rem;
+        width: 100%;
 
         &:hover {
             svg path {
@@ -312,7 +318,7 @@
         }
 
         &__feedback {
-            margin-bottom: 2.4rem;
+            margin-bottom: 0rem;
             padding: 4.8rem;
             &-title {
                 margin-bottom: 8rem;

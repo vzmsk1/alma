@@ -152,6 +152,7 @@
 
     &__nav-link {
         transition: color 0.3s ease;
+        font-size: 2rem;
 
         @media (any-hover: hover) {
             &:hover {
@@ -179,6 +180,7 @@
     &__tel {
         font-weight: 600;
         transition: color 0.3s ease;
+        font-size: 2rem;
 
         @media (any-hover: hover) {
             &:hover {

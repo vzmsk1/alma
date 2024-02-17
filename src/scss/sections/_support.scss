@@ -70,7 +70,7 @@
         display: flex;
         flex-direction: column;
         max-width: 58rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         @media (max-width: 48em) {
             max-width: none;
@@ -101,9 +101,7 @@
     // .support__text
 
     &__text {
-        @include small-tablet{
-            line-height: 140%;
-        }
+        line-height: 140%;
     }
 
     // .support__bg
@@ -112,7 +110,7 @@
         position: relative;
         flex: 0 0 73.5rem;
 
-        @include small-tablet{
+        @include small-tablet {
             flex: 0 0 40.8rem;
         }
     }
@@ -125,7 +123,7 @@
         overflow: hidden;
 
         @media (max-width: 48em) {
-            margin-bottom: 3rem;
+            margin-bottom: 4.8rem;
             height: 40.8rem;
             border-radius: 6.4rem;
         }
