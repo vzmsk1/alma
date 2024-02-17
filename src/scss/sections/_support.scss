@@ -55,7 +55,7 @@
         padding: 0 3.2rem 3.2rem;
 
         @media (max-width: 48em) {
-            padding: 4rem 5rem 5rem 5rem;
+            padding: 4rem 5rem 3rem 5rem;
             flex-direction: column-reverse;
             justify-content: stretch;
             align-items: stretch;
@@ -83,7 +83,8 @@
         margin-bottom: 2.4rem;
 
         @media (max-width: 48em) {
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
+            font-size: 2.4rem;
         }
     }
 
@@ -100,6 +101,9 @@
     // .support__text
 
     &__text {
+        @include small-tablet{
+            line-height: 140%;
+        }
     }
 
     // .support__bg
@@ -107,6 +111,10 @@
     &__bg {
         position: relative;
         flex: 0 0 73.5rem;
+
+        @include small-tablet{
+            flex: 0 0 40.8rem;
+        }
     }
 
     // .support__image-wrap
@@ -117,7 +125,7 @@
         overflow: hidden;
 
         @media (max-width: 48em) {
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
             height: 40.8rem;
             border-radius: 6.4rem;
         }

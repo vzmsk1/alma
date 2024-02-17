@@ -125,13 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    resizableSwiper('(max-width: 768px)', '.conditions-tabs-swiper', {
-        modules: [Pagination],
-        spaceBetween: remToPx(1.6),
-        speed: 1200,
-        slidesPerView: 'auto',
-        slideToClickedSlide: true
-    });
+    resizableSwiper(
+        '(max-width: 768px)',
+        '.conditions-tabs-swiper',
+        {
+            modules: [Pagination],
+            spaceBetween: remToPx(1.6),
+            speed: 1200,
+            slidesPerView: 'auto',
+            slideToClickedSlide: true,
+            resizeObserver: true,
+            observer: true
+        },
+        (swiper) => setTimeout(() => swiper.update(), 100)
+    );
     resizableSwiper('(max-width: 768px)', '.steps-swiper', {
         modules: [Pagination],
         spaceBetween: remToPx(2),
@@ -152,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
 
         pagination: {
-            el: '.odiscounts__pagination .swiper-pagination',
+            el: '.discounts__pagination .swiper-pagination',
             renderBullet: function (index, className) {
                 return '<span class="' + className + '"></span>';
             },
@@ -303,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(document.querySelectorAll('.conditions-gallery-swiper'), (swiper) => {
             const buttons = swiper.parentElement.querySelector('.conditions__navigation-buttons');
 
-            new Swiper(swiper, {
+            const conditionsSwiper = new Swiper(swiper, {
                 modules: [Navigation, Pagination],
                 spaceBetween: remToPx(2),
                 slidesPerView: 1,

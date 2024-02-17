@@ -9,10 +9,18 @@
 
     .price-card__badge {
         height: 4rem;
+
+        @include small-tablet{
+            height: 8rem;
+        }
     }
 
     .price-card {
         padding-bottom: 3rem;
+
+        @include small-tablet{
+            padding-bottom: 4rem;
+        }
     }
 
     // .services-hero__container
@@ -75,6 +83,12 @@
 
         @media (max-width: 48em) {
             display: none;
+        }
+    }
+
+    &__text {
+        @include small-tablet{
+            line-height: 140%;
         }
     }
 
