@@ -1,4 +1,7 @@
 .sales-list {
+    &__button {
+        @extend .specialists__button;
+    }
 
     @media (max-width: 48em) {
         padding-top: 1rem;
@@ -14,10 +17,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2.4rem;
+        margin-bottom: 5rem;
 
         @media (max-width: 48em) {
             display: flex;
             flex-direction: column;
+            margin-bottom: 6.4rem;
         }
     }
     &__title {
