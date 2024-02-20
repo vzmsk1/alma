@@ -36,7 +36,7 @@
 
         @media (max-width: 48em) {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: auto 1fr;
 
             .reviews__card-heading,
             .reviews__card-subtitle,
@@ -148,8 +148,17 @@
         width: auto;
         height: auto;
 
+        @include small-tablet{
+            @include sizes(24rem, 3.2rem);
+        }
+
         img {
             width: auto;
+
+            @include small-tablet{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

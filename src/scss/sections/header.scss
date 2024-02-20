@@ -13,6 +13,12 @@
         display: flex;
         align-items: center;
 
+        &:hover{
+            .header__btn-link, .header__hamburger-btn button {
+                border: .1rem solid $blue;
+            }
+        }
+
         @include small-tablet{
             order: -1;
         }
@@ -95,7 +101,6 @@
     // .header__hamburger
 
     &__hamburger {
-        margin-right: 7.1rem;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -138,6 +143,7 @@
     // .header__nav
 
     &__nav {
+        margin-left: 7.1rem;
         margin-right: 3rem;
         display: flex;
         column-gap: 3.2rem;
@@ -145,6 +151,7 @@
 
         @media (max-width: 48em) {
             display: none;
+            margin-left: 0;
         }
     }
 

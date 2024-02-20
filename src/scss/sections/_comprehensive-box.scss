@@ -106,6 +106,18 @@
         position: absolute;
         top: 4.4rem;
         right: 2.8rem;
+
+        &:hover{
+            .arrow-icon {
+                border-color: $blue;
+                background: transparent;
+
+                svg path {
+                    stroke: $blue;
+                }
+            }
+        }
+
         @include small-tablet {
             width: 100%;
             justify-content: space-between;

@@ -22,21 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.services-page-template-3')) {
+    if (document.querySelector('.services-page-template-3') && document.querySelector('.sidebar-ar__wrapper')) {
         const wrapper = document.querySelector('.sidebar-ar__wrapper');
 
         if (window.innerWidth < 768) {
             setTimeout(() => {
-                wrapper.style.height = `80rem`;
-                wrapper.dataset.showmoreContent = 80;
+                wrapper.style.height = `43rem`;
+                wrapper.dataset.showmoreContent = 43;
             }, 1);
         }
 
         window.addEventListener('resize', () => {
-            const value = window.innerWidth > 768 ? 1000000 : 80;
+            const value = window.innerWidth > 768 ? 1000000 : 43;
 
-            wrapper.style.height = window.innerWidth > 768 ? '100%' : `${value}rem`;
-            wrapper.dataset.showmoreContent = value;
+           setTimeout(() => {
+               wrapper.style.height = window.innerWidth > 768 ? '100%' : `${value}rem`;
+               wrapper.dataset.showmoreContent = value;
+           }, 1)
         });
     }
 });

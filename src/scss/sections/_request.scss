@@ -113,6 +113,10 @@
         align-items: center;
         justify-content: space-between;
 
+        @include small-tablet{
+            gap: 0;
+        }
+
         span {
             color: $blue;
         }
