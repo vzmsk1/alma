@@ -1,7 +1,7 @@
 .footer {
     margin-bottom: 3.2rem;
 
-    @include small-tablet{
+    @include small-tablet {
         margin-bottom: 0;
     }
 
@@ -166,6 +166,7 @@
             display: flex;
             flex-direction: column;
             gap: 4.8rem;
+            width: 100%;
         }
 
         &-block {
@@ -173,6 +174,9 @@
                 display: inline-block;
 
                 @include small-tablet {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.6rem;
                     font-family: 'Nunito', sans-serif;
                     font-weight: 700;
                     font-size: 3.6rem;
@@ -180,32 +184,40 @@
                     transition: 0.3s margin-bottom ease;
                     position: relative;
 
-                    &::after {
-                        @include pseudo {
-                            width: 3.2rem;
-                            height: 2px;
-                            background: $fontColor;
-                            right: -25px;
-                            top: 50%;
-                        }
-                    }
-
-                    &::before {
-                        @include pseudo {
-                            height: 3.2rem;
-                            width: 2px;
-                            background: $fontColor;
-                            right: -18px;
-                            top: 4px;
-                            transition: 0.3s transform ease;
-                        }
-                    }
-
                     &._accordion-active {
                         margin-bottom: 2.4rem;
 
-                        &::before {
-                            transform: rotate(90deg);
+                        svg {
+                            &:first-child {
+                                opacity: 0;
+                                transform: rotate(-90deg);
+                            }
+
+                            &:last-child {
+                                opacity: 1;
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-icon {
+                position: relative;
+
+                @include small-tablet {
+                    @include sizes(3.2rem, 3.2rem);
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.3s opacity ease, .3s transform ease;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:last-child {
+                            opacity: 0;
                         }
                     }
                 }

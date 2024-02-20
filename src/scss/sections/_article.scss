@@ -8,9 +8,13 @@
 
         .article__info {
             max-width: 37.5rem;
+            position: sticky;
+            top: 14.5rem;
+            gap: 2.4rem;
 
             @include small-tablet{
                 max-width: 100%;
+                position: initial;
             }
         }
 
